@@ -10,6 +10,48 @@
     <script defer src="assets/js/build/swiper.js"></script>
     <script defer src="assets/js/main.js"></script>
     <title>О клинике</title>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            let flagMap = false;
+            document.addEventListener('scroll', function () {
+                const blockMap = document.getElementById('map');
+                const posTop = blockMap.getBoundingClientRect().top;
+
+                if (posTop < window.innerHeight && !flagMap) {
+                    if (!document.querySelector('[src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"]')) {
+                        const script = document.createElement('script');
+                        script.type = 'text/javascript';
+                        script.src = 'https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU';
+                        document.head.appendChild(script);
+                    }
+
+                    ymaps.ready(init);
+
+                    function init() {
+                        const map = document.querySelector('#map');
+
+                        if (map) {
+                            var myMap = new ymaps.Map("map", {
+                                center: [47.228163, 39.714641],
+                                zoom: 14,
+                            });
+
+                            var myPlacemark = new ymaps.Placemark([47.228163, 39.714641], {}, {
+                                iconLayout: 'default#image',
+                                iconImageHref: 'assets/img/icons/map-marker.svg',
+                                iconImageSize: [38, 43],
+                            });
+
+                            myMap.geoObjects.add(myPlacemark);
+                            myMap.behaviors.disable('scrollZoom');
+                        }
+                    }
+
+                    flagMap = true;
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -42,7 +84,7 @@
                             <p class="header__top-info">Режим работы:</p>
                         </div>
                         <p class="header__top-descr">Круглосуточно, без выходных</p>
-                        <div class="header__top-span">
+                        <a href="tel:+78005001160" class="header__top-span">
                             <svg width="15.000000" height="15.000000" viewBox="0 0 15 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <desc>
@@ -53,8 +95,8 @@
                                     d="M11.52 14.5C8.47 14.49 5.54 13.27 3.38 11.11C1.21 8.94 0 6.01 0 2.95C0 2.03 0.36 1.15 1 0.51C1.65 -0.14 2.53 -0.5 3.44 -0.5C3.63 -0.51 3.82 -0.49 4.01 -0.45C4.2 -0.42 4.38 -0.38 4.55 -0.32C4.68 -0.27 4.79 -0.2 4.87 -0.1C4.96 0 5.01 0.12 5.04 0.25L6.07 4.75C6.09 4.87 6.09 4.99 6.06 5.12C6.02 5.24 5.96 5.35 5.87 5.44C5.77 5.54 5.77 5.55 4.85 6.03C5.58 7.65 6.88 8.95 8.49 9.7C8.98 8.76 8.98 8.76 9.09 8.66C9.18 8.57 9.29 8.51 9.41 8.47C9.53 8.44 9.66 8.44 9.78 8.46L14.27 9.49C14.39 9.52 14.51 9.58 14.6 9.67C14.7 9.75 14.77 9.86 14.81 9.98C14.87 10.16 14.92 10.34 14.95 10.53C14.98 10.72 15 10.91 15 11.1C14.98 12.01 14.61 12.88 13.96 13.51C13.31 14.15 12.43 14.5 11.52 14.5Z"
                                     fill="#1F587A" fill-opacity="1.000000" fill-rule="nonzero" />
                             </svg>
-                            <a class="header_phone" href="tel:+78005001160">+7 (800) 500-11-60</a>
-                        </div>
+                            <span class="header_phone">+7 (800) 500-11-60</span>
+                        </a>
                     </div>
                     <div class="header__top-block">
                         <div class="header__top-span">
@@ -66,15 +108,16 @@
                             </svg>
                             <p class="header__top-info header__top-info_weight">Адрес call-центра:</p>
                         </div>
-                        <button class="header__top-descr header__top-descr_weight">Екатеринбург</button>
+                        <button class="header__top-descr header__top-descr_weight popup-btn"
+                            data-path="cities">Екатеринбург</button>
                         <p class="header__top-descr">Круглосуточно, без выходных</p>
                     </div>
                 </div>
                 <div class="header__top-btns">
-                    <button class="header__button btn">
+                    <button class="header__button btn popup-btn" data-path="send">
                         <span class="btn__text">Вызвать врача</span>
                     </button>
-                    <button class="header__button btn btn_color">
+                    <button class="header__button btn btn_color popup-btn" data-path="send">
                         <span class="btn__text">Записаться онлайн</span>
                     </button>
                 </div>
@@ -82,101 +125,149 @@
         </div>
         <div class="header__bottom">
             <div class="header__bottom-container container">
-                <nav class="header__bottom-nav main-menu">
-                    <ul class="main-menu__list">
-                        <li class="main-menu__item">
-                            <a class="main-menu__link" href="#">
-                                <span class="main-menu__text">О клинике</span>
-                                <svg width="7.000000" height="5.000000" viewBox="0 0 7 5" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <desc>
-                                        Created with Pixso.
-                                    </desc>
-                                    <defs />
-                                    <path id="Vector"
-                                        d="M1.04 -0.5L5.95 -0.5C6.14 -0.5 6.33 -0.45 6.5 -0.35C6.66 -0.25 6.79 -0.11 6.88 0.06C6.98 0.25 7.01 0.48 6.99 0.7C6.96 0.91 6.87 1.12 6.73 1.29L4.27 4.15C4.17 4.26 4.06 4.35 3.92 4.41C3.79 4.46 3.64 4.5 3.5 4.5C3.35 4.5 3.2 4.46 3.07 4.41C2.93 4.35 2.82 4.26 2.72 4.15L0.26 1.29C0.12 1.12 0.03 0.91 0 0.7C-0.02 0.48 0.01 0.25 0.11 0.06C0.2 -0.11 0.33 -0.25 0.49 -0.35C0.66 -0.45 0.85 -0.5 1.04 -0.5Z"
-                                        fill="#2E2E2E" fill-opacity="1.000000" fill-rule="nonzero" />
-                                </svg>
+                <div class="header__bottom-wrapper">
+                    <nav class="header__bottom-nav main-menu">
+                        <ul class="main-menu__list">
+                            <li class="main-menu__item">
+                                <a class="main-menu__link" href="#">
+                                    <span class="main-menu__text">О клинике</span>
+                                    <svg width="7.000000" height="5.000000" viewBox="0 0 7 5" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <path id="Vector"
+                                            d="M1.04 -0.5L5.95 -0.5C6.14 -0.5 6.33 -0.45 6.5 -0.35C6.66 -0.25 6.79 -0.11 6.88 0.06C6.98 0.25 7.01 0.48 6.99 0.7C6.96 0.91 6.87 1.12 6.73 1.29L4.27 4.15C4.17 4.26 4.06 4.35 3.92 4.41C3.79 4.46 3.64 4.5 3.5 4.5C3.35 4.5 3.2 4.46 3.07 4.41C2.93 4.35 2.82 4.26 2.72 4.15L0.26 1.29C0.12 1.12 0.03 0.91 0 0.7C-0.02 0.48 0.01 0.25 0.11 0.06C0.2 -0.11 0.33 -0.25 0.49 -0.35C0.66 -0.45 0.85 -0.5 1.04 -0.5Z"
+                                            fill="#2E2E2E" fill-opacity="1.000000" fill-rule="nonzero" />
+                                    </svg>
+                                </a>
+                                <ul class="main-menu__sub-list">
+                                    <li class="main-menu__sub-item">
+                                        <a href="" class="main-menu__sub-link">
+                                            <img src="assets/img/icons/menu/1.svg" alt="" class="main-menu__sub-icon">
+                                            <span class="main-menu__sub-text">
+                                                Фото клиники
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="main-menu__sub-item">
+                                        <a href="" class="main-menu__sub-link">
+                                            <img src="assets/img/icons/menu/1.svg" alt="" class="main-menu__sub-icon">
+                                            <span class="main-menu__sub-text">
+                                                Фото клиники
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="main-menu__sub-item">
+                                        <a href="" class="main-menu__sub-link">
+                                            <img src="assets/img/icons/menu/1.svg" alt="" class="main-menu__sub-icon">
+                                            <span class="main-menu__sub-text">
+                                                Фото клиники
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="main-menu__sub-item">
+                                        <a href="" class="main-menu__sub-link">
+                                            <img src="assets/img/icons/menu/1.svg" alt="" class="main-menu__sub-icon">
+                                            <span class="main-menu__sub-text">
+                                                Фото клиники
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="main-menu__sub-item">
+                                        <a href="" class="main-menu__sub-link">
+                                            <img src="assets/img/icons/menu/1.svg" alt="" class="main-menu__sub-icon">
+                                            <span class="main-menu__sub-text">
+                                                Фото клиники
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="main-menu__sub-item">
+                                        <a href="" class="main-menu__sub-link">
+                                            <img src="assets/img/icons/menu/1.svg" alt="" class="main-menu__sub-icon">
+                                            <span class="main-menu__sub-text">
+                                                Фото клиники
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="main-menu__item">
+                                <a class="main-menu__link" href="#">
+                                    <span class="main-menu__text">Услуги</span>
+                                    <svg width="7.000000" height="5.000000" viewBox="0 0 7 5" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <desc>
+                                            Created with Pixso.
+                                        </desc>
+                                        <defs />
+                                        <path id="Vector"
+                                            d="M1.04 -0.5L5.95 -0.5C6.14 -0.5 6.33 -0.45 6.5 -0.35C6.66 -0.25 6.79 -0.11 6.88 0.06C6.98 0.25 7.01 0.48 6.99 0.7C6.96 0.91 6.87 1.12 6.73 1.29L4.27 4.15C4.17 4.26 4.06 4.35 3.92 4.41C3.79 4.46 3.64 4.5 3.5 4.5C3.35 4.5 3.2 4.46 3.07 4.41C2.93 4.35 2.82 4.26 2.72 4.15L0.26 1.29C0.12 1.12 0.03 0.91 0 0.7C-0.02 0.48 0.01 0.25 0.11 0.06C0.2 -0.11 0.33 -0.25 0.49 -0.35C0.66 -0.45 0.85 -0.5 1.04 -0.5Z"
+                                            fill="#2E2E2E" fill-opacity="1.000000" fill-rule="nonzero" />
+                                    </svg>
 
-                            </a>
-                        </li>
-                        <li class="main-menu__item">
-                            <a class="main-menu__link" href="#">
-                                <span class="main-menu__text">Услуги</span>
-                                <svg width="7.000000" height="5.000000" viewBox="0 0 7 5" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <desc>
-                                        Created with Pixso.
-                                    </desc>
-                                    <defs />
-                                    <path id="Vector"
-                                        d="M1.04 -0.5L5.95 -0.5C6.14 -0.5 6.33 -0.45 6.5 -0.35C6.66 -0.25 6.79 -0.11 6.88 0.06C6.98 0.25 7.01 0.48 6.99 0.7C6.96 0.91 6.87 1.12 6.73 1.29L4.27 4.15C4.17 4.26 4.06 4.35 3.92 4.41C3.79 4.46 3.64 4.5 3.5 4.5C3.35 4.5 3.2 4.46 3.07 4.41C2.93 4.35 2.82 4.26 2.72 4.15L0.26 1.29C0.12 1.12 0.03 0.91 0 0.7C-0.02 0.48 0.01 0.25 0.11 0.06C0.2 -0.11 0.33 -0.25 0.49 -0.35C0.66 -0.45 0.85 -0.5 1.04 -0.5Z"
-                                        fill="#2E2E2E" fill-opacity="1.000000" fill-rule="nonzero" />
+                                </a>
+                            </li>
+                            <li class="main-menu__item">
+                                <a class="main-menu__link" href="#">
+                                    <span class="main-menu__text">Цены</span>
+                                </a>
+                            </li>
+                            <li class="main-menu__item">
+                                <a class="main-menu__link" href="#">
+                                    <span class="main-menu__text">Статьи</span>
+                                </a>
+                            </li>
+                            <li class="main-menu__item">
+                                <a class="main-menu__link" href="#">
+                                    <span class="main-menu__text">Вопрос-ответ</span>
+                                </a>
+                            </li>
+                            <li class="main-menu__item">
+                                <a class="main-menu__link" href="#">
+                                    <span class="main-menu__text">Акции</span>
+                                </a>
+                            </li>
+                            <li class="main-menu__item">
+                                <a class="main-menu__link" href="#">
+                                    <span class="main-menu__text">Контакты</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__social">
+                        <form class="header__search search">
+                            <input type="text" placeholder="поиск" class="search__input">
+                            <button type="submit" class="search__btn">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.5 10.5L13.5 13.5M11.5 6.75C11.5 9.37335 9.37335 11.5 6.75 11.5C4.12665 11.5 2 9.37335 2 6.75C2 4.12665 4.12665 2 6.75 2C9.37335 2 11.5 4.12665 11.5 6.75Z"
+                                        stroke="#00253C" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
-
-                            </a>
-                        </li>
-                        <li class="main-menu__item">
-                            <a class="main-menu__link" href="#">
-                                <span class="main-menu__text">Цены</span>
-                            </a>
-                        </li>
-                        <li class="main-menu__item">
-                            <a class="main-menu__link" href="#">
-                                <span class="main-menu__text">Статьи</span>
-                            </a>
-                        </li>
-                        <li class="main-menu__item">
-                            <a class="main-menu__link" href="#">
-                                <span class="main-menu__text">Вопрос-ответ</span>
-                            </a>
-                        </li>
-                        <li class="main-menu__item">
-                            <a class="main-menu__link" href="#">
-                                <span class="main-menu__text">Акции</span>
-                            </a>
-                        </li>
-                        <li class="main-menu__item">
-                            <a class="main-menu__link" href="#">
-                                <span class="main-menu__text">Контакты</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header__social">
-                    <form class="header__search search">
-                        <input type="text" placeholder="поиск" class="search__input">
-                        <button type="submit" class="search__btn">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.5 10.5L13.5 13.5M11.5 6.75C11.5 9.37335 9.37335 11.5 6.75 11.5C4.12665 11.5 2 9.37335 2 6.75C2 4.12665 4.12665 2 6.75 2C9.37335 2 11.5 4.12665 11.5 6.75Z"
-                                    stroke="#00253C" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </form>
-                    <ul class="header__socials socials">
-                        <li class="socials__item social">
-                            <svg width="20" height="12" viewBox="0 0 20 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M19.547 0.825192C19.3378 1.49906 19.0317 2.13838 18.6386 2.72281L18.6544 2.6976C18.281 3.32482 17.8351 4.04948 17.3167 4.87159C16.8722 5.52064 16.6369 5.85665 16.6108 5.87961C16.492 6.02955 16.4151 6.20879 16.3882 6.39875L16.3874 6.40463C16.4086 6.57579 16.4875 6.73442 16.6108 6.85404L16.9442 7.22869C18.7277 9.07619 19.7309 10.3497 19.9538 11.0491C19.996 11.164 20.0096 11.2876 19.9933 11.4091C19.977 11.5305 19.9314 11.646 19.8604 11.7455L19.8621 11.743C19.7782 11.8302 19.6759 11.8973 19.5628 11.9393C19.4497 11.9814 19.3287 11.9972 19.2086 11.9857H19.212H17.015C16.7341 11.9857 16.4757 11.8866 16.2732 11.722L16.2757 11.7237C15.9866 11.4847 15.7211 11.218 15.4831 10.9273L15.4756 10.9172C15.0917 10.4799 14.7511 10.1117 14.4538 9.81261C13.4636 8.86394 12.733 8.38961 12.2618 8.38961C12.1097 8.37587 11.9577 8.41597 11.8317 8.50301L11.8342 8.50133C11.7801 8.5697 11.7404 8.64845 11.7175 8.73279C11.6946 8.81713 11.6889 8.90529 11.7009 8.9919V8.98854C11.6685 9.38049 11.6579 9.77396 11.6692 10.1671V10.1528V11.1264C11.6929 11.2427 11.6848 11.3633 11.6457 11.4753C11.6067 11.5873 11.5382 11.6865 11.4475 11.7623L11.4467 11.7631C11.0246 11.9553 10.5599 12.0327 10.099 11.9874L10.1098 11.9883C8.84813 11.9665 7.61624 11.5982 6.54679 10.9231L6.57596 10.9399C5.34278 10.1906 4.28576 9.18029 3.47801 7.97884L3.45551 7.94355C2.67142 6.88973 1.9822 5.76748 1.39604 4.59018L1.3377 4.46082C0.947106 3.69844 0.603894 2.91235 0.310045 2.10707L0.260038 1.95166C0.123798 1.53362 0.037072 1.1008 0.00166691 0.662228L0 0.641227C0 0.216735 0.247814 0.00448905 0.743442 0.00448905H2.93543C3.15704 -0.0130042 3.37702 0.0545013 3.55135 0.193494L3.54969 0.191814C3.71638 0.37578 3.83973 0.601746 3.90057 0.853753L3.90307 0.863833C4.2652 1.90909 4.70743 2.92438 5.22577 3.90052L5.16992 3.78544C5.54455 4.5524 5.99793 5.27766 6.52262 5.94934L6.50345 5.9233C6.94796 6.47323 7.29468 6.7482 7.54361 6.7482L7.57028 6.74904C7.62888 6.74913 7.68647 6.73364 7.73725 6.70415C7.78802 6.67465 7.83018 6.63219 7.85949 6.58103L7.86032 6.57935C7.94012 6.36881 7.97174 6.14283 7.95283 5.91826V5.9233V2.66484C7.93725 2.2954 7.84647 1.93313 7.68613 1.60053L7.69279 1.61649C7.59557 1.40512 7.46931 1.20859 7.31774 1.03268L7.32024 1.03604C7.18048 0.895408 7.08956 0.713019 7.06104 0.516063L7.0602 0.511023C7.0602 0.368219 7.12521 0.239696 7.22689 0.155693L7.22773 0.154853C7.33237 0.0582662 7.46923 0.00488947 7.61112 0.00532901H11.0733C11.1602 -0.00489361 11.2483 0.00679395 11.3296 0.0393429C11.4109 0.0718919 11.4829 0.124284 11.5392 0.191814L11.54 0.192654C11.6453 0.388695 11.6914 0.611491 11.6725 0.833592V0.829392V5.17484C11.6593 5.34623 11.6989 5.51756 11.7859 5.66541L11.7842 5.66205C11.8148 5.70802 11.856 5.74572 11.9044 5.7718C11.9528 5.79787 12.0069 5.81154 12.0618 5.81157C12.2023 5.80237 12.3387 5.75538 12.4552 5.67549L12.4527 5.67717C12.6794 5.52009 12.8744 5.34116 13.0436 5.13871L13.0469 5.13451C13.5618 4.54732 14.0235 3.91477 14.4263 3.24446L14.4588 3.18566C14.7455 2.70685 15.0555 2.11715 15.3364 1.51149L15.3881 1.38801L15.7598 0.638707C15.8253 0.444968 15.9515 0.277967 16.1195 0.162942C16.2874 0.0479161 16.488 -0.00888268 16.6908 0.0011288H16.6883H18.8811C19.4734 0.0011288 19.6957 0.275817 19.5479 0.825192H19.547Z"
-                                    fill="#1F587A" />
-                            </svg>
-                        </li>
-                        <li class="socials__item social">
-                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M16.6111 14.951V14.9492L16.6284 14.9097L19.5 1.03268V0.988627C19.5 0.64262 19.3659 0.340666 19.0768 0.159861C18.823 0.00108267 18.531 -0.00993075 18.3261 0.00475392C18.1353 0.0212889 17.9471 0.0582304 17.765 0.114889C17.6873 0.138894 17.6106 0.165837 17.5352 0.195655L17.5227 0.200243L1.51282 6.22004L1.50803 6.22188C1.45936 6.23781 1.41172 6.2565 1.36536 6.27786C1.2515 6.3269 1.14226 6.38524 1.03884 6.45224C0.832975 6.58808 0.441346 6.90747 0.507415 7.41409C0.561995 7.83444 0.863616 8.1006 1.06757 8.23919C1.18795 8.32005 1.31739 8.38777 1.45345 8.4411L1.48409 8.45395L1.49367 8.4567L1.50037 8.45946L4.3021 9.36348C4.29253 9.53144 4.30976 9.70306 4.35668 9.87286L5.75946 14.9749C5.83609 15.253 6.00169 15.5011 6.23298 15.6844C6.46428 15.8676 6.74965 15.9769 7.04904 15.9967C7.34842 16.0166 7.64677 15.946 7.90219 15.795C8.1576 15.644 8.35725 15.4201 8.4731 15.1547L10.6639 12.9098L14.4261 15.6742L14.4797 15.6962C14.8215 15.8394 15.1404 15.8844 15.4324 15.8468C15.7245 15.8082 15.9562 15.6907 16.1305 15.5577C16.332 15.401 16.4927 15.2015 16.5996 14.9749L16.6073 14.9593L16.6102 14.9538L16.6111 14.951ZM5.7451 9.52226C5.72956 9.46565 5.73326 9.40577 5.75564 9.3513C5.77802 9.29684 5.81793 9.25063 5.86958 9.21939L15.3692 3.4373C15.3692 3.4373 15.9284 3.11148 15.9083 3.4373C15.9083 3.4373 16.0079 3.4942 15.7082 3.76128C15.4248 4.01551 8.9375 10.0188 8.28063 10.6264C8.24411 10.6604 8.21852 10.7037 8.2069 10.7512L7.14788 14.6243L5.7451 9.52226Z"
-                                    fill="#1F587A" />
-                            </svg>
-                        </li>
-                    </ul>
-                    <picture class="social-icon__picture">
-                        <img class="social-icon__img social-icon__footer" src="assets/img/sections/footer/footer__icon.png" alt="">
-                    </picture>
+                            </button>
+                        </form>
+                        <ul class="header__socials socials">
+                            <li class="socials__item social">
+                                <svg width="20" height="12" viewBox="0 0 20 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19.547 0.825192C19.3378 1.49906 19.0317 2.13838 18.6386 2.72281L18.6544 2.6976C18.281 3.32482 17.8351 4.04948 17.3167 4.87159C16.8722 5.52064 16.6369 5.85665 16.6108 5.87961C16.492 6.02955 16.4151 6.20879 16.3882 6.39875L16.3874 6.40463C16.4086 6.57579 16.4875 6.73442 16.6108 6.85404L16.9442 7.22869C18.7277 9.07619 19.7309 10.3497 19.9538 11.0491C19.996 11.164 20.0096 11.2876 19.9933 11.4091C19.977 11.5305 19.9314 11.646 19.8604 11.7455L19.8621 11.743C19.7782 11.8302 19.6759 11.8973 19.5628 11.9393C19.4497 11.9814 19.3287 11.9972 19.2086 11.9857H19.212H17.015C16.7341 11.9857 16.4757 11.8866 16.2732 11.722L16.2757 11.7237C15.9866 11.4847 15.7211 11.218 15.4831 10.9273L15.4756 10.9172C15.0917 10.4799 14.7511 10.1117 14.4538 9.81261C13.4636 8.86394 12.733 8.38961 12.2618 8.38961C12.1097 8.37587 11.9577 8.41597 11.8317 8.50301L11.8342 8.50133C11.7801 8.5697 11.7404 8.64845 11.7175 8.73279C11.6946 8.81713 11.6889 8.90529 11.7009 8.9919V8.98854C11.6685 9.38049 11.6579 9.77396 11.6692 10.1671V10.1528V11.1264C11.6929 11.2427 11.6848 11.3633 11.6457 11.4753C11.6067 11.5873 11.5382 11.6865 11.4475 11.7623L11.4467 11.7631C11.0246 11.9553 10.5599 12.0327 10.099 11.9874L10.1098 11.9883C8.84813 11.9665 7.61624 11.5982 6.54679 10.9231L6.57596 10.9399C5.34278 10.1906 4.28576 9.18029 3.47801 7.97884L3.45551 7.94355C2.67142 6.88973 1.9822 5.76748 1.39604 4.59018L1.3377 4.46082C0.947106 3.69844 0.603894 2.91235 0.310045 2.10707L0.260038 1.95166C0.123798 1.53362 0.037072 1.1008 0.00166691 0.662228L0 0.641227C0 0.216735 0.247814 0.00448905 0.743442 0.00448905H2.93543C3.15704 -0.0130042 3.37702 0.0545013 3.55135 0.193494L3.54969 0.191814C3.71638 0.37578 3.83973 0.601746 3.90057 0.853753L3.90307 0.863833C4.2652 1.90909 4.70743 2.92438 5.22577 3.90052L5.16992 3.78544C5.54455 4.5524 5.99793 5.27766 6.52262 5.94934L6.50345 5.9233C6.94796 6.47323 7.29468 6.7482 7.54361 6.7482L7.57028 6.74904C7.62888 6.74913 7.68647 6.73364 7.73725 6.70415C7.78802 6.67465 7.83018 6.63219 7.85949 6.58103L7.86032 6.57935C7.94012 6.36881 7.97174 6.14283 7.95283 5.91826V5.9233V2.66484C7.93725 2.2954 7.84647 1.93313 7.68613 1.60053L7.69279 1.61649C7.59557 1.40512 7.46931 1.20859 7.31774 1.03268L7.32024 1.03604C7.18048 0.895408 7.08956 0.713019 7.06104 0.516063L7.0602 0.511023C7.0602 0.368219 7.12521 0.239696 7.22689 0.155693L7.22773 0.154853C7.33237 0.0582662 7.46923 0.00488947 7.61112 0.00532901H11.0733C11.1602 -0.00489361 11.2483 0.00679395 11.3296 0.0393429C11.4109 0.0718919 11.4829 0.124284 11.5392 0.191814L11.54 0.192654C11.6453 0.388695 11.6914 0.611491 11.6725 0.833592V0.829392V5.17484C11.6593 5.34623 11.6989 5.51756 11.7859 5.66541L11.7842 5.66205C11.8148 5.70802 11.856 5.74572 11.9044 5.7718C11.9528 5.79787 12.0069 5.81154 12.0618 5.81157C12.2023 5.80237 12.3387 5.75538 12.4552 5.67549L12.4527 5.67717C12.6794 5.52009 12.8744 5.34116 13.0436 5.13871L13.0469 5.13451C13.5618 4.54732 14.0235 3.91477 14.4263 3.24446L14.4588 3.18566C14.7455 2.70685 15.0555 2.11715 15.3364 1.51149L15.3881 1.38801L15.7598 0.638707C15.8253 0.444968 15.9515 0.277967 16.1195 0.162942C16.2874 0.0479161 16.488 -0.00888268 16.6908 0.0011288H16.6883H18.8811C19.4734 0.0011288 19.6957 0.275817 19.5479 0.825192H19.547Z"
+                                        fill="#1F587A" />
+                                </svg>
+                            </li>
+                            <li class="socials__item social">
+                                <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16.6111 14.951V14.9492L16.6284 14.9097L19.5 1.03268V0.988627C19.5 0.64262 19.3659 0.340666 19.0768 0.159861C18.823 0.00108267 18.531 -0.00993075 18.3261 0.00475392C18.1353 0.0212889 17.9471 0.0582304 17.765 0.114889C17.6873 0.138894 17.6106 0.165837 17.5352 0.195655L17.5227 0.200243L1.51282 6.22004L1.50803 6.22188C1.45936 6.23781 1.41172 6.2565 1.36536 6.27786C1.2515 6.3269 1.14226 6.38524 1.03884 6.45224C0.832975 6.58808 0.441346 6.90747 0.507415 7.41409C0.561995 7.83444 0.863616 8.1006 1.06757 8.23919C1.18795 8.32005 1.31739 8.38777 1.45345 8.4411L1.48409 8.45395L1.49367 8.4567L1.50037 8.45946L4.3021 9.36348C4.29253 9.53144 4.30976 9.70306 4.35668 9.87286L5.75946 14.9749C5.83609 15.253 6.00169 15.5011 6.23298 15.6844C6.46428 15.8676 6.74965 15.9769 7.04904 15.9967C7.34842 16.0166 7.64677 15.946 7.90219 15.795C8.1576 15.644 8.35725 15.4201 8.4731 15.1547L10.6639 12.9098L14.4261 15.6742L14.4797 15.6962C14.8215 15.8394 15.1404 15.8844 15.4324 15.8468C15.7245 15.8082 15.9562 15.6907 16.1305 15.5577C16.332 15.401 16.4927 15.2015 16.5996 14.9749L16.6073 14.9593L16.6102 14.9538L16.6111 14.951ZM5.7451 9.52226C5.72956 9.46565 5.73326 9.40577 5.75564 9.3513C5.77802 9.29684 5.81793 9.25063 5.86958 9.21939L15.3692 3.4373C15.3692 3.4373 15.9284 3.11148 15.9083 3.4373C15.9083 3.4373 16.0079 3.4942 15.7082 3.76128C15.4248 4.01551 8.9375 10.0188 8.28063 10.6264C8.24411 10.6604 8.21852 10.7037 8.2069 10.7512L7.14788 14.6243L5.7451 9.52226Z"
+                                        fill="#1F587A" />
+                                </svg>
+                            </li>
+                        </ul>
+                        <picture class="social-icon__picture">
+                            <img class="social-icon__img social-icon__footer"
+                                src="assets/img/sections/footer/footer__icon.png" alt="">
+                        </picture>
+                    </div>
                 </div>
             </div>
         </div>
@@ -310,7 +401,7 @@
                                 <p class="help__block_title">Эконом</p>
                                 <p class="help__block_num">01</p>
                             </div>
-                            <p class="help__block_price">3500 руб.</p>
+                            <p class="help__block_price section_price">3500 руб.</p>
                         </div>
                         <ul class="help__services-list">
                             <li class="help__services-item">
@@ -705,7 +796,97 @@
                 </div>
             </div>
         </section>
-        <section class="chart section-offset"></section>
+        <section class="chart section-offset">
+            <div class="chart__container container container">
+                <h3 class="chart-title section-title">График работы медицинских сотрудников и административных работников</h3>
+                <div class="chart__block">
+                    <div class="chart__block-title">
+                        <p class="chart__block_descr-name section-descr">ФИО работника</p>
+                        <p class="chart__block_descr-doctor section-descr">Должность</p>
+                        <p class="chart__block_descr-date section-descr">Дни недели</p>
+                        <p class="chart__block_descr-time section-descr">Время</p>
+                    </div>
+                    <div class="chart__block_item">
+                        <p class="chart__block_descr chart__block_descr-name">Биробиджан Арзамас Денисович</p>
+                        <p class="chart__block_descr chart__block_descr-doctor">Главный врач</p>
+                        <p class="chart__block_descr chart__block_descr-date">Понедельник-пятница</p>
+                        <p class="chart__block_descr chart__block_descr-time">09:00 - 16:00</p>
+                    </div>
+                    <div class="chart__block_item chart__block_color">
+                        <p class="chart__block_descr chart__block_descr-name">Биробиджан Арзамас Денисович</p>
+                        <p class="chart__block_descr chart__block_descr-doctor">Главный врач</p>
+                        <p class="chart__block_descr chart__block_descr-date">Понедельник-пятница</p>
+                        <p class="chart__block_descr chart__block_descr-time">09:00 - 16:00</p>
+                    </div>
+                    <div class="chart__block_item">
+                        <p class="chart__block_descr chart__block_descr-name">Биробиджан Арзамас Денисович</p>
+                        <p class="chart__block_descr chart__block_descr-doctor">Главный врач</p>
+                        <p class="chart__block_descr chart__block_descr-date">Понедельник-пятница</p>
+                        <p class="chart__block_descr chart__block_descr-time">09:00 - 16:00</p>
+                    </div>
+                    <div class="chart__block_item chart__block_color">
+                        <p class="chart__block_descr chart__block_descr-name">Биробиджан Арзамас Денисович</p>
+                        <p class="chart__block_descr chart__block_descr-doctor">Главный врач</p>
+                        <p class="chart__block_descr chart__block_descr-date">Понедельник-пятница</p>
+                        <p class="chart__block_descr chart__block_descr-time">09:00 - 16:00</p>
+                    </div>
+                    <div class="chart__block_item">
+                        <p class="chart__block_descr chart__block_descr-name">Биробиджан Арзамас Денисович</p>
+                        <p class="chart__block_descr chart__block_descr-doctor">Главный врач</p>
+                        <p class="chart__block_descr chart__block_descr-date">Понедельник-пятница</p>
+                        <p class="chart__block_descr chart__block_descr-time">09:00 - 16:00</p>
+                    </div>
+                    <div class="chart__block_item chart__block_color">
+                        <p class="chart__block_descr chart__block_descr-name">Биробиджан Арзамас Денисович</p>
+                        <p class="chart__block_descr chart__block_descr-doctor">Главный врач</p>
+                        <p class="chart__block_descr chart__block_descr-date">Понедельник-пятница</p>
+                        <p class="chart__block_descr chart__block_descr-time">09:00 - 16:00</p>
+                    </div>
+                    <div class="chart__block_item">
+                        <p class="chart__block_descr chart__block_descr-name">Биробиджан Арзамас Денисович</p>
+                        <p class="chart__block_descr chart__block_descr-doctor">Главный врач</p>
+                        <p class="chart__block_descr chart__block_descr-date">Понедельник-пятница</p>
+                        <p class="chart__block_descr chart__block_descr-time">09:00 - 16:00</p>
+                    </div>
+                    <div class="chart__block_item chart__block_color">
+                        <p class="chart__block_descr chart__block_descr-name">Биробиджан Арзамас Денисович</p>
+                        <p class="chart__block_descr chart__block_descr-doctor">Главный врач</p>
+                        <p class="chart__block_descr chart__block_descr-date">Понедельник-пятница</p>
+                        <p class="chart__block_descr chart__block_descr-time">09:00 - 16:00</p>
+                    </div>
+                    <div class="chart__block_item">
+                        <p class="chart__block_descr chart__block_descr-name">Биробиджан Арзамас Денисович</p>
+                        <p class="chart__block_descr chart__block_descr-doctor">Главный врач</p>
+                        <p class="chart__block_descr chart__block_descr-date">Понедельник-пятница</p>
+                        <p class="chart__block_descr chart__block_descr-time">09:00 - 16:00</p>
+                    </div>
+                    <div class="chart__block_item chart__block_color">
+                        <p class="chart__block_descr chart__block_descr-name">Биробиджан Арзамас Денисович</p>
+                        <p class="chart__block_descr chart__block_descr-doctor">Главный врач</p>
+                        <p class="chart__block_descr chart__block_descr-date">Понедельник-пятница</p>
+                        <p class="chart__block_descr chart__block_descr-time">09:00 - 16:00</p>
+                    </div>
+                    <div class="chart__block_item">
+                        <p class="chart__block_descr chart__block_descr-name">Биробиджан Арзамас Денисович</p>
+                        <p class="chart__block_descr chart__block_descr-doctor">Главный врач</p>
+                        <p class="chart__block_descr chart__block_descr-date">Понедельник-пятница</p>
+                        <p class="chart__block_descr chart__block_descr-time">09:00 - 16:00</p>
+                    </div>
+                    <div class="chart__block_item chart__block_color">
+                        <p class="chart__block_descr chart__block_descr-name">Биробиджан Арзамас Денисович</p>
+                        <p class="chart__block_descr chart__block_descr-doctor">Главный врач</p>
+                        <p class="chart__block_descr chart__block_descr-date">Понедельник-пятница</p>
+                        <p class="chart__block_descr chart__block_descr-time">09:00 - 16:00</p>
+                    </div>
+                    <div class="chart__block_item">
+                        <p class="chart__block_descr chart__block_descr-name">Биробиджан Арзамас Денисович</p>
+                        <p class="chart__block_descr chart__block_descr-doctor">Главный врач</p>
+                        <p class="chart__block_descr chart__block_descr-date">Понедельник-пятница</p>
+                        <p class="chart__block_descr chart__block_descr-time">09:00 - 16:00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="stages section-offset">
             <div class="stages__container container">
                 <h3 class="stages-title section-title">
@@ -793,31 +974,31 @@
             <div class="advantages__container container">
                 <h3 class="advantages__title section-title">Наши преимущества</h3>
                 <div class="advantages__container-wrapper grid-5-10-10">
-                    <div class="advantages__container-wrapper__item-1">
+                    <div class="advantages__container-wrapper_item advantages__container-wrapper_item-1">
                         <img class="advantages__container-wrapper__img" src="assets/img/sections/advantages/advantages-icon1.svg" alt="">
                         <p class="advantages__container-wrapper__descr">
                             Приезд бригады в течении 30 минут
                         </p>
                         </div>
-                        <div class="advantages__container-wrapper__item-2">
+                        <div class="advantages__container-wrapper_item advantages__container-wrapper_item-2">
                             <img class="advantages__container-wrapper__img" src="assets/img/sections/advantages/advantages-icon2.svg" alt="">
                             <p class="advantages__container-wrapper__descr">
                                 Полностью анонимное лечение
                             </p>
                             </div>
-                            <div class="advantages__container-wrapper__item-3">
+                            <div class="advantages__container-wrapper_item advantages__container-wrapper_item-3">
                                 <img class="advantages__container-wrapper__img" src="assets/img/sections/advantages/advantages-icon3.svg" alt="">
                                 <p class="advantages__container-wrapper__descr ">
                                     Квалифицированные врачи
                                 </p>
                                 </div>
-                                <div class="advantages__container-wrapper__item-4">
+                                <div class="advantages__container-wrapper_item advantages__container-wrapper_item-4">
                                     <img class="advantages__container-wrapper__img" src="assets/img/sections/advantages/advantages-icon4.svg" alt="">
                                     <p class="advantages__container-wrapper__descr">
                                         Не ставим наших пациентов на учет
                                     </p>
                                     </div>
-                                    <div class="advantages__container-wrapper__item-5">
+                                    <div class="advantages__container-wrapper_item advantages__container-wrapper_item-5">
                                         <img class="advantages__container-wrapper__img" src="assets/img/sections/advantages/advantages-icon5.svg" alt="">
                                         <p class="advantages__container-wrapper__descr">
                                             Беремся за случаи любой сложности
@@ -898,7 +1079,7 @@
                                 <p class="team__slide-block__descr section-descr">Врач-нарколог, невролог, психиатр</p>
                                 <p class="large-descr team__slide-block__large-descr">Зарипова Варвара Геннадьевна</p>
                                 <span class="span-offset">
-                                    <p class="team__slide-widht__descr">Подробнее</p>
+                                    <p class="spa-widht__descr">Подробнее</p>
                                     <svg width="8.000000" height="7.000000" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <desc>
                                                 Created with Pixso.
@@ -1451,87 +1632,111 @@
                 <div class="geolocation__container-wrapper">
                     <div class="geolocation__container__about">
                         <div class="geolocation__container__about-info">
+                            <div class="geolocation__info">
                                 <div class="geolocation__container-info">
                                     <div class="geolocation__container-info__large-block">
-                                    <div class="footer__info-item">
-                                        <svg width="14.000000" height="16.000000" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <desc>
+                                        <div class="footer__info-item">
+                                            <svg width="14.000000" height="16.000000" viewBox="0 0 14 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <desc>
                                                     Created with Pixso.
-                                            </desc>
-                                            <defs/>
-                                            <path id="Vector" d="M8.34 15.49C10.38 13.74 14 10.15 14 6.86C14 5.04 13.26 3.29 11.94 2.01C10.63 0.72 8.85 0 7 0C5.14 0 3.36 0.72 2.05 2.01C0.73 3.29 0 5.04 0 6.86C0 10.15 3.61 13.74 5.65 15.49C6.02 15.82 6.5 16 7 16C7.49 16 7.97 15.82 8.34 15.49ZM4.66 6.86C4.66 6.25 4.91 5.67 5.35 5.24C5.78 4.81 6.38 4.57 7 4.57C7.61 4.57 8.21 4.81 8.64 5.24C9.08 5.67 9.33 6.25 9.33 6.86C9.33 7.47 9.08 8.05 8.64 8.48C8.21 8.91 7.61 9.15 7 9.15C6.38 9.15 5.78 8.91 5.35 8.48C4.91 8.05 4.66 7.47 4.66 6.86Z" fill="#1F587A" fill-opacity="1.000000" fill-rule="nonzero"/>
-                                        </svg>                                        
-                                    <p class="widht-descr">Адрес call-центра:</p>
+                                                </desc>
+                                                <defs />
+                                                <path id="Vector"
+                                                    d="M8.34 15.49C10.38 13.74 14 10.15 14 6.86C14 5.04 13.26 3.29 11.94 2.01C10.63 0.72 8.85 0 7 0C5.14 0 3.36 0.72 2.05 2.01C0.73 3.29 0 5.04 0 6.86C0 10.15 3.61 13.74 5.65 15.49C6.02 15.82 6.5 16 7 16C7.49 16 7.97 15.82 8.34 15.49ZM4.66 6.86C4.66 6.25 4.91 5.67 5.35 5.24C5.78 4.81 6.38 4.57 7 4.57C7.61 4.57 8.21 4.81 8.64 5.24C9.08 5.67 9.33 6.25 9.33 6.86C9.33 7.47 9.08 8.05 8.64 8.48C8.21 8.91 7.61 9.15 7 9.15C6.38 9.15 5.78 8.91 5.35 8.48C4.91 8.05 4.66 7.47 4.66 6.86Z"
+                                                    fill="#1F587A" fill-opacity="1.000000" fill-rule="nonzero" />
+                                            </svg>
+                                            <p class="widht-descr">Адрес call-центра:</p>
+                                        </div>
+                                        <p class="section__info-descr">Екатеринбург, Верхнедонская, 28/8</p>
                                     </div>
-                                    <p class="section__info-descr">Екатеринбург, Верхнедонская, 28/8</p>
-                                </div>
-                                <div class="geolocation__container-info__large-block">
-                                    <div class="footer__info-item">
-                                        <svg width="16.000000" height="16.000000" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <desc>
+                                    <div class="geolocation__container-info__large-block">
+                                        <div class="footer__info-item">
+                                            <svg width="16.000000" height="16.000000" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <desc>
                                                     Created with Pixso.
-                                            </desc>
-                                            <defs/>
-                                            <path id="Vector" d="M4 0C3.73 0 3.48 0.1 3.29 0.29C3.1 0.48 3 0.73 3 1L3 2L2 2C1.46 2 0.96 2.21 0.58 2.58C0.21 2.96 0 3.46 0 4L0 14C0 14.53 0.21 15.03 0.58 15.41C0.96 15.78 1.46 16 2 16L14 16C14.53 16 15.03 15.78 15.41 15.41C15.78 15.03 16 14.53 16 14L16 4C16 3.46 15.78 2.96 15.41 2.58C15.03 2.21 14.53 2 14 2L13 2L13 1C13 0.73 12.89 0.48 12.7 0.29C12.51 0.1 12.26 0 12 0C11.73 0 11.48 0.1 11.29 0.29C11.1 0.48 11 0.73 11 1L11 2L5 2L5 1C5 0.73 4.89 0.48 4.7 0.29C4.51 0.1 4.26 0 4 0ZM4 5C3.73 5 3.48 5.1 3.29 5.29C3.1 5.48 3 5.73 3 6C3 6.26 3.1 6.51 3.29 6.7C3.48 6.89 3.73 7 4 7L12 7C12.26 7 12.51 6.89 12.7 6.7C12.89 6.51 13 6.26 13 6C13 5.73 12.89 5.48 12.7 5.29C12.51 5.1 12.26 5 12 5L4 5Z" fill="#1F587A" fill-opacity="1.000000" fill-rule="evenodd"/>
-                                        </svg>                                        
-                                        <p class="widht-descr">Режим работы:</p>
+                                                </desc>
+                                                <defs />
+                                                <path id="Vector"
+                                                    d="M4 0C3.73 0 3.48 0.1 3.29 0.29C3.1 0.48 3 0.73 3 1L3 2L2 2C1.46 2 0.96 2.21 0.58 2.58C0.21 2.96 0 3.46 0 4L0 14C0 14.53 0.21 15.03 0.58 15.41C0.96 15.78 1.46 16 2 16L14 16C14.53 16 15.03 15.78 15.41 15.41C15.78 15.03 16 14.53 16 14L16 4C16 3.46 15.78 2.96 15.41 2.58C15.03 2.21 14.53 2 14 2L13 2L13 1C13 0.73 12.89 0.48 12.7 0.29C12.51 0.1 12.26 0 12 0C11.73 0 11.48 0.1 11.29 0.29C11.1 0.48 11 0.73 11 1L11 2L5 2L5 1C5 0.73 4.89 0.48 4.7 0.29C4.51 0.1 4.26 0 4 0ZM4 5C3.73 5 3.48 5.1 3.29 5.29C3.1 5.48 3 5.73 3 6C3 6.26 3.1 6.51 3.29 6.7C3.48 6.89 3.73 7 4 7L12 7C12.26 7 12.51 6.89 12.7 6.7C12.89 6.51 13 6.26 13 6C13 5.73 12.89 5.48 12.7 5.29C12.51 5.1 12.26 5 12 5L4 5Z"
+                                                    fill="#1F587A" fill-opacity="1.000000" fill-rule="evenodd" />
+                                            </svg>
+                                            <p class="widht-descr">Режим работы:</p>
+                                        </div>
+                                        <p class="section__info-descr">Круглосуточно, без выходных</p>
                                     </div>
-                                    <p class="section__info-descr">Круглосуточно, без выходных</p>
-                                </div>
-                                <div class="geolocation__container-info__large-block">
-                                    <div class="footer__info-item info-item">
-                                        <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <desc>
+                                    <div class="geolocation__container-info__large-block">
+                                        <div class="footer__info-item info-item">
+                                            <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <desc>
                                                     Created with Pixso.
-                                            </desc>
-                                            <defs>
-                                                <clipPath id="clip1345_129">
-                                                    <rect id="Icon" width="20.000000" height="20.000000" fill="white" fill-opacity="0"/>
-                                                </clipPath>
-                                            </defs>
-                                            <rect id="Icon" width="20.000000" height="20.000000" fill="#FFFFFF" fill-opacity="0"/>
-                                            <g clip-path="url(#clip1345_129)">
-                                                <path id="Vector" d="M14.52 17.99C11.47 17.99 8.54 16.77 6.38 14.61C4.21 12.44 3 9.51 3 6.45C3 5.53 3.36 4.65 4 4.01C4.65 3.36 5.53 3 6.44 3C6.63 2.99 6.82 3.01 7.01 3.05C7.2 3.07 7.38 3.12 7.55 3.18C7.68 3.23 7.79 3.3 7.87 3.4C7.96 3.5 8.01 3.62 8.04 3.75L9.07 8.25C9.09 8.37 9.09 8.49 9.06 8.61C9.02 8.74 8.96 8.85 8.87 8.93C8.77 9.04 8.77 9.05 7.85 9.53C8.58 11.15 9.88 12.45 11.49 13.2C11.98 12.27 11.98 12.26 12.09 12.16C12.18 12.07 12.29 12.01 12.41 11.97C12.53 11.94 12.66 11.94 12.78 11.96L17.27 12.99C17.39 13.02 17.51 13.08 17.6 13.17C17.7 13.25 17.77 13.36 17.81 13.48C17.87 13.66 17.92 13.84 17.95 14.03C17.98 14.22 18 14.41 18 14.6C17.98 15.51 17.61 16.38 16.96 17.01C16.31 17.65 15.43 18 14.52 17.99Z" fill="#1F587A" fill-opacity="1.000000" fill-rule="nonzero"/>
-                                            </g>
-                                        </svg>                                        
-                                        
-                                        <p class="widht-descr">Номер телефона:</p>
+                                                </desc>
+                                                <defs>
+                                                    <clipPath id="clip1345_129">
+                                                        <rect id="Icon" width="20.000000" height="20.000000"
+                                                            fill="white" fill-opacity="0" />
+                                                    </clipPath>
+                                                </defs>
+                                                <rect id="Icon" width="20.000000" height="20.000000" fill="#FFFFFF"
+                                                    fill-opacity="0" />
+                                                <g clip-path="url(#clip1345_129)">
+                                                    <path id="Vector"
+                                                        d="M14.52 17.99C11.47 17.99 8.54 16.77 6.38 14.61C4.21 12.44 3 9.51 3 6.45C3 5.53 3.36 4.65 4 4.01C4.65 3.36 5.53 3 6.44 3C6.63 2.99 6.82 3.01 7.01 3.05C7.2 3.07 7.38 3.12 7.55 3.18C7.68 3.23 7.79 3.3 7.87 3.4C7.96 3.5 8.01 3.62 8.04 3.75L9.07 8.25C9.09 8.37 9.09 8.49 9.06 8.61C9.02 8.74 8.96 8.85 8.87 8.93C8.77 9.04 8.77 9.05 7.85 9.53C8.58 11.15 9.88 12.45 11.49 13.2C11.98 12.27 11.98 12.26 12.09 12.16C12.18 12.07 12.29 12.01 12.41 11.97C12.53 11.94 12.66 11.94 12.78 11.96L17.27 12.99C17.39 13.02 17.51 13.08 17.6 13.17C17.7 13.25 17.77 13.36 17.81 13.48C17.87 13.66 17.92 13.84 17.95 14.03C17.98 14.22 18 14.41 18 14.6C17.98 15.51 17.61 16.38 16.96 17.01C16.31 17.65 15.43 18 14.52 17.99Z"
+                                                        fill="#1F587A" fill-opacity="1.000000" fill-rule="nonzero" />
+                                                </g>
+                                            </svg>
+
+                                            <p class="widht-descr">Номер телефона:</p>
+                                        </div>
+                                        <a class="section__info-descr" href="tel:+78005001160">+7 (800) 500-11-60</a>
                                     </div>
-                                    <a class="section__info-descr" href="tel:+78005001160">+7 (800) 500-11-60</a>
-                                </div>
-                                <div class="geolocation__container-info__large-block">
-                                    <div class="footer__info-item">
-                                        <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <desc>
+                                    <div class="geolocation__container-info__large-block">
+                                        <div class="footer__info-item">
+                                            <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <desc>
                                                     Created with Pixso.
-                                            </desc>
-                                            <defs>
-                                                <clipPath id="clip1348_243">
-                                                    <rect id="Icon" width="20.000000" height="20.000000" fill="white" fill-opacity="0"/>
-                                                </clipPath>
-                                            </defs>
-                                            <rect id="Icon" width="20.000000" height="20.000000" fill="#FFFFFF" fill-opacity="0"/>
-                                            <g clip-path="url(#clip1348_243)">
-                                                <path id="Vector" d="M17.2 3.33L2.8 3.33C1.81 3.33 1 4.12 1 5.08L1 15.58C1 16.54 1.81 17.33 2.8 17.33L17.2 17.33C18.18 17.33 19 16.54 19 15.58L19 5.08C19 4.12 18.18 3.33 17.2 3.33ZM16.84 7.05L10.47 10.91C10.18 11.09 9.81 11.09 9.52 10.91L3.15 7.05C3.06 7 2.99 6.93 2.92 6.85C2.86 6.77 2.81 6.68 2.79 6.58C2.76 6.48 2.76 6.38 2.77 6.28C2.79 6.18 2.83 6.09 2.88 6C2.94 5.92 3.01 5.85 3.09 5.79C3.18 5.73 3.27 5.69 3.38 5.67C3.48 5.65 3.58 5.65 3.68 5.67C3.78 5.69 3.88 5.73 3.96 5.79L10 9.45L16.03 5.79C16.11 5.73 16.21 5.69 16.31 5.67C16.41 5.65 16.51 5.65 16.61 5.67C16.72 5.69 16.81 5.73 16.9 5.79C16.98 5.85 17.05 5.92 17.11 6C17.16 6.09 17.2 6.18 17.22 6.28C17.23 6.38 17.23 6.48 17.2 6.58C17.18 6.68 17.13 6.77 17.07 6.85C17 6.93 16.93 7 16.84 7.05Z" fill="#1F587A" fill-opacity="1.000000" fill-rule="nonzero"/>
-                                            </g>
-                                        </svg>                                                               
-                                        <p class="widht-descr">Электронная почта</p>
+                                                </desc>
+                                                <defs>
+                                                    <clipPath id="clip1348_243">
+                                                        <rect id="Icon" width="20.000000" height="20.000000"
+                                                            fill="white" fill-opacity="0" />
+                                                    </clipPath>
+                                                </defs>
+                                                <rect id="Icon" width="20.000000" height="20.000000" fill="#FFFFFF"
+                                                    fill-opacity="0" />
+                                                <g clip-path="url(#clip1348_243)">
+                                                    <path id="Vector"
+                                                        d="M17.2 3.33L2.8 3.33C1.81 3.33 1 4.12 1 5.08L1 15.58C1 16.54 1.81 17.33 2.8 17.33L17.2 17.33C18.18 17.33 19 16.54 19 15.58L19 5.08C19 4.12 18.18 3.33 17.2 3.33ZM16.84 7.05L10.47 10.91C10.18 11.09 9.81 11.09 9.52 10.91L3.15 7.05C3.06 7 2.99 6.93 2.92 6.85C2.86 6.77 2.81 6.68 2.79 6.58C2.76 6.48 2.76 6.38 2.77 6.28C2.79 6.18 2.83 6.09 2.88 6C2.94 5.92 3.01 5.85 3.09 5.79C3.18 5.73 3.27 5.69 3.38 5.67C3.48 5.65 3.58 5.65 3.68 5.67C3.78 5.69 3.88 5.73 3.96 5.79L10 9.45L16.03 5.79C16.11 5.73 16.21 5.69 16.31 5.67C16.41 5.65 16.51 5.65 16.61 5.67C16.72 5.69 16.81 5.73 16.9 5.79C16.98 5.85 17.05 5.92 17.11 6C17.16 6.09 17.2 6.18 17.22 6.28C17.23 6.38 17.23 6.48 17.2 6.58C17.18 6.68 17.13 6.77 17.07 6.85C17 6.93 16.93 7 16.84 7.05Z"
+                                                        fill="#1F587A" fill-opacity="1.000000" fill-rule="nonzero" />
+                                                </g>
+                                            </svg>
+                                            <p class="widht-descr">Электронная почта</p>
+                                        </div>
+                                        <a class="section__info-descr"
+                                            href="mailto:alfa_clinic@gmail.com">alfa_clinic@gmail.com</a>
                                     </div>
-                                    <a class="section__info-descr" href="mailto:alfa_clinic@gmail.com">alfa_clinic@gmail.com</a>
                                 </div>
+                                <button class="geolocation__button btn_big btn_color">
+                                    <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
+
+                                    <span class="btn__text">Записаться на прием</span>
+                                </button>
+                                <button class="geolocation__button btn_big btn_red">
+                                    <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
+                                    <span class="btn__text">Вызвать врача</span>
+                                </button>
+                            </div>
+                            <div id="map" class="geolocation__map"></div>
                         </div>
-                            <button class="geolocation__button btn_big btn_color">
-                                <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
-                                
-                                <span class="btn__text">Записаться на прием</span>
-                            </button>
-                            <button class="geolocation__button btn_big btn_red">
-                                <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
-                                <span class="btn__text">Вызвать врача</span>
-                            </button>
                     </div>
                 </div>
-            </div>
         </section>
         <section class="offers-2 section-offset">
             <div class="offers__container container">

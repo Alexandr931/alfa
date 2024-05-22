@@ -291,9 +291,21 @@ body {
     gap: 15px 20px;
 }
 
+.grid-4-1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
 /* .content-body li:last-child{
     margin-bottom: 0;
 } */
+.section_price {
+    color: rgb(255, 255, 252);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 140%;
+}
 
 .top {
     padding: 10px 0;
@@ -555,6 +567,60 @@ body {
 .send-popup .popup__content {
     width: 440px;
     padding: 60px 40px;
+}
+
+.accor {
+    box-shadow: 0px 0px 12px 0px #00253C0F;
+    background-color: #1F587A;
+    transition: background-color .2s ease;
+}
+
+.accor.active {
+    background-color: initial;
+}
+
+.accor-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    padding: 15px 30px;
+}
+
+.accor-title__text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFC;
+    transition: color .2s ease;
+}
+
+.accor.active .accor-title__text {
+    color: #2E2E2E;
+}
+
+.accor-open-decor {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFC;
+    border: 2px solid transparent;
+    transition: transform .2s ease;
+}
+
+.accor.active .accor-open-decor {
+    border-color: #DEECFD;
+    transform: rotate(-90deg);
+}
+
+.accor-full {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s ease;
 }
 
 /* header */
@@ -1039,63 +1105,78 @@ body {
     background-color: rgb(230, 32, 40);
 }
 
-/* price */
-.price {
-    border-radius: 30px;
-    background: rgb(243, 247, 253);
-}
-
-.price__container {
-    box-sizing: border-box;
-    border-bottom: 1px solid rgb(243, 247, 253);
-}
-
-.price-services {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 30px 15px 30px;
+/* prices */
+.prices__accor {
     border-radius: 20px;
-    background: rgb(31, 88, 122);
+    margin-bottom: 10px;
+    overflow: hidden;
 }
 
-.price-services__descr {
-    color: rgb(255, 255, 252);
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 140%;
+.prices__accor:last-child {
+    margin-bottom: 0;
 }
 
-.price__list {
-    border-radius: 25px;
-    background-color: #fff;
-    padding: 20px 30px;
+.price__info-wrapper {
+    padding: 0 30px 15px;
 }
 
-.price__list-info {
-    padding: 8px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-    border-bottom: #c4c0c0;
+.price__table-head {
+    display: grid;
+    grid-template-columns: 3fr 3fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
 }
 
-.price__list-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.price__table-row {
+    display: grid;
+    grid-template-columns: 3fr 3fr 1fr 1fr;
+    gap: 16px;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #F3F7FD;
 }
 
-.price__heading {
-    display: flex;
-
-    gap: 90px;
+.price__table-row:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
 }
 
-.price__markup {
-    color: rgba(46, 46, 46, 0.6);
+.price__table-title {
     font-size: 14px;
-    font-weight: 400;
-    line-height: 130%;
+    line-height: 19px;
+    color: #2E2E2E99;
+}
+
+.price__table-text {
+    font-size: 16px;
+    line-height: 21px;
+    color: #2E2E2ECC;
+}
+
+.price__table-text_size {
+    font-size: 18px;
+    line-height: 25px;
+    color: #2E2E2E;
+}
+
+.price__table-text_weight {
+    font-weight: 500;
+    color: #2E2E2E;
+}
+
+.price__table-text_max-width {
+    max-width: 340px;
+}
+
+.price__table-column:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.price__btn {
+    padding: 10px 20px;
 }
 
 /* offers */
@@ -1196,56 +1277,39 @@ body {
     margin-bottom: 40px;
 }
 
-.advantages__container-wrapper__item-1 {
+.advantages__container-wrapper_item {}
+
+.advantages__container-wrapper_item-1 {
     background-image: url("../img/sections/advantages/advantages-img1.png");
     background-repeat: no-repeat;
-    background-size: cover;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
 }
 
-.advantages__container-wrapper__item-2 {
-    background-image: url("../img/sections/advantages/advantages-img2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.advantages__container-wrapper__item-3 {
-    background-image: url("../img/sections/advantages/advantages-img3.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.advantages__container-wrapper__item-4 {
-    background-image: url("../img/sections/advantages/advantages-img4.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.advantages__container-wrapper__item-5 {
-    background-image: url("../img/sections/advantages/advantages-img5.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-
+.advantages__container-wrapper_item {
     border-radius: 20px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 18px;
+}
+
+.advantages__container-wrapper_item-2 {
+    background-image: url("../img/sections/advantages/advantages-img2.png");
+    background-repeat: no-repeat;
+}
+
+.advantages__container-wrapper_item-3 {
+    background-image: url("../img/sections/advantages/advantages-img3.png");
+    background-repeat: no-repeat;
+}
+
+.advantages__container-wrapper_item-4 {
+    background-image: url("../img/sections/advantages/advantages-img4.png");
+    background-repeat: no-repeat;
+}
+
+.advantages__container-wrapper_item-5 {
+    background-image: url("../img/sections/advantages/advantages-img5.png");
+    background-repeat: no-repeat;
 }
 
 .advantages__container-wrapper__descr {
@@ -1830,12 +1894,6 @@ body {
     line-height: 120%;
 }
 
-.help__block_price {
-    color: rgb(255, 255, 252);
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 140%;
-}
 
 .help__services-list {
     display: flex;
@@ -1884,6 +1942,7 @@ body {
 .structure-clinic__block-item {
     padding-bottom: 10px;
     margin-bottom: 10px;
+    border-bottom: 1px solid rgb(222, 236, 253);
 }
 
 .structure-clinic__img {
@@ -1963,6 +2022,205 @@ body {
     border-radius: 20px;
 }
 
+/* chart */
+.chart__block {
+    background-color: #fff;
+    border: 2px solid rgb(243, 247, 253);
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.chart__block-title {
+    display: flex;
+    padding: 14px 15px;
+    border-bottom: 2px solid rgb(243, 247, 253);
+}
+
+/* .section-descr_family
+.section-descr_post
+.section-descr_weeks
+.section-descr_times */
+.chart__block_item {
+    display: flex;
+    padding: 18px 15px;
+}
+
+.chart__block_color {
+    border-radius: 15px;
+    background-color: rgb(243, 247, 253);
+}
+
+.chart__block_descr {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.chart__block_descr-name {
+    flex-basis: 280px;
+    margin-right: 50px;
+}
+
+.chart__block_descr-doctor {
+    flex-basis: 340px;
+    margin-right: 80px;
+}
+
+.chart__block_descr-date {
+    margin-right: 129px;
+    flex-basis: 168px;
+}
+
+/* rehabilitation */
+.navigation {
+    padding: 7.5px;
+}
+
+.breadcrumbs {
+    display: flex;
+    gap: 10px;
+}
+
+.breadcrumbs_link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    ;
+}
+
+.rehabilitation__top_block {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.rehabilitation-descr {
+    max-width: 700px;
+}
+
+.rehabilitation__title {
+    max-width: 700px;
+}
+
+.rehabilitation__connection {
+    display: flex;
+    gap: 10px;
+}
+
+.rehabilitation__connection-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rehabilitation__btn {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rehabilitation_link {
+    background-image: url("../img/sections/rehabilitation/rehabilitation_link-fon.png");
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    padding: 15px;
+    height: 181px;
+    width: 236px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.rehabilitation__descr {
+    color: #2E2E2E;
+}
+
+.rehabilitation__title {
+    margin-bottom: 15px;
+}
+
+/* rehabilitation__block */
+.rehabilitation__block {
+    position: relative;
+    border-radius: 15px;
+}
+
+.rehabilitation__slide_img {
+    border-radius: 15px;
+}
+
+.rehabilitation__slide-div {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.rehabilitation__slide-block {
+    bottom: 5px;
+    right: 5px;
+    left: 5px;
+}
+
+.rehabilitation__slide-div {
+    border-radius: 12px;
+    background: rgb(255, 90, 95);
+    padding: 10px;
+}
+
+.rehabilitation__container-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* about */
+.about-us__content {
+    margin-bottom: 50px;
+}
+
+.about-us__content {
+    background-image: url("../img/sections/about-us/about-us-fon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.about-us__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.about-us__date {
+    display: flex;
+    gap: 85px;
+}
+
+.about-us__content-descr {
+    margin-bottom: 4px;
+}
+
+.about-us__content-descr_doctor {
+    margin-bottom: 20px;
+}
+
+.about-us__content-article {
+    padding: 20px 25px;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 1px solid rgb(222, 236, 253);
+}
+
+.about-us__content-block_internal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 @media (min-width: 1025px) {
 
     /* header */
@@ -1980,11 +2238,11 @@ body {
         visibility: visible;
     }
 
-    .main-menu__item:hover > .main-menu__link .main-menu__text {
+    .main-menu__item:hover>.main-menu__link .main-menu__text {
         color: #1F587A;
     }
-    
-    .main-menu__item:hover > .main-menu__link svg {
+
+    .main-menu__item:hover>.main-menu__link svg {
         transform: rotate(180deg);
     }
 
