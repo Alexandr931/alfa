@@ -26,8 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     clickable: true,
                 },
 
-                loop: true,
-
                 navigation: {
                     prevEl: elem.closest('.slider-container').querySelector('.slider-btn_prev'),
                     nextEl: elem.closest('.slider-container').querySelector('.slider-btn_next'),
@@ -45,8 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     el: elem.closest('.slider-container').querySelector('.slider-pagination'),
                     clickable: true,
                 },
-
-                loop: true,
 
                 navigation: {
                     prevEl: elem.closest('.slider-container').querySelector('.slider-btn_prev'),
@@ -69,8 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     clickable: true,
                 },
 
-                loop: true,
-
                 navigation: {
                     prevEl: elem.closest('.slider-container').querySelector('.slider-btn_prev'),
                     nextEl: elem.closest('.slider-container').querySelector('.slider-btn_next'),
@@ -92,37 +86,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     clickable: true,
                 },
 
-                loop: true,
-
                 navigation: {
                     prevEl: elem.closest('.slider-container').querySelector('.slider-btn_prev'),
                     nextEl: elem.closest('.slider-container').querySelector('.slider-btn_next'),
                 },
                 slidesPerView: 4,
                 spaceBetween: 20,
-            });
-        });
-    }
-
-    //our-articles
-    const ourarticlessliderList = document.querySelectorAll('.our-articles__slider');
-
-    if (ourarticlessliderList.length > 0) {
-        ourarticlessliderList.forEach((elem) => {
-            const ourarticlesslider = new Swiper(elem, {
-                pagination: {
-                    el: elem.closest('.slider-container').querySelector('.slider-pagination'),
-                    clickable: true,
-                },
-
-                loop: true,
-
-                navigation: {
-                    prevEl: elem.closest('.slider-container').querySelector('.slider-btn_prev'),
-                    nextEl: elem.closest('.slider-container').querySelector('.slider-btn_next'),
-                },
-                slidesPerView: 3,
-                spaceBetween: 25,
             });
         });
     }
@@ -137,8 +106,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     el: elem.closest('.slider-container').querySelector('.slider-pagination'),
                     clickable: true,
                 },
-
-                loop: true,
 
                 navigation: {
                     prevEl: elem.closest('.slider-container').querySelector('.slider-btn_prev'),
@@ -159,8 +126,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     el: elem.closest('.slider-container').querySelector('.slider-pagination'),
                     clickable: true,
                 },
-
-                loop: true,
 
                 navigation: {
                     prevEl: elem.closest('.slider-container').querySelector('.slider-btn_prev'),
@@ -329,5 +294,104 @@ document.addEventListener('DOMContentLoaded', function () {
         accorWrapperList.forEach(function (elem) {
             Accordion.apply(elem);
         });
+    }
+
+    // rating
+    const ratings = document.querySelectorAll('.rating');
+    const articleID = document.querySelector('[name="f_id_article"]');
+    let articleIDValue = '';
+    if (articleID) {
+        articleIDValue = articleID.value;
+    }
+
+    if (ratings.length > 0) {
+        initRatings();
+    }
+
+    function initRatings() {
+        let ratingActive, ratingValue, ratingText;
+
+        for (let i = 0; i < ratings.length; i += 1) {
+            const rating = ratings[i];
+            initRating(rating);
+        }
+    }
+
+    function initRating(rating) {
+        initRatingVars(rating);
+
+        setRatingActiveWidth();
+
+        if (rating.classList.contains('rating__set')) {
+            setRating(rating);
+        }
+    }
+
+    function initRatingVars(rating) {
+        ratingActive = rating.querySelector('.rating__active');
+        ratingValue = rating.querySelector('.rating__value');
+        ratingText = rating.querySelector('.rating__text');
+    }
+
+    function setRatingActiveWidth(index = ratingValue.innerHTML.replace(',', '.')) {
+        const ratingActiveWidth = index / 0.05;
+        ratingActive.style.width = `${ratingActiveWidth}%`;
+        if (ratingText) {
+            ratingText.innerHTML = `Рекомендуют ${Math.round(ratingActiveWidth)}%`
+        }
+    }
+
+    function setRating(rating) {
+        const ratingItems = rating.querySelectorAll('.rating__item');
+
+        for (let i = 0; i < ratingItems.length; i += 1) {
+            const ratingItem = ratingItems[i];
+
+            ratingItem.addEventListener('mouseenter', (e) => {
+                initRatingVars(rating);
+
+                setRatingActiveWidth(ratingItem.value);
+            });
+
+            ratingItem.addEventListener('mouseleave', (e) => {
+                setRatingActiveWidth();
+            });
+
+            ratingItem.addEventListener('click', (e) => {
+                ratingItems.forEach((elem) => {
+                    elem.style.pointerEvents = 'none';
+                });
+                initRatingVars(rating);
+
+                ratingValue.innerHTML = i + 1;
+                setRatingActiveWidth();
+            });
+        }
+    }
+
+    // nav slider disable
+    const paginateLockList = document.querySelectorAll('.swiper-pagination-lock');
+
+    if (paginateLockList.length > 0) {
+        paginateLockList.forEach((elem) => {
+            elem.closest('.slider-navigation').remove();
+        })
+    }
+
+    // review full
+    const reviewMoreBtnList = document.querySelectorAll('.review__more-btn');
+    const reviewFullPopupName = document.querySelector('.review-full-popup__name');
+    const reviewFullPopupText = document.querySelector('.review-full-popup__text');
+
+    if (reviewMoreBtnList.length > 0) {
+        reviewMoreBtnList.forEach((elem) => {
+            elem.addEventListener('click', () => {
+                const name = elem.closest('.review').querySelector('.review__name');
+                const text = elem.closest('.review').querySelector('.review__text');
+                
+                reviewFullPopupName.textContent = name.textContent;
+                reviewFullPopupText.textContent = text.textContent;
+            });
+        })
     }
 });
