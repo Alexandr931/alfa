@@ -296,6 +296,58 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
+.grid-5-3-2{
+    display: grid;
+    grid-template-columns: repeat(5, 4fr);
+    gap: 10px;
+}
+.grid-2-2-1{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 10px;
+}
+.grid-4-2{
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 10px;
+}
+.grid-2-4{
+    display: grid;
+    grid-template-columns: repeat(2, 4fr);
+    gap: 35px 90px;
+}
+.section__heading{
+    padding: 30px 0 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.grid-3-3{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 24px;
+}
+.section__heading-title{
+    color: rgb(46, 46, 46);
+    font-family: "DaysOne", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 120%;
+    text-align: center;
+}
+.section__heading-descr{
+    text-align: center;
+}
+.section__heading-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.sections-color{
+    border-radius: 20px 20px 0px 0px;
+    background: rgb(243, 247, 253);
+}
 
 /* .content-body li:last-child{
     margin-bottom: 0;
@@ -1106,6 +1158,13 @@ body {
 }
 
 /* prices */
+.prices{
+    border-radius: 30px;
+    background: rgb(243, 247, 253);
+}
+.prices_white{
+    background:#FFFFFC;
+}
 .prices__accor {
     border-radius: 20px;
     margin-bottom: 10px;
@@ -1277,7 +1336,6 @@ body {
     margin-bottom: 40px;
 }
 
-.advantages__container-wrapper_item {}
 
 .advantages__container-wrapper_item-1 {
     background-image: url("../img/sections/advantages/advantages-img1.png");
@@ -1566,6 +1624,9 @@ body {
 }
 
 /* stocks */
+.stocks__slider{
+    margin-bottom: 30px;
+}
 .button__stocks {
     position: relative;
     width: 397px;
@@ -1622,6 +1683,9 @@ body {
 
 .text__white {
     color: rgb(255, 255, 252);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
 }
 
 /* documents */
@@ -1646,69 +1710,57 @@ body {
 }
 
 /* our-articles */
-.our-articles__article {
-    position: relative;
-    max-width: 397px;
+
+.our-articles__container-wrapper{
+    display: flex;
+    gap: 15px;
+}
+.our-articles__block{
     padding: 20px;
     border: 2px solid rgb(222, 236, 253);
     border-radius: 25px;
+    background: rgb(255, 255, 252);
 }
-
-.our-articles_link {
-    position: absolute;
+.our-articles__img-div{
+    position: relative;
+}
+.our-articles__img{
     width: 100%;
     height: 100%;
-    visibility: hidden;
-}
-
-.our-articles__block-img {
-    position: relative;
-    margin-bottom: 18px;
-}
-
-.our-articles__img {
     border-radius: 15px;
-    width: 357px;
-    max-width: 100%;
-    height: 100%;
-    margin-bottom: 18px;
 }
-
-.our-articles_large_descr {
-    margin-bottom: 10px;
+.our-articles__div-content{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: rgb(31, 88, 122);
+    max-width: 164px;
 }
-
-.our-articles_descr {
-    margin-bottom: 25px;
+.our-articles__div-content_color{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: rgb(25, 170, 30);
+    max-width: 164px;
 }
-
-.our-articles__date-block {
+.our-articles__internal-block{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
 }
-
-.our-articles__internal-block {
+.our-articles__div-date{
     display: flex;
     gap: 8px;
 }
-
-.our-articles_div-color {
-    background: rgb(31, 88, 122);
-}
-
-.our-articles_div-green {
-    background-color: rgb(25, 170, 30);
-    border-radius: 10px;
-}
-
-.our-articles_div {
-    position: absolute;
-    top: 30px;
-    left: 22px;
+.our-articles__div-wrapper{
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 6px;
 }
-
 .reviews {
     background-color: rgb(243, 247, 253);
 }
@@ -2134,7 +2186,8 @@ body {
 }
 
 .rehabilitation__descr {
-    color: #2E2E2E;
+    color: #FFFFFCCC;
+
 }
 
 .rehabilitation__title {
@@ -2176,16 +2229,14 @@ body {
 }
 
 /* about */
-.about-us__content {
-    margin-bottom: 50px;
-}
 
 .about-us__content {
     background-image: url("../img/sections/about-us/about-us-fon.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     padding: 40px;
     border-radius: 20px;
+    margin-bottom: 50px;
 }
 
 .about-us__content-wrapper {
@@ -2219,6 +2270,290 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+/* questions */
+
+.questions__accor{
+    border-radius: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.questions-title__text{
+        color: rgb(255, 255, 252);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 140%;
+}
+.questions__table{
+    padding: 30px 15px;
+    border-top: 1px solid rgb(222, 236, 253);;
+}
+
+.accor.active .questions-title__text {
+    color: #2E2E2E;
+}
+
+.questions__form{
+    position: relative;
+    margin-bottom: 30px;
+    height: 51px;
+    max-width: 420px;
+}
+.questions__input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(86, 130, 165);
+    border-radius: 15px;
+    background: rgb(243, 247, 253);
+    padding: 15px 40px 15px 20px;
+}
+.questions__span-svg{
+    position: absolute;
+    top: 15px;
+    right: 21px;
+}
+/* related-services */
+.related-services__slider{
+    margin-bottom: 30px;
+}
+.related-services__slide{
+    position: relative;
+}
+.related-services__div{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    left: 5px;
+    border-radius: 15px;
+    background: rgb(255, 255, 252);
+    padding: 20px 15px;
+}
+.related-services_descr{
+    color: rgb(46, 46, 46);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 140%;
+}
+/* rehabilitation-center */
+.rehabilitation-centers__slide{
+    border: 1px solid rgb(222, 236, 253);
+    border-radius: 15px;
+} 
+.rehabilitation-center_btn{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 15px;
+    gap: 3px;
+}
+.rehabilitation-centers__img{
+    border-radius: 15px;
+}
+.rehabilitation-centers_adres{
+    display: flex;
+    gap: 8px;
+}
+
+.rehabilitation-center__internal{
+    display: flex;
+    flex-direction: column;
+    padding:15px;
+    gap: 25px;
+}
+.rehabilitation-centers__large-descr{
+    margin-bottom: 6px;
+}
+.rehabilitation-centers__slider{
+    margin-bottom: 30px;
+}
+/* treatment-programs */
+.treatment-programs__block{
+    padding: 15px;
+    border: 1px solid rgb(255, 90, 95);
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+}
+.treatment-programs__accor{
+    border-radius: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.treatment-programs__table{
+    padding: 20px 30px;
+}
+.treatment-programs__block-info{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.treatment-programs__large_descr{
+    margin-bottom: 6px;
+}
+/* Indications */
+.Indications-contraindications___container-wrapper{
+    display: flex;
+    gap: 25px;
+    border: 1px solid rgb(222, 236, 253);
+    border-radius: 30px;
+    padding: 30px;
+}
+.Indications-block{
+    background-image: url("../img/sections/Indications-contraindications/Indications-img.png");
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 20px;
+}
+.contraindications-block{
+    background-image: url("../img/sections/Indications-contraindications/contraindications-img.png");
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 20px;
+}
+.Indications-div{
+    display: flex;
+    gap: 12px;
+}
+/* phenibut */
+.phenibut{
+    background-image: url("../img/sections/phenibut/phenibut-fon.png");
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0px 0px;
+    padding: 38px 0 50px;
+}
+.phenibut__container-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+.phenibut__container-left{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.phenibut__title{
+    color: #FFFFFC;
+    font-family: "DaysOne", "sans-serif";
+    font-weight: 400px;
+    font-size: 48px;
+    line-height: 57.6px;
+    max-width: 700px;
+}
+.phenibut__descr{
+    color: #FFFFFC;
+    max-width: 700px;
+} 
+.phenibut__info-block{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    border: 2px solid #FFFFFC;
+    border-radius: 15px;
+    width: 100%;    
+}
+.phenibut__info-block_svg{
+    margin-bottom: 33px;
+}
+.phenibut__number{
+    color: #FFFFFC;
+    margin-bottom: 5px;
+}
+/* photo-gallery */
+.photo-clinic__block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.photo-clinic__block-item{
+    margin-bottom: 40px;
+}
+.photo-clinic_img{
+    height: 240px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+/* calculation*/
+.calculation__container-wrapper{
+    display: flex;
+    gap: 10px;
+}
+.calculation-form{
+    border: 1px solid rgb(222, 236, 253);
+    border-radius: 25px;
+    background: rgb(255, 255, 252);
+    padding: 40px;
+}
+.calculation__div-input{
+    position: relative;
+}
+.calculation__input{ 
+    border: 1px solid rgb(222, 236, 253);
+    border-radius: 15px;
+    background: rgb(243, 247, 253);
+    /* height: 51px; */
+    padding: 15px 20px;
+    width: 100%;
+    height: 100%;
+    color: rgba(46, 46, 46, 0.6);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+}
+.calculation__span-svg{
+    position: absolute;
+    right: 21px;
+    top: 16px;
+}
+.calculation__block-registr{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.calculation__right-block{
+    background: #00253C;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: space-between;
+    border-radius: 25px;
+}
+.calculation__right-width_descr{
+    color: #FFFFFCCC;
+    font-size: 14px;
+} 
+.calculation__large-descr{
+    color: #FFFFFC;
+}
+.calculation__descr_num{
+    color: rgb(255, 255, 252);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 130%;
+}
+.calculation__span{
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+    align-items: center;
+}
+.calculation__right-descr{
+    color:#FFFFFF;
+    max-width: 340px;
+}
+.calculation__right-block_text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 @media (min-width: 1025px) {

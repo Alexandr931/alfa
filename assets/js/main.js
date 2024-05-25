@@ -103,12 +103,13 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
-    //our-articles
-    const slider5List = document.querySelectorAll('.slider-5');
 
-    if (slider5List.length > 0) {
-        slider5List.forEach((elem) => {
-            const slider5 = new Swiper(elem, {
+    //our-articles
+    const ourarticlessliderList = document.querySelectorAll('.our-articles__slider');
+
+    if (ourarticlessliderList.length > 0) {
+        ourarticlessliderList.forEach((elem) => {
+            const ourarticlesslider = new Swiper(elem, {
                 pagination: {
                     el: elem.closest('.slider-container').querySelector('.slider-pagination'),
                     clickable: true,
@@ -121,6 +122,51 @@ document.addEventListener('DOMContentLoaded', function () {
                     nextEl: elem.closest('.slider-container').querySelector('.slider-btn_next'),
                 },
                 slidesPerView: 3,
+                spaceBetween: 25,
+            });
+        });
+    }
+
+    //related-services__slider
+    const relatedservicessliderList = document.querySelectorAll('.related-services__slider');
+
+    if (relatedservicessliderList.length > 0) {
+        relatedservicessliderList.forEach((elem) => {
+            const relatedservicesslider = new Swiper(elem, {
+                pagination: {
+                    el: elem.closest('.slider-container').querySelector('.slider-pagination'),
+                    clickable: true,
+                },
+
+                loop: true,
+
+                navigation: {
+                    prevEl: elem.closest('.slider-container').querySelector('.slider-btn_prev'),
+                    nextEl: elem.closest('.slider-container').querySelector('.slider-btn_next'),
+                },
+                slidesPerView: 4,
+                spaceBetween: 25,
+            });
+        });
+    }
+    //rehabilitation-centers__slider
+    const rehabilitationcenterssliderList = document.querySelectorAll('.rehabilitation-centers__slider');
+
+    if (relatedservicessliderList.length > 0) {
+        rehabilitationcenterssliderList.forEach((elem) => {
+            const rehabilitationcentersslider = new Swiper(elem, {
+                pagination: {
+                    el: elem.closest('.slider-container').querySelector('.slider-pagination'),
+                    clickable: true,
+                },
+
+                loop: true,
+
+                navigation: {
+                    prevEl: elem.closest('.slider-container').querySelector('.slider-btn_prev'),
+                    nextEl: elem.closest('.slider-container').querySelector('.slider-btn_next'),
+                },
+                slidesPerView: 4,
                 spaceBetween: 25,
             });
         });
