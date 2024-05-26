@@ -268,7 +268,7 @@ body {
     top: 0;
     left: -30px;
     width: 22px;
-    height: 22px;
+    height: 27px;
     background: rgb(230, 32, 40);
     color: #fff;
     border-radius: 7px;
@@ -2984,6 +2984,155 @@ body {
     display: block;
     flex-direction: column;
 }
+.patient-reviews__btn{
+    color: #fff;
+    width: fit-content;
+} 
+.question-doctor__block-img{
+    height: 100%;
+}
+/* licenses */
+.licenses__container-wrapper{
+    display: flex;
+    gap: 15px;
+}
+.license__block{
+    border-radius: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #F3F7FD;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+/* doctor_page */
+.doctor_page__left-block{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.doctor_page__button{
+    padding: 15px 79px;
+    border-radius: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22.4px;
+    color: #1F587A;
+}
+.doctor_page__button_color{
+    background-color: #DEECFD;
+}
+.doctor_page__button-white{
+    color: #fff;
+}
+.doctor_page__left-block-img{
+    max-height: 398px;
+    border-radius: 20px;
+    width: 100%;
+}
+.doctor_page__right-div{
+    padding: 10px 15px;
+    border-radius: 12px;
+    width: fit-content;
+    background-color: #1F587A;
+}
+.doctor_page__right-div_red{
+    background-color: #E52028;
+}
+.doctor_page__wrapper{
+    display: flex;
+    gap: 40px;
+}
+.doctor_page__right-block{
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+.doctor_page__right-wrapper_div{
+    display: flex;
+    gap: 10px;
+}
+.doctor_page__right-block_descr-internal{
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(222, 236, 253);
+}
+.doctor_page__tabl{
+    border: 1px solid rgb(222, 236, 253);
+    border-radius: 20px;
+    box-shadow: 0px 0px 12px 0px rgba(0, 37, 60, 0.06);
+    background: rgb(243, 247, 253);
+    padding: 30px;
+}
+
+.tabl-item{
+    padding: 15px 0;
+    border-bottom: 1px solid rgb(31, 88, 122);
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+}
+.tabl__date-time{
+    color: rgb(46, 46, 46);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 140%;
+}
+.tabl__date{
+    color: rgba(46, 46, 46, 0.8);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+}
+.doctor_page__li{
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+.doctor_page__right-wrapper_div{
+    margin-bottom: 25px;
+}
+/* mistake */
+.mistake__container-wrapper{
+    display: flex;
+    gap: 60px;
+}
+.mistake__right_link{
+    color: #E52028;
+}
+.mistake__link{
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 20.8px;
+    color: #1F587A;
+}
+.mistake__right{
+    max-width: 431px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.mistake__list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+/* vacancy */
+.vacancy__accor{
+    border-radius: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.vacancy-title__text{
+    color: rgb(255, 255, 252);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 140%;
+}
+.accor.active .vacancy-title__text {
+    color: #2E2E2E;
+}
+
 
 @media (min-width: 1025px) {
 
@@ -3014,7 +3163,7 @@ body {
         background-color: #DEECFD;
     }
 }
-@media (max-width: 1025px){
+@media (max-width: 1024px){
     
     /* glob */
     .section-descr{
