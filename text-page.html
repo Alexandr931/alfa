@@ -471,30 +471,31 @@
             </div>
         </div>
     </section>
-        <section class="offers section-offset">
-            <div class="offers__container container">
-                <div class="offers__container-wrapper">
-                    <div class="offers__container-left">
-                        <h3 class="offers__container-left__title">Получите бесплатную
-                            консультацию врача прямо сейчас!
-                            Оставьте заявку
-                        </h3>
-                        <a class="offers__container-left__link" href="tel:+78005001160">
-                            <p class="offers__container-left__descr">или позвоните по номеру</p>
-                            <img class="offers__icon" src="assets/img/sections/offers/Vector-offers.svg" alt="">
-                            <p class="offers__phone">+7 (800) 500-11-60</p>
-                        </a>
-                    </div>
-                    <div class="offers__container-right">
-                        <input class="offers__container-right__input" type="name" placeholder="Имя">
-                        <input class="offers__container-right__input" type="tel" placeholder="Номер телефона">
-                        <button class="offers__container-right__button">Оставить заявку</button>
-                        <p class="offers__container-right__descr">Нажимая кнопку «Оставить заявку», вы соглашаетесь
-                            с политикой конфиденциальности данного сайта</p>
-                    </div>
+    <section class="offers section-offset">
+        <div class="offers__container container">
+            <div class="offers__container-wrapper">
+                <div class="offers__container-left">
+                    <h3 class="offers__container-left__title">Получите бесплатную
+                        консультацию врача прямо сейчас!
+                        Оставьте заявку
+                    </h3>
+                    <a class="offers__container-left__link" href="tel:+78005001160">
+                        <p class="offers__container-left__descr">или позвоните по номеру</p>
+                        <img class="offers__icon" src="assets/img/sections/offers/Vector-offers.svg" alt="">
+                        <p class="offers__phone">+7 (800) 500-11-60</p>
+                    </a>
                 </div>
+                <form action="#" method="post" class="offers__container-right">
+                    <input name="name" class="offers__container-right__input" type="name" placeholder="Имя">
+                    <input name="phone" class="offers__container-right__input" type="tel"
+                        placeholder="Номер телефона">
+                    <button class="offers__container-right__button">Оставить заявку</button>
+                    <p class="offers__container-right__descr">Нажимая кнопку «Оставить заявку», вы соглашаетесь
+                        с политикой конфиденциальности данного сайта</p>
+                </form>
             </div>
-        </section>
+        </div>
+    </section>
         <section class="team section-offset">
             <div class="team__container container">
                 <h3 class="team__title section-title">
@@ -625,43 +626,391 @@
                 </div>
         </div>
     </section>
-        <section class="reviews section-offset section-offset_padding">
-            <div class="reviews__container container">
+    <section class="reviews section-offset section-offset_padding">
+        <div class="reviews__container container">
+            <div class="reviews__top section-top">
                 <h3 class="reviews__title section-title">Отзывы наших пациентов</h3>
-                <div class="reviews__slider-container slider-container">
-                    <div class="reviews__slider swiper slider-4">
-                        <div class="reviews__slider-wrapper swiper-wrapper">
-                            <div class="reviews__block">
-                                <div class="stars">
-
+                <button class="reviews__btn btn btn_color">
+                    <span class="btn__text">
+                        Оставить отзыв
+                    </span>
+                </button>
+            </div>
+            <div class="reviews__slider-container slider-container">
+                <div class="reviews__slider swiper slider-3">
+                    <div class="reviews__slider-wrapper swiper-wrapper">
+                        <div class="reviews__block review swiper-slide">
+                            <div class="reviews__rating rating">
+                                <div class="rating__wrapper">
+                                    <div class="rating__body">
+                                        <div class="rating__active">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                        </div>
+                                        <div class="rating__items">
+                                            <input type="radio" name="f_rating" value="1" class="rating__item">
+                                            <input type="radio" name="f_rating" value="2" class="rating__item">
+                                            <input type="radio" name="f_rating" value="3" class="rating__item">
+                                            <input type="radio" name="f_rating" value="4" class="rating__item">
+                                            <input type="radio" name="f_rating" value="5" class="rating__item">
+                                        </div>
+                                        <div class="rating__stars">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rating__value visually-hidden">2.5</div>
+                            </div>
+                            <div class="review__text-wrapper">
+                                <p class="review__text">
+                                    Для современного мира повышение уровня гражданского сознания, в своём
+                                    классическом представлении, допускает внедрение благоприятных перспектив. А
+                                    также реплицированные с зарубежных источников, современные исследования набирают
+                                    популярность среди определенных слоев населения, а значит, должны быть
+                                    представлены в исключительно положительном свете. Картельные сговоры не
+                                    допускают ситуации, при которой действия представителей оппозиции объединены в
+                                    целые кластеры себе подобных.
+                                    Для современного мира повышение уровня гражданского сознания, в своём
+                                    классическом представлении, допускает внедрение благоприятных перспектив. А
+                                    также реплицированные с зарубежных источников, современные исследования набирают
+                                    популярность среди определенных слоев населения, а значит, должны быть
+                                    представлены в исключительно положительном свете. Картельные сговоры не
+                                    допускают ситуации, при которой действия представителей оппозиции объединены в
+                                    целые кластеры себе подобных.
+                                </p>
+                                <div class="review__more">
+                                    <button class="review__more-btn popup-btn" data-path="review-full">
+                                        <p class="review__more-text">
+                                            Читать полностью
+                                        </p>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7.14851 4.89744L6.993 0.825638M6.993 0.825638L2.90587 0.654797M6.993 0.825638L0.629035 7.1896"
+                                                stroke="#5682A5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="review__info">
+                                <div class="review__info-top">
+                                    <p class="review__name">
+                                        Аркадий, 40 лет
+                                    </p>
+                                    <img src="assets/img/sections/reviews/logo-1.svg" alt="" class="review__logo">
+                                </div>
+                                <div class="review__date">
+                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.5 7V12.4444C14.5 12.857 14.3361 13.2527 14.0444 13.5444C13.7527 13.8361 13.357 14 12.9444 14H2.05556C1.643 14 1.24733 13.8361 0.955612 13.5444C0.663888 13.2527 0.5 12.857 0.5 12.4444V7H14.5ZM10.6111 0C10.8174 0 11.0152 0.0819442 11.1611 0.227806C11.3069 0.373667 11.3889 0.571498 11.3889 0.777778V1.55556H12.9444C13.357 1.55556 13.7527 1.71944 14.0444 2.01117C14.3361 2.30289 14.5 2.69855 14.5 3.11111V5.44444H0.5V3.11111C0.5 2.69855 0.663888 2.30289 0.955612 2.01117C1.24733 1.71944 1.643 1.55556 2.05556 1.55556H3.61111V0.777778C3.61111 0.571498 3.69306 0.373667 3.83892 0.227806C3.98478 0.0819442 4.18261 0 4.38889 0C4.59517 0 4.793 0.0819442 4.93886 0.227806C5.08472 0.373667 5.16667 0.571498 5.16667 0.777778V1.55556H9.83333V0.777778C9.83333 0.571498 9.91528 0.373667 10.0611 0.227806C10.207 0.0819442 10.4048 0 10.6111 0Z"
+                                            fill="#5682A5" />
+                                    </svg>
+                                    <p class="review__date-text">
+                                        Отзыв опубликован: 26.07.2023
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__block review swiper-slide">
+                            <div class="reviews__rating rating">
+                                <div class="rating__wrapper">
+                                    <div class="rating__body">
+                                        <div class="rating__active">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                        </div>
+                                        <div class="rating__items">
+                                            <input type="radio" name="f_rating" value="1" class="rating__item">
+                                            <input type="radio" name="f_rating" value="2" class="rating__item">
+                                            <input type="radio" name="f_rating" value="3" class="rating__item">
+                                            <input type="radio" name="f_rating" value="4" class="rating__item">
+                                            <input type="radio" name="f_rating" value="5" class="rating__item">
+                                        </div>
+                                        <div class="rating__stars">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rating__value visually-hidden">2.5</div>
+                            </div>
+                            <div class="review__text-wrapper">
+                                <p class="review__text">
+                                    Для современного мира повышение уровня гражданского сознания, в своём
+                                    классическом представлении, допускает внедрение благоприятных перспектив. А
+                                    также реплицированные с зарубежных источников, современные исследования набирают
+                                    популярность среди определенных слоев населения, а значит, должны быть
+                                    представлены в исключительно положительном свете. Картельные сговоры не
+                                    допускают ситуации, при которой действия представителей оппозиции объединены в
+                                    целые кластеры себе подобных.
+                                    Для современного мира повышение уровня гражданского сознания, в своём
+                                    классическом представлении, допускает внедрение благоприятных перспектив. А
+                                    также реплицированные с зарубежных источников, современные исследования набирают
+                                    популярность среди определенных слоев населения, а значит, должны быть
+                                    представлены в исключительно положительном свете. Картельные сговоры не
+                                    допускают ситуации, при которой действия представителей оппозиции объединены в
+                                    целые кластеры себе подобных.
+                                </p>
+                                <div class="review__more">
+                                    <button class="review__more-btn popup-btn" data-path="review-full">
+                                        <p class="review__more-text">
+                                            Читать полностью
+                                        </p>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7.14851 4.89744L6.993 0.825638M6.993 0.825638L2.90587 0.654797M6.993 0.825638L0.629035 7.1896"
+                                                stroke="#5682A5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="review__info">
+                                <div class="review__info-top">
+                                    <p class="review__name">
+                                        Аркадий, 40 лет
+                                    </p>
+                                    <img src="assets/img/sections/reviews/logo-1.svg" alt="" class="review__logo">
+                                </div>
+                                <div class="review__date">
+                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.5 7V12.4444C14.5 12.857 14.3361 13.2527 14.0444 13.5444C13.7527 13.8361 13.357 14 12.9444 14H2.05556C1.643 14 1.24733 13.8361 0.955612 13.5444C0.663888 13.2527 0.5 12.857 0.5 12.4444V7H14.5ZM10.6111 0C10.8174 0 11.0152 0.0819442 11.1611 0.227806C11.3069 0.373667 11.3889 0.571498 11.3889 0.777778V1.55556H12.9444C13.357 1.55556 13.7527 1.71944 14.0444 2.01117C14.3361 2.30289 14.5 2.69855 14.5 3.11111V5.44444H0.5V3.11111C0.5 2.69855 0.663888 2.30289 0.955612 2.01117C1.24733 1.71944 1.643 1.55556 2.05556 1.55556H3.61111V0.777778C3.61111 0.571498 3.69306 0.373667 3.83892 0.227806C3.98478 0.0819442 4.18261 0 4.38889 0C4.59517 0 4.793 0.0819442 4.93886 0.227806C5.08472 0.373667 5.16667 0.571498 5.16667 0.777778V1.55556H9.83333V0.777778C9.83333 0.571498 9.91528 0.373667 10.0611 0.227806C10.207 0.0819442 10.4048 0 10.6111 0Z"
+                                            fill="#5682A5" />
+                                    </svg>
+                                    <p class="review__date-text">
+                                        Отзыв опубликован: 26.07.2023
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__block review swiper-slide">
+                            <div class="reviews__rating rating">
+                                <div class="rating__wrapper">
+                                    <div class="rating__body">
+                                        <div class="rating__active">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                        </div>
+                                        <div class="rating__items">
+                                            <input type="radio" name="f_rating" value="1" class="rating__item">
+                                            <input type="radio" name="f_rating" value="2" class="rating__item">
+                                            <input type="radio" name="f_rating" value="3" class="rating__item">
+                                            <input type="radio" name="f_rating" value="4" class="rating__item">
+                                            <input type="radio" name="f_rating" value="5" class="rating__item">
+                                        </div>
+                                        <div class="rating__stars">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rating__value visually-hidden">2.5</div>
+                            </div>
+                            <div class="review__text-wrapper">
+                                <p class="review__text">
+                                    Для современного мира повышение уровня гражданского сознания, в своём
+                                    классическом представлении, допускает внедрение благоприятных перспектив. А
+                                    также реплицированные с зарубежных источников, современные исследования набирают
+                                </p>
+                                <div class="review__more">
+                                    <button class="review__more-btn popup-btn" data-path="review-full">
+                                        <p class="review__more-text">
+                                            Читать полностью
+                                        </p>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7.14851 4.89744L6.993 0.825638M6.993 0.825638L2.90587 0.654797M6.993 0.825638L0.629035 7.1896"
+                                                stroke="#5682A5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="review__info">
+                                <div class="review__info-top">
+                                    <p class="review__name">
+                                        Аркадий, 40 лет
+                                    </p>
+                                    <img src="assets/img/sections/reviews/logo-1.svg" alt="" class="review__logo">
+                                </div>
+                                <div class="review__date">
+                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.5 7V12.4444C14.5 12.857 14.3361 13.2527 14.0444 13.5444C13.7527 13.8361 13.357 14 12.9444 14H2.05556C1.643 14 1.24733 13.8361 0.955612 13.5444C0.663888 13.2527 0.5 12.857 0.5 12.4444V7H14.5ZM10.6111 0C10.8174 0 11.0152 0.0819442 11.1611 0.227806C11.3069 0.373667 11.3889 0.571498 11.3889 0.777778V1.55556H12.9444C13.357 1.55556 13.7527 1.71944 14.0444 2.01117C14.3361 2.30289 14.5 2.69855 14.5 3.11111V5.44444H0.5V3.11111C0.5 2.69855 0.663888 2.30289 0.955612 2.01117C1.24733 1.71944 1.643 1.55556 2.05556 1.55556H3.61111V0.777778C3.61111 0.571498 3.69306 0.373667 3.83892 0.227806C3.98478 0.0819442 4.18261 0 4.38889 0C4.59517 0 4.793 0.0819442 4.93886 0.227806C5.08472 0.373667 5.16667 0.571498 5.16667 0.777778V1.55556H9.83333V0.777778C9.83333 0.571498 9.91528 0.373667 10.0611 0.227806C10.207 0.0819442 10.4048 0 10.6111 0Z"
+                                            fill="#5682A5" />
+                                    </svg>
+                                    <p class="review__date-text">
+                                        Отзыв опубликован: 26.07.2023
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__block review swiper-slide">
+                            <div class="reviews__rating rating">
+                                <div class="rating__wrapper">
+                                    <div class="rating__body">
+                                        <div class="rating__active">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                alt="" class="star aspect-ratio">
+                                        </div>
+                                        <div class="rating__items">
+                                            <input type="radio" name="f_rating" value="1" class="rating__item">
+                                            <input type="radio" name="f_rating" value="2" class="rating__item">
+                                            <input type="radio" name="f_rating" value="3" class="rating__item">
+                                            <input type="radio" name="f_rating" value="4" class="rating__item">
+                                            <input type="radio" name="f_rating" value="5" class="rating__item">
+                                        </div>
+                                        <div class="rating__stars">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rating__value visually-hidden">2.5</div>
+                            </div>
+                            <div class="review__text-wrapper">
+                                <p class="review__text">
+                                    Для современного мира повышение уровня гражданского сознания, в своём
+                                    классическом представлении, допускает внедрение благоприятных перспектив. А
+                                    также реплицированные с зарубежных источников, современные исследования набирают
+                                    популярность среди определенных слоев населения, а значит, должны быть
+                                    представлены в исключительно положительном свете. Картельные сговоры не
+                                    допускают ситуации, при которой действия представителей оппозиции объединены в
+                                    целые кластеры себе подобных.
+                                    Для современного мира повышение уровня гражданского сознания, в своём
+                                    классическом представлении, допускает внедрение благоприятных перспектив. А
+                                    также реплицированные с зарубежных источников, современные исследования набирают
+                                    популярность среди определенных слоев населения, а значит, должны быть
+                                    представлены в исключительно положительном свете. Картельные сговоры не
+                                    допускают ситуации, при которой действия представителей оппозиции объединены в
+                                    целые кластеры себе подобных.
+                                </p>
+                                <div class="review__more">
+                                    <button class="review__more-btn popup-btn" data-path="review-full">
+                                        <p class="review__more-text">
+                                            Читать полностью
+                                        </p>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7.14851 4.89744L6.993 0.825638M6.993 0.825638L2.90587 0.654797M6.993 0.825638L0.629035 7.1896"
+                                                stroke="#5682A5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="review__info">
+                                <div class="review__info-top">
+                                    <p class="review__name">
+                                        Аркадий, 40 лет
+                                    </p>
+                                    <img src="assets/img/sections/reviews/logo-1.svg" alt="" class="review__logo">
+                                </div>
+                                <div class="review__date">
+                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.5 7V12.4444C14.5 12.857 14.3361 13.2527 14.0444 13.5444C13.7527 13.8361 13.357 14 12.9444 14H2.05556C1.643 14 1.24733 13.8361 0.955612 13.5444C0.663888 13.2527 0.5 12.857 0.5 12.4444V7H14.5ZM10.6111 0C10.8174 0 11.0152 0.0819442 11.1611 0.227806C11.3069 0.373667 11.3889 0.571498 11.3889 0.777778V1.55556H12.9444C13.357 1.55556 13.7527 1.71944 14.0444 2.01117C14.3361 2.30289 14.5 2.69855 14.5 3.11111V5.44444H0.5V3.11111C0.5 2.69855 0.663888 2.30289 0.955612 2.01117C1.24733 1.71944 1.643 1.55556 2.05556 1.55556H3.61111V0.777778C3.61111 0.571498 3.69306 0.373667 3.83892 0.227806C3.98478 0.0819442 4.18261 0 4.38889 0C4.59517 0 4.793 0.0819442 4.93886 0.227806C5.08472 0.373667 5.16667 0.571498 5.16667 0.777778V1.55556H9.83333V0.777778C9.83333 0.571498 9.91528 0.373667 10.0611 0.227806C10.207 0.0819442 10.4048 0 10.6111 0Z"
+                                            fill="#5682A5" />
+                                    </svg>
+                                    <p class="review__date-text">
+                                        Отзыв опубликован: 26.07.2023
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="slider-navigation slider-navigation_static">
-                        <button class="slider-btn slider-btn_prev">
-                            <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.61538 1L1 5.48375M1 5.48375L5.61538 10M1 5.48375L16 5.48375"
-                                    stroke="#5682A5" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                        <div class="slider-pagination"></div>
-                        <button class="slider-btn slider-btn_next">
-                            <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.61538 1L1 5.48375M1 5.48375L5.61538 10M1 5.48375L16 5.48375"
-                                    stroke="#5682A5" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
                 </div>
-
+                <div class="slider-navigation slider-navigation_static">
+                    <button class="slider-btn slider-btn_prev">
+                        <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.61538 1L1 5.48375M1 5.48375L5.61538 10M1 5.48375L16 5.48375"
+                                stroke="#5682A5" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="slider-pagination"></div>
+                    <button class="slider-btn slider-btn_next">
+                        <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.61538 1L1 5.48375M1 5.48375L5.61538 10M1 5.48375L16 5.48375"
+                                stroke="#5682A5" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-            </div>
-        </section>
+    </section>
         <section class="questions section-offset">
             <div class="questions__container container">
                 <h3 class="questions__title section-title">Ответы на часто задаваемые вопросы</h3>

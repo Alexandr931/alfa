@@ -116,26 +116,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
-    //rehabilitation-centers__slider
-    const rehabilitationcenterssliderList = document.querySelectorAll('.rehabilitation-centers__slider');
-
-    if (relatedservicessliderList.length > 0) {
-        rehabilitationcenterssliderList.forEach((elem) => {
-            const rehabilitationcentersslider = new Swiper(elem, {
-                pagination: {
-                    el: elem.closest('.slider-container').querySelector('.slider-pagination'),
-                    clickable: true,
-                },
-
-                navigation: {
-                    prevEl: elem.closest('.slider-container').querySelector('.slider-btn_prev'),
-                    nextEl: elem.closest('.slider-container').querySelector('.slider-btn_next'),
-                },
-                slidesPerView: 4,
-                spaceBetween: 25,
-            });
-        });
-    }
 
     // Popups
     function popupClose(popupActive) {

@@ -290,7 +290,7 @@
     <section class="questions section-offset">
         <div class="questions__container container">
             <form class="questions__form" action="">
-                <input class="questions__input" type="text" placeholder="Выберите направление">
+                <input class="section__input" type="text" placeholder="Выберите направление">
                 <span class="questions__span-svg">
                     <svg width="7.000000" height="5.000000" viewBox="0 0 7 5" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <path id="Vector" d="M1.04 -0.5L5.95 -0.5C6.14 -0.5 6.33 -0.45 6.5 -0.35C6.66 -0.25 6.79 -0.11 6.88 0.06C6.98 0.25 7.01 0.48 6.99 0.7C6.96 0.91 6.87 1.12 6.73 1.29L4.27 4.15C4.17 4.26 4.06 4.35 3.92 4.41C3.79 4.46 3.64 4.5 3.5 4.5C3.35 4.5 3.2 4.46 3.07 4.41C2.93 4.35 2.82 4.26 2.72 4.15L0.26 1.29C0.12 1.12 0.03 0.91 0 0.7C-0.02 0.48 0.01 0.25 0.11 0.06C0.2 -0.11 0.33 -0.25 0.49 -0.35C0.66 -0.45 0.85 -0.5 1.04 -0.5Z" fill="#2E2E2E" fill-opacity="1.000000" fill-rule="nonzero"></path>
@@ -407,8 +407,21 @@
     <section class="question-doctor section-offset sections-color section__heading">
         <div class="question-doctor__container container">
             <h3 class="question-doctor__title section-title">Задать свой вопрос врачу</h3>
-            <div class="question-doctor_block">
-                <div class="question-doctor_block"></div>
+            <div class="question-doctor__block">
+                <picture class="question-doctor__block-pictutre">
+                    <img class="question-doctor__block-img" src="assets/img/doctor-qq.png" alt="">
+                </picture>
+               <form class="question-doctor__form" action="#">
+                    <div class="question-doctor__form-input">
+                        <input class="question-doctor__input input-custom" type="text" placeholder="Имя">
+                        <input class="question-doctor__input input-custom" type="text" placeholder="Номер телефона">
+                    </div>
+                    <textarea class="question-doctor__textarea input-custom" name="" id="" cols="30" rows="10">Текст вопроса</textarea>
+                    <div class="question-doctor__form-btn">
+                        <button class="question-doctor__button btn btn_red">Отправить</button>
+                        <p class="question-doctor__descr section-descr">Нажимая кнопку «Отправить», вы соглашаетесь с политикой конфиденциальности данного сайта</p>
+                    </div>
+               </form>
             </div>
         </div>
     </section>
