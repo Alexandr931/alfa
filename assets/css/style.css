@@ -362,6 +362,11 @@ body {
     grid-template-columns: repeat(3, 3fr);
     gap: 24px;
 }
+.grid-3-1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
 
 .section__heading-title {
     color: rgb(46, 46, 46);
@@ -698,7 +703,7 @@ body {
 }
 
 .accor.active {
-    background-color: initial;
+    background-color: #fff;
 }
 
 .accor-title {
@@ -1445,7 +1450,9 @@ body {
     border-radius: 30px;
     background: rgb(243, 247, 253);
 }
-
+.prices_color{
+    background-color: #fff;
+}
 .prices_white {
     background: #FFFFFC;
 }
@@ -1714,7 +1721,7 @@ textarea.offers__container-right__input {
 .about-us__container-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 35px;
 }
 
 .about-us__container__center {
@@ -1931,8 +1938,8 @@ textarea.offers__container-right__input {
 
 .button__stocks {
     position: relative;
-    width: 397px;
-    height: 340px;
+    max-width: 397px;
+    max-height: 340px;
     border-radius: 20px;
 }
 
@@ -2410,7 +2417,7 @@ textarea.offers__container-right__input {
 
 .block_color {
     background: rgb(31, 88, 122);
-    width: 396px;
+    max-width: 396px;
 }
 
 .structure-clinic_picture {
@@ -2426,6 +2433,7 @@ textarea.offers__container-right__input {
 .stages__block {
     background-image: url("../img/sections/stages/stages-fon.png");
     background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 20px;
     padding: 20px;
     display: flex;
@@ -2464,10 +2472,11 @@ textarea.offers__container-right__input {
     display: flex;
     gap: 25px;
     align-items: center;
+
 }
 
 .therapy__picture {
-    width: 425px;
+    min-width: 425px;
     height: 355px;
 }
 
@@ -2486,13 +2495,17 @@ textarea.offers__container-right__input {
 }
 
 .chart__block-title {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
     padding: 14px 15px;
     border-bottom: 2px solid rgb(243, 247, 253);
 }
 
 .chart__block_item {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
     padding: 18px 15px;
 }
 
@@ -2505,21 +2518,6 @@ textarea.offers__container-right__input {
     font-size: 16px;
     font-weight: 400;
     line-height: 130%;
-}
-
-.chart__block_descr-name {
-    flex-basis: 280px;
-    margin-right: 50px;
-}
-
-.chart__block_descr-doctor {
-    flex-basis: 340px;
-    margin-right: 80px;
-}
-
-.chart__block_descr-date {
-    margin-right: 129px;
-    flex-basis: 168px;
 }
 
 /* rehabilitation */
@@ -2792,7 +2790,6 @@ textarea.offers__container-right__input {
     border-radius: 10px;
     background: rgb(255, 255, 255);
 }
-
 .treatment-programs__accor {
     border-radius: 20px;
     margin-bottom: 10px;
@@ -2825,6 +2822,7 @@ textarea.offers__container-right__input {
 .Indications-block {
     background-image: url("../img/sections/Indications-contraindications/Indications-img.png");
     background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -2855,6 +2853,7 @@ textarea.offers__container-right__input {
     background-repeat: no-repeat;
     border-radius: 20px 20px 0px 0px;
     padding: 38px 0 50px;
+    background-size: cover;
 }
 
 .phenibut__container-wrapper {
@@ -3345,6 +3344,46 @@ textarea.offers__container-right__input {
     grid-template-columns: repeat(2, 3fr);
     gap: 24px 20px;
 }
+.breadcrumbs_link_active-white .section-descr {
+    color: #FFFFFC;
+}
+/* legal */
+.legal__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.legal__title{
+    margin-bottom: 20px;
+}
+.legal-documents__picture{
+    padding: 10px;
+    border-radius: 20px;
+    background: rgb(243, 247, 253);
+}
+.legal-documents__info{
+    display: flex;
+    gap: 25px;
+}
+.legal-documents__internal{
+    background-image: url("../img/sections/vacancy/vacancy.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    padding: 30px 48px;
+    margin-bottom: 35px;
+}
+.legal-documents__descr{
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+.legal-documents__info-text{
+    display: flex;
+    flex-direction: column;
+}
+.legal-documents__link{
+    width: fit-content;
+}
 @media (min-width: 1025px) {
 
     /* glob */
@@ -3387,7 +3426,6 @@ textarea.offers__container-right__input {
         opacity: 1;
         pointer-events: all;
     }
-
     /* header */
     a.header__top-span:hover .header_phone {
         color: #1F587A;
@@ -3449,7 +3487,10 @@ textarea.offers__container-right__input {
     .section-descr {
         font-size: 14px;
     }
-
+    .breadcrumbs{
+        padding: 0;
+        flex-wrap: wrap;
+    }
     .section-title {
         font-size: 22px;
         margin-bottom: 30px;
@@ -3541,7 +3582,38 @@ textarea.offers__container-right__input {
         display: grid;
         margin-bottom: 30px;
     }
-
+    .section__heading{
+        gap: 10px;
+    }
+    .section__heading-title{
+        font-size: 26px;
+        line-height: 33.8px;
+    }
+    .grid-4-2{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .section__heading{
+        padding: 15px 10px;
+    }
+    .grid-2-4{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .calculation-form{
+        padding: 20px 15px;
+    } 
+    .calculation__container-wrapper{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .grid-3-3{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
     /* header */
     .burger {
         position: relative;
@@ -4042,6 +4114,10 @@ textarea.offers__container-right__input {
         min-width: 291px;
     }
 
+    .structure-clinic__link-block.block_color {
+        min-width: initial;
+    }
+
     /* .help */
     .help__container-wrapper {
         display: grid;
@@ -4116,6 +4192,18 @@ textarea.offers__container-right__input {
 
     .footer__container-center {
         margin-bottom: 35px;
+    }
+     /* therapy */
+     .therapy__container-wrapper{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .therapy-title{
+        margin-bottom: 15px;
+    }
+    .therapy__picture {
+        min-width: auto;
+        height: auto;
     }
 
     /* advantages */
@@ -4211,7 +4299,53 @@ textarea.offers__container-right__input {
     .offers__container-wrapper__white {
         grid-template-columns: initial;
     }
+    /* help */
+    .help__block{
+        padding: 10px;
+    }
+    .rehabilitation__top_block{
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .rehabilitation__connection{
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .rehabilitation__connection-btn{
+        gap: 5px;
+    }
+    .grid-5-3-2 {
+        display: grid;
+        grid-template-columns: repeat(1, 17fr);
+        gap: 5px;
+    }
+    .treatment-programs__table{
+        padding: 21px 15px;
+    }
+    /* Indications */
+    .Indications-contraindications___container-wrapper{
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+    }
+    /* phenibut */
+    .phenibut__container-wrapper{
+        justify-content: inherit;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .phenibut__title{
+        font-size: 26px;
+        line-height: 33.8px;
+    }
+    /* photo-clinic */
+    .photo-clinic__block-item{
+        margin-bottom: 20px;
+    } 
+    
 }
+
+
 
 @media (max-width: 767px) {
 
