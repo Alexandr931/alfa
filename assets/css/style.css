@@ -362,7 +362,8 @@ body {
     grid-template-columns: repeat(3, 3fr);
     gap: 24px;
 }
-.grid-3-1{
+
+.grid-3-1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
@@ -753,7 +754,7 @@ body {
 
 .rating {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .rating__set {
@@ -776,6 +777,8 @@ body {
     margin-right: 8px;
     margin-bottom: 0px;
 }
+
+.rating__value {}
 
 .rating__body {
     position: relative;
@@ -1450,9 +1453,11 @@ body {
     border-radius: 30px;
     background: rgb(243, 247, 253);
 }
-.prices_color{
+
+.prices_color {
     background-color: #fff;
 }
+
 .prices_white {
     background: #FFFFFC;
 }
@@ -1712,6 +1717,13 @@ textarea.offers__container-right__input {
 .about-us {
     border-radius: 50px;
     background: rgb(243, 247, 253);
+}
+.about-us__rating{
+    font-family: "DaysOne","sans-serif";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-right: 5px;
 }
 
 .about-us__title {
@@ -2018,8 +2030,8 @@ textarea.offers__container-right__input {
 
 .documents__slide-img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-height: 419px;
+    object-fit: contain;
     border-radius: 15px;
 }
 
@@ -2494,6 +2506,10 @@ textarea.offers__container-right__input {
     padding: 30px;
 }
 
+.chart__blockss:nth-child(2) {
+    background-color: rgb(243, 247, 253);
+}
+
 .chart__block-title {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -2509,10 +2525,6 @@ textarea.offers__container-right__input {
     padding: 18px 15px;
 }
 
-.chart__block_color {
-    border-radius: 15px;
-    background-color: rgb(243, 247, 253);
-}
 
 .chart__block_descr {
     font-size: 16px;
@@ -2628,9 +2640,9 @@ textarea.offers__container-right__input {
 /* about */
 
 .about-us__content {
-    background-image: url("../img/sections/about-us/about-us-fon.png");
+    background-image: url("../img/sections/about-us/about-us-fon.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     padding: 40px;
     border-radius: 20px;
     margin-bottom: 50px;
@@ -2726,6 +2738,17 @@ textarea.offers__container-right__input {
 
 .related-services__slide {
     position: relative;
+    max-height: 300px;
+}
+
+.related-services__slide-img {
+    width: 100%;
+    height: 100%;
+}
+
+.related-services__slide {
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .related-services__div {
@@ -2749,6 +2772,7 @@ textarea.offers__container-right__input {
 .rehabilitation-centers__slide {
     border: 1px solid rgb(222, 236, 253);
     border-radius: 15px;
+    max-width: 300px;
 }
 
 .rehabilitation-center_btn {
@@ -2790,6 +2814,7 @@ textarea.offers__container-right__input {
     border-radius: 10px;
     background: rgb(255, 255, 255);
 }
+
 .treatment-programs__accor {
     border-radius: 20px;
     margin-bottom: 10px;
@@ -3107,6 +3132,20 @@ textarea.offers__container-right__input {
     gap: 15px;
 }
 
+.doctor_page__left-block-picture {
+    position: relative;
+    max-width: 316px;
+}
+
+.doctor_page__left-block-img {
+    width: 100%;
+    height: 100%;
+}
+
+.doctor_page__div-hiden {
+    display: none;
+}
+
 .doctor_page__button {
     padding: 15px 79px;
     border-radius: 15px;
@@ -3125,7 +3164,7 @@ textarea.offers__container-right__input {
 }
 
 .doctor_page__left-block-img {
-    max-height: 398px;
+
     border-radius: 20px;
     width: 100%;
 }
@@ -3160,6 +3199,19 @@ textarea.offers__container-right__input {
 .doctor_page__right-block_descr-internal {
     padding-bottom: 5px;
     border-bottom: 1px solid rgb(222, 236, 253);
+}
+
+.doctor_page__right-block_descr li {
+    margin-bottom: 12px;
+}
+
+.doctor_page__right-block_descr li:last-child {
+    margin-bottom: 0px;
+}
+
+.doctor_page__li svg {
+    min-width: 15px;
+    min-height: 15px;
 }
 
 .doctor_page__tabl {
@@ -3305,85 +3357,107 @@ textarea.offers__container-right__input {
     border-radius: 15px;
     border: 1px solid #1F587A;
 }
-.methods-title{
+
+.methods-title {
     font-size: 24px;
     line-height: 28.8px;
     margin-bottom: 20px;
 }
-.methods__wrapper{
+
+.methods__wrapper {
     display: flex;
     flex-direction: column;
     gap: 35px;
 }
+
 /* preparations */
-.preparations__block{
+.preparations__block {
     display: flex;
     gap: 20px;
     border-radius: 10px;
     padding: 10px;
-    background-color: #DEECFD;
+    background-color: rgb(243, 247, 253);
 }
 
-.preparations__img{
+.preparations__img {
     border-radius: 10px;
 }
-.preparations__block-text{
+
+.preparations__block-text {
     display: flex;
     flex-direction: column;
 }
-.preparations-large-descr{
+
+.preparations-large-descr {
     margin-bottom: 4px;
 }
-.preparations__descr{
+
+.preparations__descr {
     font-size: 14px;
     margin-bottom: 54px;
     max-width: 220px;
 }
-.preparations__wrapper{
+
+.preparations__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 3fr);
     gap: 24px 20px;
 }
+
 .breadcrumbs_link_active-white .section-descr {
     color: #FFFFFC;
 }
+
 /* legal */
-.legal__wrapper{
+.legal__wrapper {
     display: flex;
     flex-direction: column;
     gap: 35px;
 }
-.legal__title{
+
+.legal__title {
     margin-bottom: 20px;
 }
-.legal-documents__picture{
+
+.legal-documents__picture {
     padding: 10px;
     border-radius: 20px;
     background: rgb(243, 247, 253);
 }
-.legal-documents__info{
+
+.legal-documents__info {
     display: flex;
     gap: 25px;
 }
-.legal-documents__internal{
+
+.legal-documents__internal {
     background-image: url("../img/sections/vacancy/vacancy.png");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 25px;
-    padding: 30px 48px;
+    padding: 30px 30px;
     margin-bottom: 35px;
 }
-.legal-documents__descr{
+
+.legal-documents__descr {
     max-width: 400px;
     margin-bottom: 20px;
 }
-.legal-documents__info-text{
+
+.legal-documents__info-text {
     display: flex;
     flex-direction: column;
 }
-.legal-documents__link{
+
+.legal-documents__link {
     width: fit-content;
 }
+
+/* mistake */
+.mistake__img {
+    min-height: 173px;
+}
+
 @media (min-width: 1025px) {
 
     /* glob */
@@ -3426,6 +3500,7 @@ textarea.offers__container-right__input {
         opacity: 1;
         pointer-events: all;
     }
+
     /* header */
     a.header__top-span:hover .header_phone {
         color: #1F587A;
@@ -3484,13 +3559,29 @@ textarea.offers__container-right__input {
 @media (max-width: 1024px) {
 
     /* glob */
+    .content-body ol li:before {
+        width: 20px;
+        height: 20px;
+    }
+
+    .content-body li {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .accor-title {
+        gap: 5px;
+    }
+
     .section-descr {
         font-size: 14px;
     }
-    .breadcrumbs{
+
+    .breadcrumbs {
         padding: 0;
         flex-wrap: wrap;
     }
+
     .section-title {
         font-size: 22px;
         margin-bottom: 30px;
@@ -3526,6 +3617,12 @@ textarea.offers__container-right__input {
         gap: 10px;
         overflow-y: auto;
         overflow-x: scroll hidden;
+    }
+
+    .grid-3-1 {
+        display: grid;
+        grid-template-columns: repeat(1, 3fr);
+        gap: 10px;
     }
 
     .btn {
@@ -3582,38 +3679,50 @@ textarea.offers__container-right__input {
         display: grid;
         margin-bottom: 30px;
     }
-    .section__heading{
+
+    .section__heading {
         gap: 10px;
     }
-    .section__heading-title{
+
+    .section__heading-title {
         font-size: 26px;
         line-height: 33.8px;
     }
-    .grid-4-2{
-        display: flex;
-        flex-wrap: wrap;
+
+    .grid-4-2 {
+        display: grid;
+        grid-template-columns: repeat(1, 7fr);
         gap: 10px;
     }
-    .section__heading{
+
+    .section__heading {
         padding: 15px 10px;
     }
-    .grid-2-4{
+
+    .grid-2-4 {
+        /* display: grid;
+        grid-template-columns: repeat(1, 8fr);
+        gap: 20px; */
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
     }
-    .calculation-form{
+
+    .calculation-form {
         padding: 20px 15px;
-    } 
-    .calculation__container-wrapper{
+    }
+
+    .calculation__container-wrapper {
         flex-wrap: wrap;
         gap: 10px;
     }
-    .grid-3-3{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
+
+    .grid-3-3 {
+        display: grid;
+        grid-template-columns: repeat(1, 8fr);
+        gap: 15px;
     }
+
     /* header */
     .burger {
         position: relative;
@@ -4193,14 +4302,17 @@ textarea.offers__container-right__input {
     .footer__container-center {
         margin-bottom: 35px;
     }
-     /* therapy */
-     .therapy__container-wrapper{
+
+    /* therapy */
+    .therapy__container-wrapper {
         flex-wrap: wrap;
         gap: 20px;
     }
-    .therapy-title{
+
+    .therapy-title {
         margin-bottom: 15px;
     }
+
     .therapy__picture {
         min-width: auto;
         height: auto;
@@ -4231,6 +4343,7 @@ textarea.offers__container-right__input {
     /* team */
     .team__slide {
         min-height: 380px;
+        max-height: 500px;
     }
 
     .team__slide-block {
@@ -4299,53 +4412,277 @@ textarea.offers__container-right__input {
     .offers__container-wrapper__white {
         grid-template-columns: initial;
     }
+
     /* help */
-    .help__block{
+    .help__block {
         padding: 10px;
     }
-    .rehabilitation__top_block{
-        flex-wrap: wrap;
-        gap: 15px;
+
+    .rehabilitation__top_block {
+        flex-direction: column;
+        gap: 10px;
     }
-    .rehabilitation__connection{
-        flex-wrap: wrap;
+
+    .rehabilitation__connection {
+        flex-direction: column;
         gap: 5px;
     }
-    .rehabilitation__connection-btn{
+
+    .rehabilitation__connection-btn {
         gap: 5px;
     }
+
+    .rehabilitation_link {
+        height: 78px;
+        width: 100%;
+        background-size: cover;
+    }
+
     .grid-5-3-2 {
         display: grid;
         grid-template-columns: repeat(1, 17fr);
         gap: 5px;
     }
-    .treatment-programs__table{
+
+    .treatment-programs__table {
         padding: 21px 15px;
     }
+
     /* Indications */
-    .Indications-contraindications___container-wrapper{
+    .Indications-contraindications___container-wrapper {
         flex-wrap: wrap;
         gap: 10px;
         padding: 10px;
     }
+
     /* phenibut */
-    .phenibut__container-wrapper{
+    .phenibut__container-wrapper {
         justify-content: inherit;
         flex-wrap: wrap;
         gap: 20px;
     }
-    .phenibut__title{
+
+    .phenibut__title {
         font-size: 26px;
         line-height: 33.8px;
     }
+
     /* photo-clinic */
-    .photo-clinic__block-item{
+    .photo-clinic__block-item {
         margin-bottom: 20px;
-    } 
-    
+    }
+
+    /* chart  */
+    .chart__block {
+        padding: 20px 15px;
+    }
+
+    .chart__block-title {
+        display: none;
+    }
+
+    .chart__block_item {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .chart__block_descr-name {
+        flex: 1 1 100%;
+        color: #2E2E2E;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .chart__block_descr-doctor {
+        flex: 1 1 100%;
+        font-size: 14px;
+    }
+
+    .chart__block_descr-date {
+        flex: 0 1 calc(50% - 4px);
+        margin-right: 8px;
+        font-size: 12px;
+        color: #1F587A;
+        line-height: 18.2px;
+    }
+
+    .chart__block_descr-time {
+        flex: 0 1 calc(50% - 4px);
+        text-align: right;
+        font-size: 12px;
+        display: contents;
+        color: #1F587A;
+        line-height: 18.2px;
+    }
+
+    .chart__block_item {
+        padding: 15px;
+        border-bottom: 1px solid rgb(243, 247, 253);
+    }
+
+    .calculation__descr_num {
+        font-size: 20px;
+    }
+
+    /* question-doctor */
+    .question-doctor__block-pictutre {
+        display: none;
+    }
+
+    .question-doctor__form-input {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .question-doctor__form-btn {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .question-doctor__block {
+        padding: 20px 15px;
+    }
+
+    .questions__form {
+        margin-bottom: 8px;
+    }
+
+    /* licenses */
+    .licenses__container-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .team__slide-block-position {
+        bottom: 75px;
+    }
+
+    /* doctor_page */
+    .doctor_page__div-hiden {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+
+    .doctor_page__right-wrapper_div {
+        display: none;
+    }
+
+    .doctor_page__wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .doctor_page__tabl {
+        padding: 20px 15px;
+    }
+
+    .mistake__container-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* vacancy */
+    .vacancy__services {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .vacancy__title-descr {
+        font-size: 14px;
+    }
+
+    .vacancy-title__text {
+        font-size: 16px;
+        text-align: start;
+        line-height: 21px;
+    }
+
+    .vacancy__title-div_wrapper {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .vacancy__requirements-title {
+        font-size: 16px;
+    }
+
+    .vacancy-title__decor {
+        width: 30px;
+        height: 30px;
+        flex-shrink: 0;
+    }
+
+    .vacancy__connection {
+        padding: 15px;
+    }
+
+    /* methods */
+    .methods__wrapper {
+        gap: 20px;
+    }
+
+    .preparations__wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 5fr);
+        gap: 10px;
+    }
+
+    /* legal */
+    .legal__wrapper {
+        gap: 10px;
+    }
+
+    .legal__title {
+        margin-bottom: 15px;
+    }
+
+    .legal-documents__internal {
+        padding: 25px 15px;
+    }
+
+    .legal-documents__info {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .legal-documents__link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .vacancy__requirements-title {
+        margin-bottom: 15px;
+    }
+
+    .about-us__content-wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .about-us__content {
+        padding: 15px;
+    }
+
+    .about-us__content-block_internal {
+        gap: 10px;
+    }
+
+    /* related */
+    .related-services__slide {
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    .related-services__div {
+        padding: 15px 20px;
+    }
 }
-
-
 
 @media (max-width: 767px) {
 

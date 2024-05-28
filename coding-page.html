@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/build/swiper.css">
+    <link rel="stylesheet" href="assets/css/build/fancybox.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/build/jquery.min.js"></script>
     <script defer src="assets/js/build/swiper.js"></script>
+    <script defer src="assets/js/build/lidrekon.js"></script>
+    <script defer src="assets/js/build/mask.js"></script>
+    <script defer src="assets/js/build/fancybox.js"></script>
     <script defer src="assets/js/main.js"></script>
-    <title>Страница вывода из запоя</title>
+    <title>Главная</title>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
             let flagMap = false;
@@ -908,7 +913,7 @@
                                 <p class="section-descr">Главная</p>
                                 <span>
                                     <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7.92308 6.5L11 3.51084M11 3.51084L7.92308 0.5M11 3.51084L1 3.51084" stroke="#2E2E2E" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M7.92308 6.5L11 3.51084M11 3.51084L7.92308 0.5M11 3.51084L1 3.51084" stroke="#2E2E2E" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>                                         
                                 </span>
                             </a>
@@ -918,7 +923,7 @@
                                 <p class="section-descr">Услуги</p>
                                 <span>
                                     <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7.92308 6.5L11 3.51084M11 3.51084L7.92308 0.5M11 3.51084L1 3.51084" stroke="#2E2E2E" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M7.92308 6.5L11 3.51084M11 3.51084L7.92308 0.5M11 3.51084L1 3.51084" stroke="#2E2E2E" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>                                    
                                 </span>
                             </a>
@@ -944,69 +949,91 @@
                         </div>
                         </a>
                         <div class="rehabilitation__connection-btn">
-                            <button class="rehabilitation__btn btn btn_big btn_red">
+                            <button class="rehabilitation__btn btn btn_big btn_red popup-btn">
                                 <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
                                 <span class="btn__text">Заказать прямо сейчас</span>
                             </button>
-                            <button class="rehabilitation__btn-color btn btn_big btn_color">
+                            <button class="rehabilitation__btn-color btn btn_big btn_color popup-btn">
                                 <span class="btn__text">Записаться на прием</span>
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="rehabilitation__bottom_block grid-4-1">
-                    <div class="rehabilitation__block">
-                        <img class="rehabilitation__slide_img" src="assets/img/sections/about/doctor-img.jpg" alt="">
-                        <div class="rehabilitation__slide-div">
-                            <p class="team__div_descr">Консультирует вас</p>
+                <div class="rehabilitation__bottom_block">
+                    <div class="team__container container">
+                        <div class="rehabilitation__slider-container slider-container">
+                            <div class="rehabilitation__slider swiper slider-4 swiper-initialized swiper-horizontal swiper-backface-hidden">
+                                <div class="rehabilitation__slider-wrapper swiper-wrapper" id="swiper-wrapper-5fb110ebefd35263" aria-live="polite">
+                                    <div class="rehabilitation__block swiper-slide">
+                                        <img class="rehabilitation__slide_img" src="assets/img/sections/about/doctor-img.jpg" alt="">
+                                        <div class="rehabilitation__slide-div">
+                                            <p class="team__div_descr">Консультирует вас</p>
+                                        </div>
+                                        <a href="#" class="team__slide-block rehabilitation__slide-block">
+                                            <p class="rehabilitation__slide-block_descr section-descr">Врач-нарколог, невролог, психиатр
+                                            </p>
+                                            <p class="large-descr rehabilitation__slide-block__large-descr">Зарипова Варвара Геннадьевна
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="rehabilitation__block swiper-slide">
+                                        <img class="rehabilitation__slide_img" src="assets/img/sections/about/doctor-img.jpg" alt="">
+                                        <div class="rehabilitation__slide-div">
+                                            <p class="team__div_descr">Консультирует вас</p>
+                                        </div>
+                                        <a href="#" class="team__slide-block rehabilitation__slide-block">
+                                            <p class="rehabilitation__slide-block_descr section-descr">Врач-нарколог, невролог, психиатр
+                                            </p>
+                                            <p class="large-descr rehabilitation__slide-block__large-descr">Зарипова Варвара Геннадьевна
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="rehabilitation__block swiper-slide">
+                                        <img class="rehabilitation__slide_img" src="assets/img/sections/about/doctor-img.jpg" alt="">
+                                        <div class="rehabilitation__slide-div">
+                                            <p class="team__div_descr">Консультирует вас</p>
+                                        </div>
+                                        <a href="#" class="team__slide-block rehabilitation__slide-block">
+                                            <p class="rehabilitation__slide-block_descr section-descr">Врач-нарколог, невролог, психиатр
+                                            </p>
+                                            <p class="large-descr rehabilitation__slide-block__large-descr">Зарипова Варвара Геннадьевна
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="rehabilitation__block swiper-slide">
+                                        <img class="rehabilitation__slide_img" src="assets/img/sections/about/doctor-img.jpg" alt="">
+                                        <div class="rehabilitation__slide-div">
+                                            <p class="team__div_descr">Консультирует вас</p>
+                                        </div>
+                                        <a href="#" class="team__slide-block rehabilitation__slide-block rehabilitation__slide-block">
+                                            <p class="rehabilitation__slide-block_descr section-descr">Врач-нарколог, невролог, психиатр
+                                            </p>
+                                            <p class="large-descr rehabilitation__slide-block__large-descr">Зарипова Варвара Геннадьевна
+                                            </p>
+                                        </a>
+                                    </div>     
+                                </div>
+                                <div class="slider-navigation slider-navigation_static">
+                                    <button class="slider-btn slider-btn_prev" tabindex="0" aria-label="Previous slide" aria-controls="swiper-wrapper-9ba7b369dcfd6786">
+                                        <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.61538 1L1 5.48375M1 5.48375L5.61538 10M1 5.48375L16 5.48375" stroke="#5682A5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button>
+                                    <div class="slider-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span></div>
+                                    <button class="slider-btn slider-btn_next" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-9ba7b369dcfd6786">
+                                        <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.61538 1L1 5.48375M1 5.48375L5.61538 10M1 5.48375L16 5.48375" stroke="#5682A5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                         </div>
-                        <a href="#" class="team__slide-block rehabilitation__slide-block">
-                            <p class="rehabilitation__slide-block_descr section-descr">Врач-нарколог, невролог, психиатр
-                            </p>
-                            <p class="large-descr rehabilitation__slide-block__large-descr">Зарипова Варвара Геннадьевна
-                            </p>
-                        </a>
-                    </div>
-                    <div class="rehabilitation__block">
-                        <img class="rehabilitation__slide_img" src="assets/img/sections/about/doctor-img.jpg" alt="">
-                        <div class="rehabilitation__slide-div">
-                            <p class="team__div_descr">Консультирует вас</p>
                         </div>
-                        <a href="#" class="team__slide-block rehabilitation__slide-block">
-                            <p class="rehabilitation__slide-block_descr section-descr">Врач-нарколог, невролог, психиатр
-                            </p>
-                            <p class="large-descr rehabilitation__slide-block__large-descr">Зарипова Варвара Геннадьевна
-                            </p>
-                        </a>
-                    </div>
-                    <div class="rehabilitation__block">
-                        <img class="rehabilitation__slide_img" src="assets/img/sections/about/doctor-img.jpg" alt="">
-                        <div class="rehabilitation__slide-div">
-                            <p class="team__div_descr">Консультирует вас</p>
                         </div>
-                        <a href="#" class="team__slide-block rehabilitation__slide-block">
-                            <p class="rehabilitation__slide-block_descr section-descr">Врач-нарколог, невролог, психиатр
-                            </p>
-                            <p class="large-descr rehabilitation__slide-block__large-descr">Зарипова Варвара Геннадьевна
-                            </p>
-                        </a>
-                    </div>
-                    <div class="rehabilitation__block">
-                        <img class="rehabilitation__slide_img" src="assets/img/sections/about/doctor-img.jpg" alt="">
-                        <div class="rehabilitation__slide-div">
-                            <p class="team__div_descr">Консультирует вас</p>
-                        </div>
-                        <a href="#" class="team__slide-block rehabilitation__slide-block rehabilitation__slide-block">
-                            <p class="rehabilitation__slide-block_descr section-descr">Врач-нарколог, невролог, психиатр
-                            </p>
-                            <p class="large-descr rehabilitation__slide-block__large-descr">Зарипова Варвара Геннадьевна
-                            </p>
-                        </a>
-                    </div>     
                 </div>           
                 </div>
         </div>
-            
+            </div>
         </section>
         <section class="prices section-offset section-offset_padding">
             <div class="prices__container container">
@@ -2577,40 +2604,56 @@
         </section>
         <section class="about-us section-offset section-offset_padding">
             <div class="about-us__container container">
-                <!-- <div class="about-us__content">
+                <div class="about-us__content">
                     <h3 class="about-us__content-content section-title">Содержание</h3>
-                    <div class="about-us__content-wrapper">
-                        <div class="about-us__content-block content-body">
-                            <ol>
-                                <li>Вывод из запоя в Екатеринбурге</li>
-                                <li>Что такое запой?</li>
-                                <li>Помощь при запое</li>
-                                <li>Вывод из запоя в Екатеринбурге</li>
-                                <li>Что такое запой?</li>
-                            </ol>
-                        </div>
-                        <div class="about-us__content-block_internal">
-                            <div class="about-us__content-article">
-                                <p class="about-us__content-descr section-descr">Статью написал(а):</p>
-                                <a href="#" class="about-us__content_large-descr large-descr">Васильченко Михаил Сергеевич</a>
-                                <p class="about-us__content-descr_doctor section-descr">Психиатр-нарколог</p>
-                                <div class="about-us__date">
-                                <div class="stars"></div>
-                                    <p class="about-us__content_large-descr section-descr">Опубликовано: 09.09.2023</p>
+                    <div class="about-us__content-article">
+                        <p class="about-us__content-descr section-descr">Статью написал(а):</p>
+                        <a href="#" class="about-us__content_large-descr large-descr">Васильченко Михаил
+                            Сергеевич</a>
+                        <p class="about-us__content-descr_doctor section-descr">Психиатр-нарколог</p>
+                        <div class="about-us__date">
+                            <div class="reviews__rating rating">
+                                <div class="about-us__rating rating__value">5.0</div>
+                                <div class="rating__wrapper">
+                                    <div class="rating__body">
+                                        <div class="rating__active">
+                                            <img width="25" height="25" src="assets/img/icons/red-star.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/red-star.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/red-star.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/red-star.svg"
+                                                alt="" class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/red-star.svg"
+                                                alt="" class="star aspect-ratio">
+                                        </div>
+                                        <div class="rating__items">
+                                            <input type="radio" name="f_rating" value="1" class="rating__item">
+                                            <input type="radio" name="f_rating" value="2" class="rating__item">
+                                            <input type="radio" name="f_rating" value="3" class="rating__item">
+                                            <input type="radio" name="f_rating" value="4" class="rating__item">
+                                            <input type="radio" name="f_rating" value="5" class="rating__item">
+                                        </div>
+                                        <div class="rating__stars">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                class="star aspect-ratio">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            </div>
-                            <div class="about-us__content-article">
-                                <p class="about-us__content-descr section-descr">Статью проверил эксперт::</p>
-                                <a href="#" class="about-us__content_large-descr large-descr">Васильченко Михаил Сергеевич</a>
-                                <p class="about-us__content-descr_doctor section-descr">Основатель программы, клинический психолог</p>
-                                <div class="about-us__date">
-                                <img class="about-us__content-img" src="assets/img/sections/about/doctors-word.png" alt="">
-                                    <p class="about-us__content_large-descr section-descr">Проверено: 09.09.2023</p>
-                            </div>
-                            </div>
+                            <p class="about-us__content_large-descr section-descr">Опубликовано: 09.09.2023</p>
                         </div>
                     </div>
-                </div> -->
+                </div>
                 <h3 class="about-us__title section-title">Реабилитационный центр «Альфа» в Екатеринбурге</h3>
                 <div class="about-us__container-wrapper ">
                     <div class="about-us__container__top content-body">

@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/build/swiper.css">
+    <link rel="stylesheet" href="assets/css/build/fancybox.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/build/jquery.min.js"></script>
     <script defer src="assets/js/build/swiper.js"></script>
+    <script defer src="assets/js/build/lidrekon.js"></script>
+    <script defer src="assets/js/build/mask.js"></script>
+    <script defer src="assets/js/build/fancybox.js"></script>
     <script defer src="assets/js/main.js"></script>
-    <title>Текстовая страница</title>
+    <title>текстовая страница</title>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
             let flagMap = false;
@@ -899,1128 +904,1171 @@
         </div>
     </header>
     <main class="main">
-       <section class="phenibut section-offset">
-        <div class="phenibut__container container">
-            <ul class="breadcrumbs">
-                <li class="">
-                    <a class="breadcrumbs_link" href="#">
-                        <p class="section-descr">Главная</p>
-                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.92308 6.5L11 3.51084M11 3.51084L7.92308 0.5M11 3.51084L1 3.51084" stroke="#2E2E2E" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
-                            </path>
-                        </svg>
-                    </a>
-                </li>
-                <li class="">
-                    <a class="breadcrumbs_link" href="#">
-                        <p class="section-descr">о клиники</p>
-                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.92308 6.5L11 3.51084M11 3.51084L7.92308 0.5M11 3.51084L1 3.51084" stroke="#2E2E2E" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round">
-                            </path>
-                        </svg>
-                    </a>
-                </li>
-                
-                <li class="">
-                    <span class="breadcrumbs_link  breadcrumbs_link_active-white" href="#">
-                        <p class="section-descr breadcrumbs_link_active-white">Совместим ли одновременный прием Фенибута и алкоголя?</p>
-                    </span>
-                </li>
-            </ul> 
-        <div class="phenibut__container-wrapper">
-            <div class="phenibut__container-left">
-                <h1 class="phenibut__title">Совместим ли одновременный прием Фенибута и алкоголя?</h1>
-                <p class="phenibut__descr section-descr">Для современного мира сплочённость команды профессионалов, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для своевременного выполнения сверхзадачи. Есть над чем задуматься: сделанные на базе интернет-аналитики выводы и по сей день остаются уделом либералов, которые жаждут быть разоблачены.
-                </p>
+        <section class="phenibut section-offset">
+            <div class="phenibut__container container">
+                <ul class="breadcrumbs">
+                    <li class="">
+                        <a class="breadcrumbs_link" href="#">
+                            <p class="section-descr">Главная</p>
+                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.92308 6.5L11 3.51084M11 3.51084L7.92308 0.5M11 3.51084L1 3.51084"
+                                    stroke="#2E2E2E" stroke-opacity="0.6" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="breadcrumbs_link" href="#">
+                            <p class="section-descr">о клиники</p>
+                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.92308 6.5L11 3.51084M11 3.51084L7.92308 0.5M11 3.51084L1 3.51084"
+                                    stroke="#2E2E2E" stroke-opacity="0.6" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <span class="breadcrumbs_link  breadcrumbs_link_active-white" href="#">
+                            <p class="section-descr breadcrumbs_link_active-white">Совместим ли одновременный прием
+                                Фенибута и алкоголя?</p>
+                        </span>
+                    </li>
+                </ul>
+                <div class="phenibut__container-wrapper">
+                    <div class="phenibut__container-left">
+                        <h1 class="phenibut__title">Совместим ли одновременный прием Фенибута и алкоголя?</h1>
+                        <p class="phenibut__descr section-descr">Для современного мира сплочённость команды
+                            профессионалов, а также свежий взгляд на привычные вещи — безусловно открывает новые
+                            горизонты для своевременного выполнения сверхзадачи. Есть над чем задуматься: сделанные на
+                            базе интернет-аналитики выводы и по сей день остаются уделом либералов, которые жаждут быть
+                            разоблачены.
+                        </p>
+                    </div>
+                    <div class="phenibut__container-right grid-2-2-1">
+                        <div class="phenibut__info-block">
+                            <span class="phenibut__info-block_svg">
+                                <svg width="28" height="20" viewBox="0 0 28 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14.0004 0C19.2657 0 23.651 3.03625 27.0901 8.9425L27.3601 9.41625L27.4153 9.54125L27.4521 9.645L27.4693 9.71375L27.4865 9.81625L27.5 9.94125V10.0787L27.4828 10.2175C27.4747 10.2639 27.4641 10.3098 27.4509 10.355L27.403 10.49L27.3589 10.5837L27.3392 10.6212C23.9468 16.6662 19.6069 19.8462 14.3846 19.995L14.0004 20C8.605 20 4.13623 16.8137 0.661614 10.62C0.555706 10.4312 0.5 10.2175 0.5 10C0.5 9.78253 0.555706 9.56883 0.661614 9.38C4.13623 3.18625 8.605 0 14.0004 0ZM14.0004 6.25C13.0239 6.25 12.0873 6.64509 11.3968 7.34835C10.7063 8.05161 10.3184 9.00544 10.3184 10C10.3184 10.9946 10.7063 11.9484 11.3968 12.6516C12.0873 13.3549 13.0239 13.75 14.0004 13.75C14.977 13.75 15.9135 13.3549 16.604 12.6516C17.2945 11.9484 17.6825 10.9946 17.6825 10C17.6825 9.00544 17.2945 8.05161 16.604 7.34835C15.9135 6.64509 14.977 6.25 14.0004 6.25Z"
+                                        fill="#FFFFFC" />
+                                </svg>
+                            </span>
+                            <p class="phenibut__number large-descr">
+                                728
+                            </p>
+                            <p class="phenibut__descr section-descr">просмотров</p>
+                        </div>
+                        <div class="phenibut__info-block">
+                            <span class="phenibut__info-block_svg">
+                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19.25 2.17487C21.1353 3.26343 22.7037 4.82552 23.7998 6.70649C24.8959 8.58746 25.4817 10.7221 25.4993 12.899C25.5169 15.076 24.9656 17.2198 23.9 19.1182C22.8345 21.0167 21.2916 22.6039 19.4241 23.7228C17.5565 24.8417 15.4292 25.4534 13.2526 25.4974C11.076 25.5415 8.92569 25.0163 7.01444 23.9739C5.1032 22.9315 3.49734 21.408 2.35583 19.5543C1.21433 17.7005 0.576762 15.5808 0.50625 13.4049L0.5 12.9999L0.50625 12.5949C0.576254 10.4361 1.20443 8.33232 2.32955 6.48861C3.45466 4.6449 5.03832 3.12418 6.92611 2.07472C8.81391 1.02526 10.9414 0.482862 13.1013 0.500413C15.2611 0.517964 17.3795 1.09486 19.25 2.17487ZM13 5.49987C12.6938 5.49991 12.3983 5.61231 12.1695 5.81576C11.9407 6.01921 11.7946 6.29955 11.7587 6.60362L11.75 6.74987V12.9999L11.7612 13.1636C11.7897 13.3805 11.8747 13.5861 12.0075 13.7599L12.1162 13.8849L15.8662 17.6349L15.9837 17.7374C16.203 17.9074 16.4725 17.9998 16.75 17.9998C17.0275 17.9998 17.297 17.9074 17.5162 17.7374L17.6337 17.6336L17.7375 17.5161C17.9076 17.2969 17.9999 17.0273 17.9999 16.7499C17.9999 16.4724 17.9076 16.2028 17.7375 15.9836L17.6337 15.8661L14.25 12.4811V6.74987L14.2412 6.60362C14.2054 6.29955 14.0593 6.01921 13.8305 5.81576C13.6017 5.61231 13.3062 5.49991 13 5.49987Z"
+                                        fill="#FFFFFC" />
+                                </svg>
+
+                            </span>
+                            <p class="phenibut__number large-descr">
+                                10 минут
+                            </p>
+                            <p class="phenibut__descr section-descr">требуется для чтения</p>
+                        </div>
+                        <div class="phenibut__info-block">
+                            <span class="phenibut__info-block_svg">
+                                <svg width="26" height="24" viewBox="0 0 26 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19.6078 23.9987C18.1995 23.9996 15.9961 22.9038 12.9978 20.7113C10.0011 22.9046 7.7978 24.0008 6.3878 24C4.11613 24 3.90988 21.1505 5.76905 15.4515C-2.05512 9.7734 -1.16553 6.93437 8.4378 6.93437H8.5328C10.0203 2.31146 11.5095 0 13.0003 0C14.4878 0 15.977 2.31146 17.4678 6.93437H17.5628C27.167 6.93437 28.0557 9.77298 20.2291 15.4502C22.0874 21.1509 21.8803 24.0004 19.6078 23.9987Z"
+                                        fill="#FFFFFC" />
+                                </svg>
+
+                            </span>
+                            <p class="phenibut__number large-descr">
+                                5.0
+                            </p>
+                            <p class="phenibut__descr section-descr">рейтинг статьи</p>
+                        </div>
+                        <div class="phenibut__info-block">
+                            <span class="phenibut__info-block_svg">
+                                <svg width="18" height="26" viewBox="0 0 18 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9 0.5C10.2715 0.5 11.5143 0.866556 12.5715 1.55332C13.6287 2.24007 14.4527 3.21619 14.9392 4.35823C15.4258 5.50027 15.5531 6.75693 15.305 7.96932C15.057 9.1817 14.4447 10.2953 13.5457 11.1694C12.6466 12.0435 11.5012 12.6388 10.2542 12.8799C9.00713 13.1211 7.71456 12.9973 6.53989 12.5242C5.36522 12.0512 4.36122 11.2501 3.65484 10.2223C2.94846 9.19451 2.57143 7.98613 2.57143 6.75L2.57786 6.47875C2.64975 4.86969 3.35778 3.34972 4.55429 2.23582C5.75079 1.12193 7.3434 0.500093 9 0.5ZM11.5714 15.5C13.2764 15.5 14.9115 16.1585 16.1171 17.3306C17.3227 18.5027 18 20.0924 18 21.75V23C18 23.663 17.7291 24.2989 17.2468 24.7678C16.7646 25.2366 16.1106 25.5 15.4286 25.5H2.57143C1.88944 25.5 1.23539 25.2366 0.753154 24.7678C0.270917 24.2989 0 23.663 0 23V21.75C0 20.0924 0.677294 18.5027 1.88288 17.3306C3.08848 16.1585 4.72361 15.5 6.42857 15.5H11.5714Z"
+                                        fill="#FFFFFC" />
+                                </svg>
+
+                            </span>
+                            <p class="phenibut__number large-descr">
+                                728
+                            </p>
+                            <p class="phenibut__descr section-descr">людям была полезна</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="phenibut__container-right grid-2-2-1">
-                <div class="phenibut__info-block">
-                       <span class="phenibut__info-block_svg">
-                        <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.0004 0C19.2657 0 23.651 3.03625 27.0901 8.9425L27.3601 9.41625L27.4153 9.54125L27.4521 9.645L27.4693 9.71375L27.4865 9.81625L27.5 9.94125V10.0787L27.4828 10.2175C27.4747 10.2639 27.4641 10.3098 27.4509 10.355L27.403 10.49L27.3589 10.5837L27.3392 10.6212C23.9468 16.6662 19.6069 19.8462 14.3846 19.995L14.0004 20C8.605 20 4.13623 16.8137 0.661614 10.62C0.555706 10.4312 0.5 10.2175 0.5 10C0.5 9.78253 0.555706 9.56883 0.661614 9.38C4.13623 3.18625 8.605 0 14.0004 0ZM14.0004 6.25C13.0239 6.25 12.0873 6.64509 11.3968 7.34835C10.7063 8.05161 10.3184 9.00544 10.3184 10C10.3184 10.9946 10.7063 11.9484 11.3968 12.6516C12.0873 13.3549 13.0239 13.75 14.0004 13.75C14.977 13.75 15.9135 13.3549 16.604 12.6516C17.2945 11.9484 17.6825 10.9946 17.6825 10C17.6825 9.00544 17.2945 8.05161 16.604 7.34835C15.9135 6.64509 14.977 6.25 14.0004 6.25Z" fill="#FFFFFC"/>
-                        </svg>
-                       </span>
-                       <p class="phenibut__number large-descr">
-                        728
-                       </p>
-                       <p class="phenibut__descr section-descr">просмотров</p>
+        </section>
+        <section class="about-us section-offset section-offset_padding">
+            <div class="about-us__container container">
+                <div class="about-us__content-article">
+                    <p class="about-us__content-descr section-descr">Статью написал(а):</p>
+                    <a href="#" class="about-us__content_large-descr large-descr">Васильченко Михаил
+                        Сергеевич</a>
+                    <p class="about-us__content-descr_doctor section-descr">Психиатр-нарколог</p>
+                    <div class="about-us__date">
+                        <div class="reviews__rating rating">
+                            <div class="about-us__rating rating__value">5.0</div>
+                            <div class="rating__wrapper">
+                                <div class="rating__body">
+                                    <div class="rating__active">
+                                        <img width="25" height="25" src="assets/img/icons/red-star.svg" alt=""
+                                            class="star aspect-ratio">
+                                        <img width="25" height="25" src="assets/img/icons/red-star.svg" alt=""
+                                            class="star aspect-ratio">
+                                        <img width="25" height="25" src="assets/img/icons/red-star.svg" alt=""
+                                            class="star aspect-ratio">
+                                        <img width="25" height="25" src="assets/img/icons/red-star.svg" alt=""
+                                            class="star aspect-ratio">
+                                        <img width="25" height="25" src="assets/img/icons/red-star.svg" alt=""
+                                            class="star aspect-ratio">
+                                    </div>
+                                    <div class="rating__items">
+                                        <input type="radio" name="f_rating" value="1" class="rating__item">
+                                        <input type="radio" name="f_rating" value="2" class="rating__item">
+                                        <input type="radio" name="f_rating" value="3" class="rating__item">
+                                        <input type="radio" name="f_rating" value="4" class="rating__item">
+                                        <input type="radio" name="f_rating" value="5" class="rating__item">
+                                    </div>
+                                    <div class="rating__stars">
+                                        <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                            class="star aspect-ratio">
+                                        <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                            class="star aspect-ratio">
+                                        <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                            class="star aspect-ratio">
+                                        <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                            class="star aspect-ratio">
+                                        <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                            class="star aspect-ratio">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="about-us__content_large-descr section-descr">Опубликовано: 09.09.2023</p>
+                    </div>
                 </div>
-                <div class="phenibut__info-block">
-                       <span class="phenibut__info-block_svg">
-                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19.25 2.17487C21.1353 3.26343 22.7037 4.82552 23.7998 6.70649C24.8959 8.58746 25.4817 10.7221 25.4993 12.899C25.5169 15.076 24.9656 17.2198 23.9 19.1182C22.8345 21.0167 21.2916 22.6039 19.4241 23.7228C17.5565 24.8417 15.4292 25.4534 13.2526 25.4974C11.076 25.5415 8.92569 25.0163 7.01444 23.9739C5.1032 22.9315 3.49734 21.408 2.35583 19.5543C1.21433 17.7005 0.576762 15.5808 0.50625 13.4049L0.5 12.9999L0.50625 12.5949C0.576254 10.4361 1.20443 8.33232 2.32955 6.48861C3.45466 4.6449 5.03832 3.12418 6.92611 2.07472C8.81391 1.02526 10.9414 0.482862 13.1013 0.500413C15.2611 0.517964 17.3795 1.09486 19.25 2.17487ZM13 5.49987C12.6938 5.49991 12.3983 5.61231 12.1695 5.81576C11.9407 6.01921 11.7946 6.29955 11.7587 6.60362L11.75 6.74987V12.9999L11.7612 13.1636C11.7897 13.3805 11.8747 13.5861 12.0075 13.7599L12.1162 13.8849L15.8662 17.6349L15.9837 17.7374C16.203 17.9074 16.4725 17.9998 16.75 17.9998C17.0275 17.9998 17.297 17.9074 17.5162 17.7374L17.6337 17.6336L17.7375 17.5161C17.9076 17.2969 17.9999 17.0273 17.9999 16.7499C17.9999 16.4724 17.9076 16.2028 17.7375 15.9836L17.6337 15.8661L14.25 12.4811V6.74987L14.2412 6.60362C14.2054 6.29955 14.0593 6.01921 13.8305 5.81576C13.6017 5.61231 13.3062 5.49991 13 5.49987Z" fill="#FFFFFC"/>
-                            </svg>
-                            
-                       </span>
-                       <p class="phenibut__number large-descr">
-                        10 минут
-                       </p>
-                       <p class="phenibut__descr section-descr">требуется для чтения</p>
-                </div>
-                <div class="phenibut__info-block">
-                       <span class="phenibut__info-block_svg">
-                        <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19.6078 23.9987C18.1995 23.9996 15.9961 22.9038 12.9978 20.7113C10.0011 22.9046 7.7978 24.0008 6.3878 24C4.11613 24 3.90988 21.1505 5.76905 15.4515C-2.05512 9.7734 -1.16553 6.93437 8.4378 6.93437H8.5328C10.0203 2.31146 11.5095 0 13.0003 0C14.4878 0 15.977 2.31146 17.4678 6.93437H17.5628C27.167 6.93437 28.0557 9.77298 20.2291 15.4502C22.0874 21.1509 21.8803 24.0004 19.6078 23.9987Z" fill="#FFFFFC"/>
-                            </svg>
-                            
-                       </span>
-                       <p class="phenibut__number large-descr">
-                        5.0
-                       </p>
-                       <p class="phenibut__descr section-descr">рейтинг статьи</p>
-                </div>
-                <div class="phenibut__info-block">
-                       <span class="phenibut__info-block_svg">
-                        <svg width="18" height="26" viewBox="0 0 18 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 0.5C10.2715 0.5 11.5143 0.866556 12.5715 1.55332C13.6287 2.24007 14.4527 3.21619 14.9392 4.35823C15.4258 5.50027 15.5531 6.75693 15.305 7.96932C15.057 9.1817 14.4447 10.2953 13.5457 11.1694C12.6466 12.0435 11.5012 12.6388 10.2542 12.8799C9.00713 13.1211 7.71456 12.9973 6.53989 12.5242C5.36522 12.0512 4.36122 11.2501 3.65484 10.2223C2.94846 9.19451 2.57143 7.98613 2.57143 6.75L2.57786 6.47875C2.64975 4.86969 3.35778 3.34972 4.55429 2.23582C5.75079 1.12193 7.3434 0.500093 9 0.5ZM11.5714 15.5C13.2764 15.5 14.9115 16.1585 16.1171 17.3306C17.3227 18.5027 18 20.0924 18 21.75V23C18 23.663 17.7291 24.2989 17.2468 24.7678C16.7646 25.2366 16.1106 25.5 15.4286 25.5H2.57143C1.88944 25.5 1.23539 25.2366 0.753154 24.7678C0.270917 24.2989 0 23.663 0 23V21.75C0 20.0924 0.677294 18.5027 1.88288 17.3306C3.08848 16.1585 4.72361 15.5 6.42857 15.5H11.5714Z" fill="#FFFFFC"/>
-                            </svg>
-                            
-                       </span>
-                       <p class="phenibut__number large-descr">
-                        728
-                       </p>
-                       <p class="phenibut__descr section-descr">людям была полезна</p>
-                </div>
-            </div>
-        </div>
-    </div>
-       </section>
-       <section class="about-us section-offset section-offset_padding">
-        <div class="about-us__container container">
-            <!-- <div class="about-us__content">
-                <h3 class="about-us__content-content section-title">Содержание</h3>
-                <div class="about-us__content-wrapper">
-                    <div class="about-us__content-block content-body">
+                <h3 class="about-us__title section-title">Реабилитационный центр «Альфа» в Екатеринбурге</h3>
+                <div class="about-us__container-wrapper ">
+                    <div class="about-us__container__top content-body">
+                        <p>
+                            Стационарное отделение оснащено всем, что требуется для комфортного пребывания: удобная
+                            мебель, чистые помещения, организованный досуг. Реабилитация не причиняет больным неприятных
+                            моментов – лечение проходит легко и практически безболезненно. Медицинский персонал
+                            отличается тактичностью, относится к пациентам с пониманием. В трудную минуту они мгновенно
+                            приходят на помощь, облегчая физические и психологические страдания.
+                            Предлагаемые услуги оказываются на основе лицензии, дающей право на оказание врачебной
+                            наркологической помощи. Врачи всех специализаций, средний медперсонал имеют допуски для
+                            проведения медицинских процедур. Ксерокопии документов пациенты могут потребовать у
+                            приехавшего по вызову на дом врача-нарколога.
+                        </p>
+                        <p>Работа наркологического центра ориентирована на положительный результат. Наркомания –
+                            проблема, с которой может столкнуться каждая семья. Мы понимаем, как важна профессиональная
+                            помощь в этот непростой период жизни.</p>
+                        <h3>Подходы работы в клинике</h3>
+                        <p>В работе наша команда использует следующие подходы:</p>
+                        <ul class="markers">
+                            <li>Люди, знающие своё дело. В московском наркологическом центре работают специалисты. Они
+                                имеют за своими плечами внушительный опыт. Это ведущие наркологи, психиатры, психологи и
+                                эксперты по химической зависимости</li>
+                            <li>Психологическая поддержка. Мы никогда не осуждаем человека, который страдает от
+                                алкоголизма или наркотической зависимости. Наша команда внимательна к пациентам. Мы
+                                уважаем выбор в пользу жизни без наркотиков. Здесь вас поймут и поддержат</li>
+                            <li>Полная анонимность. Многие зависимые откладывают лечение из-за боязни огласки. Мы
+                                гарантируем полную анонимность и неразглашение исходных данных. </li>
+                            <li>Помощь близким. Семья пациента тоже страдает от психологического упадка. Наша клиника
+                                проводит для них бесплатные мероприятия и консультации. Это позволит посмотреть на
+                                проблемы под нужным углом, понять их причину и сделать выводы.</li>
+                        </ul>
+                        <p>В работе наша команда использует следующие подходы:</p>
+                        <p>
+                        </p>
                         <ol>
-                            <li>Вывод из запоя в Екатеринбурге</li>
-                            <li>Что такое запой?</li>
-                            <li>Помощь при запое</li>
-                            <li>Вывод из запоя в Екатеринбурге</li>
-                            <li>Что такое запой?</li>
+                            <li><a href="#">Получение консультации у врача-нарколога.</a> Беседа с психологом и
+                                психиатром. Согласие на проведение обследования и лечения</li>
+                            <li>Проведение интоксикации организма. Полное очищение от наркотических веществ и алкоголя.
+                                Снятие ломки. </li>
+                            <li>Разработка плана лечение. Комплексная работа с зависимым и его окружением. </li>
+                            <li>Проведение групповых занятий, способствующих снижению тяги к употреблению наркотических
+                                веществ.</li>
+                            <li>Проведение медицинских манипуляций. Они направлены на улучшение работы внутренних
+                                органов и всего организма.</li>
                         </ol>
                     </div>
-                    <div class="about-us__content-block_internal">
-                        <div class="about-us__content-article">
-                            <p class="about-us__content-descr section-descr">Статью написал(а):</p>
-                            <a href="#" class="about-us__content_large-descr large-descr">Васильченко Михаил Сергеевич</a>
-                            <p class="about-us__content-descr_doctor section-descr">Психиатр-нарколог</p>
-                            <div class="about-us__date">
-                            <div class="stars"></div>
-                                <p class="about-us__content_large-descr section-descr">Опубликовано: 09.09.2023</p>
+                    <div class="about-us__container__center">
+                        <div class="about-us__container-block">
+                            <picture class="about-us__container__picture">
+                                <img class="about-us__container__img"
+                                    src="assets/img/sections/about-us/about-us-img1.png" alt="">
+                            </picture>
+                            <picture class="about-us__container__picture">
+                                <img class="about-us__container__img" src="assets/img/sections/about-us/about-img2.png"
+                                    alt="">
+                            </picture>
                         </div>
-                        </div>
-                        <div class="about-us__content-article">
-                            <p class="about-us__content-descr section-descr">Статью проверил эксперт::</p>
-                            <a href="#" class="about-us__content_large-descr large-descr">Васильченко Михаил Сергеевич</a>
-                            <p class="about-us__content-descr_doctor section-descr">Основатель программы, клинический психолог</p>
-                            <div class="about-us__date">
-                            <img class="about-us__content-img" src="assets/img/sections/about/doctors-word.png" alt="">
-                                <p class="about-us__content_large-descr section-descr">Проверено: 09.09.2023</p>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <h3 class="about-us__title section-title">Реабилитационный центр «Альфа» в Екатеринбурге</h3>
-            <div class="about-us__container-wrapper ">
-                <div class="about-us__container__top content-body">
-                    <p>
-                        Стационарное отделение оснащено всем, что требуется для комфортного пребывания: удобная
-                        мебель, чистые помещения, организованный досуг. Реабилитация не причиняет больным неприятных
-                        моментов – лечение проходит легко и практически безболезненно. Медицинский персонал
-                        отличается тактичностью, относится к пациентам с пониманием. В трудную минуту они мгновенно
-                        приходят на помощь, облегчая физические и психологические страдания.
-                        Предлагаемые услуги оказываются на основе лицензии, дающей право на оказание врачебной
-                        наркологической помощи. Врачи всех специализаций, средний медперсонал имеют допуски для
-                        проведения медицинских процедур. Ксерокопии документов пациенты могут потребовать у
-                        приехавшего по вызову на дом врача-нарколога.
-                    </p>
-                    <p>Работа наркологического центра ориентирована на положительный результат. Наркомания –
-                        проблема, с которой может столкнуться каждая семья. Мы понимаем, как важна профессиональная
-                        помощь в этот непростой период жизни.</p>
-                    <h3>Подходы работы в клинике</h3>
-                    <p>В работе наша команда использует следующие подходы:</p>
-                    <ul class="markers">
-                        <li>Люди, знающие своё дело. В московском наркологическом центре работают специалисты. Они
-                            имеют за своими плечами внушительный опыт. Это ведущие наркологи, психиатры, психологи и
-                            эксперты по химической зависимости</li>
-                        <li>Психологическая поддержка. Мы никогда не осуждаем человека, который страдает от
-                            алкоголизма или наркотической зависимости. Наша команда внимательна к пациентам. Мы
-                            уважаем выбор в пользу жизни без наркотиков. Здесь вас поймут и поддержат</li>
-                        <li>Полная анонимность. Многие зависимые откладывают лечение из-за боязни огласки. Мы
-                            гарантируем полную анонимность и неразглашение исходных данных. </li>
-                        <li>Помощь близким. Семья пациента тоже страдает от психологического упадка. Наша клиника
-                            проводит для них бесплатные мероприятия и консультации. Это позволит посмотреть на
-                            проблемы под нужным углом, понять их причину и сделать выводы.</li>
-                    </ul>
-                    <p>В работе наша команда использует следующие подходы:</p>
-                    <p>
-                    </p><ol>
-                        <li><a href="#">Получение консультации у врача-нарколога.</a> Беседа с психологом и
-                            психиатром. Согласие на проведение обследования и лечения</li>
-                        <li>Проведение интоксикации организма. Полное очищение от наркотических веществ и алкоголя.
-                            Снятие ломки. </li>
-                        <li>Разработка плана лечение. Комплексная работа с зависимым и его окружением. </li>
-                        <li>Проведение групповых занятий, способствующих снижению тяги к употреблению наркотических
-                            веществ.</li>
-                        <li>Проведение медицинских манипуляций. Они направлены на улучшение работы внутренних
-                            органов и всего организма.</li>
-                    </ol>
-                </div>
-                <div class="about-us__container__center">
-                    <div class="about-us__container-block">
-                        <picture class="about-us__container__picture">
-                            <img class="about-us__container__img" src="assets/img/sections/about-us/about-us-img1.png" alt="">
-                        </picture>
-                        <picture class="about-us__container__picture">
-                            <img class="about-us__container__img" src="assets/img/sections/about-us/about-img2.png" alt="">
-                        </picture>
-                    </div>
-                    <div class="about-us__container-btns__block">
-                        <button class="about-us__button btn_big btn_color">
-                            <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
-                            <span class="btn__text">Цена на услуги</span>
-                        </button>
-                        <p class="about-us__container-btns__block__text">Фото реабилитационного центра в холле и
-                            коридоре</p>
-                        <button class="about-us__button btn_big btn_red">
-                            <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
-                            <span class="btn__text">Увидеть больше фото</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="about-us__container__descr-block content-body">
-                    <p>Стационарное отделение оснащено всем, что требуется для комфортного пребывания: удобная
-                        мебель, чистые помещения, организованный досуг. Реабилитация не причиняет больным неприятных
-                        моментов – <a href="">лечение проходит легко и практически безболезненно.</a> Медицинский
-                        персонал отличается тактичностью, относится к пациентам с пониманием. В трудную минуту они
-                        мгновенно приходят на помощь, облегчая физические и психологические страдания.</p>
-                </div>
-                <div class="about-us__container__bottom">
-                    <div class="about-us__container__bottom__block-text">
-                        <img class="about-us__container__bottom-icon" src="assets/img/sections/about-us/about-us__container__bottom-vecotr.svg" alt="">
-                        <p class="about-us__container__bottom_descr section-descr">Предлагаемые услуги оказываются
-                            на основе лицензии, дающей право на оказание врачебной наркологической помощи. Врачи
-                            всех специализаций, средний медперсонал имеют допуски для проведения медицинских
-                            процедур. Ксерокопии документов пациенты могут потребовать у приехавшего по вызову на
-                            дом врача-нарколога
-                        </p>
-                    </div>
-                    <div class="about-us__container__bottom-connection">
-                        <p class="about-us__container__bottom-connection__descr">
-                            Чтобы обратиться к нам, позвоните по телефону
-                        </p>
-                        <div class="about-us__container__bottom-connection__link">
-                            <svg width="15.000000" height="15.000000" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <desc>
-                                    Created with Pixso.
-                                </desc>
-                                <defs></defs>
-                                <path id="Vector" d="M11.52 14.5C8.47 14.49 5.54 13.27 3.38 11.11C1.21 8.94 0 6.01 0 2.95C0 2.03 0.36 1.15 1 0.51C1.65 -0.14 2.53 -0.5 3.44 -0.5C3.63 -0.51 3.82 -0.49 4.01 -0.45C4.2 -0.42 4.38 -0.38 4.55 -0.32C4.68 -0.27 4.79 -0.2 4.87 -0.1C4.96 0 5.01 0.12 5.04 0.25L6.07 4.75C6.09 4.87 6.09 4.99 6.06 5.12C6.02 5.24 5.96 5.35 5.87 5.44C5.77 5.54 5.77 5.55 4.85 6.03C5.58 7.65 6.88 8.95 8.49 9.7C8.98 8.76 8.98 8.76 9.09 8.66C9.18 8.57 9.29 8.51 9.41 8.47C9.53 8.44 9.66 8.44 9.78 8.46L14.27 9.49C14.39 9.52 14.51 9.58 14.6 9.67C14.7 9.75 14.77 9.86 14.81 9.98C14.87 10.16 14.92 10.34 14.95 10.53C14.98 10.72 15 10.91 15 11.1C14.98 12.01 14.61 12.88 13.96 13.51C13.31 14.15 12.43 14.5 11.52 14.5Z" fill="#1F587A" fill-opacity="1.000000" fill-rule="nonzero"></path>
-                            </svg>
-                            <a class="about-us__container__bottom-connection__phone" href="tel:+78005001160">+7
-                                (800) 500-11-60</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="offers section-offset">
-        <div class="offers__container container">
-            <div class="offers__container-wrapper">
-                <div class="offers__container-left">
-                    <h3 class="offers__container-left__title">Получите бесплатную
-                        консультацию врача прямо сейчас!
-                        Оставьте заявку
-                    </h3>
-                    <a class="offers__container-left__link" href="tel:+78005001160">
-                        <p class="offers__container-left__descr">или позвоните по номеру</p>
-                        <img class="offers__icon" src="assets/img/sections/offers/Vector-offers.svg" alt="">
-                        <p class="offers__phone">+7 (800) 500-11-60</p>
-                    </a>
-                </div>
-                <form action="#" method="post" class="offers__container-right">
-                    <input name="name" class="offers__container-right__input" type="name" placeholder="Имя">
-                    <input name="phone" class="offers__container-right__input" type="tel"
-                        placeholder="Номер телефона">
-                    <button class="offers__container-right__button">Оставить заявку</button>
-                    <p class="offers__container-right__descr">Нажимая кнопку «Оставить заявку», вы соглашаетесь
-                        с политикой конфиденциальности данного сайта</p>
-                </form>
-            </div>
-        </div>
-    </section>
-    <section class="team section-offset">
-        <div class="team__container container">
-            <h3 class="team__title section-title">
-                Наша команда профессионалов
-            </h3>
-            <div class="team__slider-container slider-container">
-                <div class="team__slider swiper slider-3">
-                    <div class="team__slider-wrapper swiper-wrapper">
-                        <div class="team__slide swiper-slide">
-                            <img class="team__slide_img" src="assets/img/sections/banner/preview.jpg" alt="">
-                            <div class="team__slide-div">
-                                <p class="team__div_descr">Стаж 10 лет</p>
-                            </div>
-                            <a href="#" class="team__slide-block">
-                                <p class="team__slide-block__descr section-descr">Врач-нарколог, невролог, психиатр
-                                </p>
-                                <p class="large-descr team__slide-block__large-descr">Зарипова Варвара Геннадьевна
-                                </p>
-                                <span class="span-offset">
-                                    <p class="spa-widht__descr">Подробнее</p>
-                                    <svg width="8.000000" height="7.000000" viewBox="0 0 8 7" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <desc>
-                                            Created with Pixso.
-                                        </desc>
-                                        <defs />
-                                        <path id="Vector" d="M6.64 3.89L6.49 -0.18L2.4 -0.35M6.49 -0.18L0.12 6.18"
-                                            stroke="#5682A5" stroke-opacity="1.000000" stroke-width="1.000000"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <button class="team__slide_btn btn btn_big btn_red popup-btn" data-path="send">
+                        <div class="about-us__container-btns__block">
+                            <button class="about-us__button btn_big btn_color">
                                 <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
-                                <span class="btn__text">обратиться</span>
+                                <span class="btn__text">Цена на услуги</span>
                             </button>
-                        </div>
-                        <div class="team__slide swiper-slide">
-                            <img class="team__slide_img" src="assets/img/sections/about/doctor-img.jpg" alt="">
-                            <div class="team__slide-div">
-                                <p class="team__div_descr">Стаж 10 лет</p>
-                            </div>
-                            <a href="#" class="team__slide-block">
-                                <p class="team__slide-block__descr section-descr">Врач-нарколог, невролог, психиатр
-                                </p>
-                                <p class="large-descr team__slide-block__large-descr">Зарипова Варвара Геннадьевна
-                                </p>
-                                <span class="span-offset">
-                                    <p class="spa-widht__descr">Подробнее</p>
-                                    <svg width="8.000000" height="7.000000" viewBox="0 0 8 7" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <desc>
-                                            Created with Pixso.
-                                        </desc>
-                                        <defs />
-                                        <path id="Vector" d="M6.64 3.89L6.49 -0.18L2.4 -0.35M6.49 -0.18L0.12 6.18"
-                                            stroke="#5682A5" stroke-opacity="1.000000" stroke-width="1.000000"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <button class="team__slide_btn btn  btn_big btn_red popup-btn" data-path="send">
+                            <p class="about-us__container-btns__block__text">Фото реабилитационного центра в холле и
+                                коридоре</p>
+                            <button class="about-us__button btn_big btn_red">
                                 <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
-                                <span class="btn__text">обратиться</span>
-                            </button>
-                        </div>
-                        <div class="team__slide swiper-slide">
-                            <img class="team__slide_img" src="assets/img/sections/about/doctor-img.jpg" alt="">
-                            <div class="team__slide-div">
-                                <p class="team__div_descr">Стаж 10 лет</p>
-                            </div>
-                            <a href="#" class="team__slide-block">
-                                <p class="team__slide-block__descr section-descr">Врач-нарколог, невролог, психиатр
-                                </p>
-                                <p class="large-descr team__slide-block__large-descr">Зарипова Варвара Геннадьевна
-                                </p>
-                                <span class="span-offset">
-                                    <p class="spa-widht__descr">Подробнее</p>
-                                    <svg width="8.000000" height="7.000000" viewBox="0 0 8 7" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <desc>
-                                            Created with Pixso.
-                                        </desc>
-                                        <defs />
-                                        <path id="Vector" d="M6.64 3.89L6.49 -0.18L2.4 -0.35M6.49 -0.18L0.12 6.18"
-                                            stroke="#5682A5" stroke-opacity="1.000000" stroke-width="1.000000"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <button class="team__slide_btn btn  btn_big btn_red popup-btn" data-path="send">
-                                <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
-                                <span class="btn__text">обратиться</span>
-                            </button>
-                        </div>
-                        <div class="team__slide swiper-slide">
-                            <img class="team__slide_img" src="assets/img/sections/about/doctor-img.jpg" alt="">
-                            <div class="team__slide-div">
-                                <p class="team__div_descr">Стаж 10 лет</p>
-                            </div>
-                            <a href="#" class="team__slide-block">
-                                <p class="team__slide-block__descr section-descr">Врач-нарколог, невролог, психиатр
-                                </p>
-                                <p class="large-descr team__slide-block__large-descr">Зарипова Варвара Геннадьевна
-                                </p>
-                                <span class="span-offset">
-                                    <p class="spa-widht__descr">Подробнее</p>
-                                    <svg width="8.000000" height="7.000000" viewBox="0 0 8 7" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <desc>
-                                            Created with Pixso.
-                                        </desc>
-                                        <defs />
-                                        <path id="Vector" d="M6.64 3.89L6.49 -0.18L2.4 -0.35M6.49 -0.18L0.12 6.18"
-                                            stroke="#5682A5" stroke-opacity="1.000000" stroke-width="1.000000"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <button class="team__slide_btn btn  btn_big btn_red popup-btn" data-path="send">
-                                <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
-                                <span class="btn__text">обратиться</span>
+                                <span class="btn__text">Увидеть больше фото</span>
                             </button>
                         </div>
                     </div>
-                </div>
-                <div class="slider-navigation slider-navigation_static">
-                    <button class="slider-btn slider-btn_prev">
-                        <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.61538 1L1 5.48375M1 5.48375L5.61538 10M1 5.48375L16 5.48375"
-                                stroke="#5682A5" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                    <div class="slider-pagination"></div>
-                    <button class="slider-btn slider-btn_next">
-                        <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.61538 1L1 5.48375M1 5.48375L5.61538 10M1 5.48375L16 5.48375"
-                                stroke="#5682A5" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="reviews section-offset section-offset_padding">
-        <div class="reviews__container container">
-            <div class="reviews__top section-top">
-                <h3 class="reviews__title section-title">Отзывы наших пациентов</h3>
-                <button class="reviews__btn btn btn_color popup-btn" data-path="add-review">
-                    <span class="btn__text">
-                        Оставить отзыв
-                    </span>
-                </button>
-            </div>
-            <div class="reviews__slider-container slider-container">
-                <div class="reviews__slider swiper slider-3">
-                    <div class="reviews__slider-wrapper swiper-wrapper">
-                        <div class="reviews__block review swiper-slide">
-                            <div class="reviews__rating rating">
-                                <div class="rating__wrapper">
-                                    <div class="rating__body">
-                                        <div class="rating__active">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                        </div>
-                                        <div class="rating__items">
-                                            <input type="radio" name="f_rating" value="1" class="rating__item">
-                                            <input type="radio" name="f_rating" value="2" class="rating__item">
-                                            <input type="radio" name="f_rating" value="3" class="rating__item">
-                                            <input type="radio" name="f_rating" value="4" class="rating__item">
-                                            <input type="radio" name="f_rating" value="5" class="rating__item">
-                                        </div>
-                                        <div class="rating__stars">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rating__value visually-hidden">2.5</div>
-                            </div>
-                            <div class="review__text-wrapper">
-                                <p class="review__text">
-                                    Для современного мира повышение уровня гражданского сознания, в своём
-                                    классическом представлении, допускает внедрение благоприятных перспектив. А
-                                    также реплицированные с зарубежных источников, современные исследования набирают
-                                    популярность среди определенных слоев населения, а значит, должны быть
-                                    представлены в исключительно положительном свете. Картельные сговоры не
-                                    допускают ситуации, при которой действия представителей оппозиции объединены в
-                                    целые кластеры себе подобных.
-                                    Для современного мира повышение уровня гражданского сознания, в своём
-                                    классическом представлении, допускает внедрение благоприятных перспектив. А
-                                    также реплицированные с зарубежных источников, современные исследования набирают
-                                    популярность среди определенных слоев населения, а значит, должны быть
-                                    представлены в исключительно положительном свете. Картельные сговоры не
-                                    допускают ситуации, при которой действия представителей оппозиции объединены в
-                                    целые кластеры себе подобных.
-                                </p>
-                                <div class="review__more">
-                                    <button class="review__more-btn popup-btn" data-path="review-full">
-                                        <p class="review__more-text">
-                                            Читать полностью
-                                        </p>
-                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.14851 4.89744L6.993 0.825638M6.993 0.825638L2.90587 0.654797M6.993 0.825638L0.629035 7.1896"
-                                                stroke="#5682A5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="review__info">
-                                <div class="review__info-top">
-                                    <p class="review__name">
-                                        Аркадий, 40 лет
-                                    </p>
-                                    <img src="assets/img/sections/reviews/logo-1.svg" alt="" class="review__logo">
-                                </div>
-                                <div class="review__date">
-                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M14.5 7V12.4444C14.5 12.857 14.3361 13.2527 14.0444 13.5444C13.7527 13.8361 13.357 14 12.9444 14H2.05556C1.643 14 1.24733 13.8361 0.955612 13.5444C0.663888 13.2527 0.5 12.857 0.5 12.4444V7H14.5ZM10.6111 0C10.8174 0 11.0152 0.0819442 11.1611 0.227806C11.3069 0.373667 11.3889 0.571498 11.3889 0.777778V1.55556H12.9444C13.357 1.55556 13.7527 1.71944 14.0444 2.01117C14.3361 2.30289 14.5 2.69855 14.5 3.11111V5.44444H0.5V3.11111C0.5 2.69855 0.663888 2.30289 0.955612 2.01117C1.24733 1.71944 1.643 1.55556 2.05556 1.55556H3.61111V0.777778C3.61111 0.571498 3.69306 0.373667 3.83892 0.227806C3.98478 0.0819442 4.18261 0 4.38889 0C4.59517 0 4.793 0.0819442 4.93886 0.227806C5.08472 0.373667 5.16667 0.571498 5.16667 0.777778V1.55556H9.83333V0.777778C9.83333 0.571498 9.91528 0.373667 10.0611 0.227806C10.207 0.0819442 10.4048 0 10.6111 0Z"
-                                            fill="#5682A5" />
-                                    </svg>
-                                    <p class="review__date-text">
-                                        Отзыв опубликован: 26.07.2023
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="reviews__block review swiper-slide">
-                            <div class="reviews__rating rating">
-                                <div class="rating__wrapper">
-                                    <div class="rating__body">
-                                        <div class="rating__active">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                        </div>
-                                        <div class="rating__items">
-                                            <input type="radio" name="f_rating" value="1" class="rating__item">
-                                            <input type="radio" name="f_rating" value="2" class="rating__item">
-                                            <input type="radio" name="f_rating" value="3" class="rating__item">
-                                            <input type="radio" name="f_rating" value="4" class="rating__item">
-                                            <input type="radio" name="f_rating" value="5" class="rating__item">
-                                        </div>
-                                        <div class="rating__stars">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rating__value visually-hidden">2.5</div>
-                            </div>
-                            <div class="review__text-wrapper">
-                                <p class="review__text">
-                                    Для современного мира повышение уровня гражданского сознания, в своём
-                                    классическом представлении, допускает внедрение благоприятных перспектив. А
-                                    также реплицированные с зарубежных источников, современные исследования набирают
-                                    популярность среди определенных слоев населения, а значит, должны быть
-                                    представлены в исключительно положительном свете. Картельные сговоры не
-                                    допускают ситуации, при которой действия представителей оппозиции объединены в
-                                    целые кластеры себе подобных.
-                                    Для современного мира повышение уровня гражданского сознания, в своём
-                                    классическом представлении, допускает внедрение благоприятных перспектив. А
-                                    также реплицированные с зарубежных источников, современные исследования набирают
-                                    популярность среди определенных слоев населения, а значит, должны быть
-                                    представлены в исключительно положительном свете. Картельные сговоры не
-                                    допускают ситуации, при которой действия представителей оппозиции объединены в
-                                    целые кластеры себе подобных.
-                                </p>
-                                <div class="review__more">
-                                    <button class="review__more-btn popup-btn" data-path="review-full">
-                                        <p class="review__more-text">
-                                            Читать полностью
-                                        </p>
-                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.14851 4.89744L6.993 0.825638M6.993 0.825638L2.90587 0.654797M6.993 0.825638L0.629035 7.1896"
-                                                stroke="#5682A5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="review__info">
-                                <div class="review__info-top">
-                                    <p class="review__name">
-                                        Аркадий, 40 лет
-                                    </p>
-                                    <img src="assets/img/sections/reviews/logo-1.svg" alt="" class="review__logo">
-                                </div>
-                                <div class="review__date">
-                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M14.5 7V12.4444C14.5 12.857 14.3361 13.2527 14.0444 13.5444C13.7527 13.8361 13.357 14 12.9444 14H2.05556C1.643 14 1.24733 13.8361 0.955612 13.5444C0.663888 13.2527 0.5 12.857 0.5 12.4444V7H14.5ZM10.6111 0C10.8174 0 11.0152 0.0819442 11.1611 0.227806C11.3069 0.373667 11.3889 0.571498 11.3889 0.777778V1.55556H12.9444C13.357 1.55556 13.7527 1.71944 14.0444 2.01117C14.3361 2.30289 14.5 2.69855 14.5 3.11111V5.44444H0.5V3.11111C0.5 2.69855 0.663888 2.30289 0.955612 2.01117C1.24733 1.71944 1.643 1.55556 2.05556 1.55556H3.61111V0.777778C3.61111 0.571498 3.69306 0.373667 3.83892 0.227806C3.98478 0.0819442 4.18261 0 4.38889 0C4.59517 0 4.793 0.0819442 4.93886 0.227806C5.08472 0.373667 5.16667 0.571498 5.16667 0.777778V1.55556H9.83333V0.777778C9.83333 0.571498 9.91528 0.373667 10.0611 0.227806C10.207 0.0819442 10.4048 0 10.6111 0Z"
-                                            fill="#5682A5" />
-                                    </svg>
-                                    <p class="review__date-text">
-                                        Отзыв опубликован: 26.07.2023
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="reviews__block review swiper-slide">
-                            <div class="reviews__rating rating">
-                                <div class="rating__wrapper">
-                                    <div class="rating__body">
-                                        <div class="rating__active">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                        </div>
-                                        <div class="rating__items">
-                                            <input type="radio" name="f_rating" value="1" class="rating__item">
-                                            <input type="radio" name="f_rating" value="2" class="rating__item">
-                                            <input type="radio" name="f_rating" value="3" class="rating__item">
-                                            <input type="radio" name="f_rating" value="4" class="rating__item">
-                                            <input type="radio" name="f_rating" value="5" class="rating__item">
-                                        </div>
-                                        <div class="rating__stars">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rating__value visually-hidden">2.5</div>
-                            </div>
-                            <div class="review__text-wrapper">
-                                <p class="review__text">
-                                    Для современного мира повышение уровня гражданского сознания, в своём
-                                    классическом представлении, допускает внедрение благоприятных перспектив. А
-                                    также реплицированные с зарубежных источников, современные исследования набирают
-                                </p>
-                                <div class="review__more">
-                                    <button class="review__more-btn popup-btn" data-path="review-full">
-                                        <p class="review__more-text">
-                                            Читать полностью
-                                        </p>
-                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.14851 4.89744L6.993 0.825638M6.993 0.825638L2.90587 0.654797M6.993 0.825638L0.629035 7.1896"
-                                                stroke="#5682A5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="review__info">
-                                <div class="review__info-top">
-                                    <p class="review__name">
-                                        Аркадий, 40 лет
-                                    </p>
-                                    <img src="assets/img/sections/reviews/logo-1.svg" alt="" class="review__logo">
-                                </div>
-                                <div class="review__date">
-                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M14.5 7V12.4444C14.5 12.857 14.3361 13.2527 14.0444 13.5444C13.7527 13.8361 13.357 14 12.9444 14H2.05556C1.643 14 1.24733 13.8361 0.955612 13.5444C0.663888 13.2527 0.5 12.857 0.5 12.4444V7H14.5ZM10.6111 0C10.8174 0 11.0152 0.0819442 11.1611 0.227806C11.3069 0.373667 11.3889 0.571498 11.3889 0.777778V1.55556H12.9444C13.357 1.55556 13.7527 1.71944 14.0444 2.01117C14.3361 2.30289 14.5 2.69855 14.5 3.11111V5.44444H0.5V3.11111C0.5 2.69855 0.663888 2.30289 0.955612 2.01117C1.24733 1.71944 1.643 1.55556 2.05556 1.55556H3.61111V0.777778C3.61111 0.571498 3.69306 0.373667 3.83892 0.227806C3.98478 0.0819442 4.18261 0 4.38889 0C4.59517 0 4.793 0.0819442 4.93886 0.227806C5.08472 0.373667 5.16667 0.571498 5.16667 0.777778V1.55556H9.83333V0.777778C9.83333 0.571498 9.91528 0.373667 10.0611 0.227806C10.207 0.0819442 10.4048 0 10.6111 0Z"
-                                            fill="#5682A5" />
-                                    </svg>
-                                    <p class="review__date-text">
-                                        Отзыв опубликован: 26.07.2023
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="reviews__block review swiper-slide">
-                            <div class="reviews__rating rating">
-                                <div class="rating__wrapper">
-                                    <div class="rating__body">
-                                        <div class="rating__active">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star-active.svg"
-                                                alt="" class="star aspect-ratio">
-                                        </div>
-                                        <div class="rating__items">
-                                            <input type="radio" name="f_rating" value="1" class="rating__item">
-                                            <input type="radio" name="f_rating" value="2" class="rating__item">
-                                            <input type="radio" name="f_rating" value="3" class="rating__item">
-                                            <input type="radio" name="f_rating" value="4" class="rating__item">
-                                            <input type="radio" name="f_rating" value="5" class="rating__item">
-                                        </div>
-                                        <div class="rating__stars">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                            <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
-                                                class="star aspect-ratio">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="rating__value visually-hidden">2.5</div>
-                            </div>
-                            <div class="review__text-wrapper">
-                                <p class="review__text">
-                                    Для современного мира повышение уровня гражданского сознания, в своём
-                                    классическом представлении, допускает внедрение благоприятных перспектив. А
-                                    также реплицированные с зарубежных источников, современные исследования набирают
-                                    популярность среди определенных слоев населения, а значит, должны быть
-                                    представлены в исключительно положительном свете. Картельные сговоры не
-                                    допускают ситуации, при которой действия представителей оппозиции объединены в
-                                    целые кластеры себе подобных.
-                                    Для современного мира повышение уровня гражданского сознания, в своём
-                                    классическом представлении, допускает внедрение благоприятных перспектив. А
-                                    также реплицированные с зарубежных источников, современные исследования набирают
-                                    популярность среди определенных слоев населения, а значит, должны быть
-                                    представлены в исключительно положительном свете. Картельные сговоры не
-                                    допускают ситуации, при которой действия представителей оппозиции объединены в
-                                    целые кластеры себе подобных.
-                                </p>
-                                <div class="review__more">
-                                    <button class="review__more-btn popup-btn" data-path="review-full">
-                                        <p class="review__more-text">
-                                            Читать полностью
-                                        </p>
-                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.14851 4.89744L6.993 0.825638M6.993 0.825638L2.90587 0.654797M6.993 0.825638L0.629035 7.1896"
-                                                stroke="#5682A5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="review__info">
-                                <div class="review__info-top">
-                                    <p class="review__name">
-                                        Аркадий, 40 лет
-                                    </p>
-                                    <img src="assets/img/sections/reviews/logo-1.svg" alt="" class="review__logo">
-                                </div>
-                                <div class="review__date">
-                                    <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M14.5 7V12.4444C14.5 12.857 14.3361 13.2527 14.0444 13.5444C13.7527 13.8361 13.357 14 12.9444 14H2.05556C1.643 14 1.24733 13.8361 0.955612 13.5444C0.663888 13.2527 0.5 12.857 0.5 12.4444V7H14.5ZM10.6111 0C10.8174 0 11.0152 0.0819442 11.1611 0.227806C11.3069 0.373667 11.3889 0.571498 11.3889 0.777778V1.55556H12.9444C13.357 1.55556 13.7527 1.71944 14.0444 2.01117C14.3361 2.30289 14.5 2.69855 14.5 3.11111V5.44444H0.5V3.11111C0.5 2.69855 0.663888 2.30289 0.955612 2.01117C1.24733 1.71944 1.643 1.55556 2.05556 1.55556H3.61111V0.777778C3.61111 0.571498 3.69306 0.373667 3.83892 0.227806C3.98478 0.0819442 4.18261 0 4.38889 0C4.59517 0 4.793 0.0819442 4.93886 0.227806C5.08472 0.373667 5.16667 0.571498 5.16667 0.777778V1.55556H9.83333V0.777778C9.83333 0.571498 9.91528 0.373667 10.0611 0.227806C10.207 0.0819442 10.4048 0 10.6111 0Z"
-                                            fill="#5682A5" />
-                                    </svg>
-                                    <p class="review__date-text">
-                                        Отзыв опубликован: 26.07.2023
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="about-us__container__descr-block content-body">
+                        <p>Стационарное отделение оснащено всем, что требуется для комфортного пребывания: удобная
+                            мебель, чистые помещения, организованный досуг. Реабилитация не причиняет больным неприятных
+                            моментов – <a href="">лечение проходит легко и практически безболезненно.</a> Медицинский
+                            персонал отличается тактичностью, относится к пациентам с пониманием. В трудную минуту они
+                            мгновенно приходят на помощь, облегчая физические и психологические страдания.</p>
                     </div>
-                </div>
-                <div class="slider-navigation slider-navigation_static">
-                    <button class="slider-btn slider-btn_prev">
-                        <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.61538 1L1 5.48375M1 5.48375L5.61538 10M1 5.48375L16 5.48375"
-                                stroke="#5682A5" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                    <div class="slider-pagination"></div>
-                    <button class="slider-btn slider-btn_next">
-                        <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.61538 1L1 5.48375M1 5.48375L5.61538 10M1 5.48375L16 5.48375"
-                                stroke="#5682A5" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-    </section>
-    <section class="questions section-offset">
-        <div class="questions__container container">
-            <h3 class="questions__title section-title">Ответы на часто задаваемые вопросы</h3>
-            <div class="questions__wrapper accor-wrapper">
-                <div class="questions__accor questions accor">
-                    <button class="questions__title accor-title accor-open" data-accordion-button="">
-                        <span class="questions-title__text accor-title__text">Что такое реабилитация 12
-                            шагов?</span>
-                        <span class="questions-title__decor accor-open-decor">
-                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M4.43928 10.096L10.0859 10.1062M10.0859 10.1062L10.0961 4.43915M10.0859 10.1062L0.893529 0.913833"
-                                    stroke="#1F587A" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="questions__info accor-full">
-                        <div class="questions__info-wrapper accor-full-content" data-accordion-content>
-                            <div class="questions__table content-body">
-                                <p>Однозначно, ключевые особенности структуры проекта набирают популярность среди
-                                    определенных слоев населения, а значит, должны быть функционально разнесены на
-                                    независимые элементы. Но убеждённость некоторых оппонентов способствует
-                                    подготовке и реализации новых принципов формирования материально-технической и
-                                    кадровой базы. Как принято считать, явные признаки победы институционализации
-                                    являются только методом политического участия и в равной степени предоставлены
-                                    сами себе.</p>
-                            </div>
+                    <div class="about-us__container__bottom">
+                        <div class="about-us__container__bottom__block-text">
+                            <img class="about-us__container__bottom-icon"
+                                src="assets/img/sections/about-us/about-us__container__bottom-vecotr.svg" alt="">
+                            <p class="about-us__container__bottom_descr section-descr">Предлагаемые услуги оказываются
+                                на основе лицензии, дающей право на оказание врачебной наркологической помощи. Врачи
+                                всех специализаций, средний медперсонал имеют допуски для проведения медицинских
+                                процедур. Ксерокопии документов пациенты могут потребовать у приехавшего по вызову на
+                                дом врача-нарколога
+                            </p>
                         </div>
-                    </div>
-                </div>
-                <div class="questions__accor questions accor">
-                    <button class="questions__title accor-title accor-open" data-accordion-button="">
-                        <span class="questions-title__text accor-title__text">Что такое реабилитация 12
-                            шагов?</span>
-                        <span class="questions-title__decor accor-open-decor">
-                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M4.43928 10.096L10.0859 10.1062M10.0859 10.1062L10.0961 4.43915M10.0859 10.1062L0.893529 0.913833"
-                                    stroke="#1F587A" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="questions__info accor-full">
-                        <div class="questions__info-wrapper accor-full-content" data-accordion-content>
-                            <div class="questions__table content-body">
-                                <p>Однозначно, ключевые особенности структуры проекта набирают популярность среди
-                                    определенных слоев населения, а значит, должны быть функционально разнесены на
-                                    независимые элементы. Но убеждённость некоторых оппонентов способствует
-                                    подготовке и реализации новых принципов формирования материально-технической и
-                                    кадровой базы. Как принято считать, явные признаки победы институционализации
-                                    являются только методом политического участия и в равной степени предоставлены
-                                    сами себе.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="questions__accor questions accor">
-                    <button class="questions__title accor-title accor-open" data-accordion-button="">
-                        <span class="questions-title__text accor-title__text">Что такое реабилитация 12
-                            шагов?</span>
-                        <span class="questions-title__decor accor-open-decor">
-                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M4.43928 10.096L10.0859 10.1062M10.0859 10.1062L10.0961 4.43915M10.0859 10.1062L0.893529 0.913833"
-                                    stroke="#1F587A" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="questions__info accor-full">
-                        <div class="questions__info-wrapper accor-full-content" data-accordion-content>
-                            <div class="questions__table content-body">
-                                <p>Однозначно, ключевые особенности структуры проекта набирают популярность среди
-                                    определенных слоев населения, а значит, должны быть функционально разнесены на
-                                    независимые элементы. Но убеждённость некоторых оппонентов способствует
-                                    подготовке и реализации новых принципов формирования материально-технической и
-                                    кадровой базы. Как принято считать, явные признаки победы институционализации
-                                    являются только методом политического участия и в равной степени предоставлены
-                                    сами себе.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="questions__accor questions accor">
-                    <button class="questions__title accor-title accor-open" data-accordion-button="">
-                        <span class="questions-title__text accor-title__text">Что такое реабилитация 12
-                            шагов?</span>
-                        <span class="questions-title__decor accor-open-decor">
-                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M4.43928 10.096L10.0859 10.1062M10.0859 10.1062L10.0961 4.43915M10.0859 10.1062L0.893529 0.913833"
-                                    stroke="#1F587A" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="questions__info accor-full">
-                        <div class="questions__info-wrapper accor-full-content" data-accordion-content>
-                            <div class="questions__table content-body">
-                                <p>Однозначно, ключевые особенности структуры проекта набирают популярность среди
-                                    определенных слоев населения, а значит, должны быть функционально разнесены на
-                                    независимые элементы. Но убеждённость некоторых оппонентов способствует
-                                    подготовке и реализации новых принципов формирования материально-технической и
-                                    кадровой базы. Как принято считать, явные признаки победы институционализации
-                                    являются только методом политического участия и в равной степени предоставлены
-                                    сами себе.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="questions__accor questions accor">
-                    <button class="questions__title accor-title accor-open" data-accordion-button="">
-                        <span class="questions-title__text accor-title__text">Что такое реабилитация 12
-                            шагов?</span>
-                        <span class="questions-title__decor accor-open-decor">
-                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M4.43928 10.096L10.0859 10.1062M10.0859 10.1062L10.0961 4.43915M10.0859 10.1062L0.893529 0.913833"
-                                    stroke="#1F587A" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="questions__info accor-full">
-                        <div class="questions__info-wrapper content-body accor-full-content" data-accordion-content>
-                            <div class="questions__table ">
-                                <p>Однозначно, ключевые особенности структуры проекта набирают популярность среди
-                                    определенных слоев населения, а значит, должны быть функционально разнесены на
-                                    независимые элементы. Но убеждённость некоторых оппонентов способствует
-                                    подготовке и реализации новых принципов формирования материально-технической и
-                                    кадровой базы. Как принято считать, явные признаки победы институционализации
-                                    являются только методом политического участия и в равной степени предоставлены
-                                    сами себе.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="questions__accor questions accor">
-                    <button class="questions__title accor-title accor-open" data-accordion-button="">
-                        <span class="questions-title__text accor-title__text">Что такое реабилитация 12
-                            шагов?</span>
-                        <span class="questions-title__decor accor-open-decor">
-                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M4.43928 10.096L10.0859 10.1062M10.0859 10.1062L10.0961 4.43915M10.0859 10.1062L0.893529 0.913833"
-                                    stroke="#1F587A" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="questions__info accor-full">
-                        <div class="questions__info-wrapper accor-full-content" data-accordion-content>
-                            <div class="questions__table content-body">
-                                <p>Однозначно, ключевые особенности структуры проекта набирают популярность среди
-                                    определенных слоев населения, а значит, должны быть функционально разнесены на
-                                    независимые элементы. Но убеждённость некоторых оппонентов способствует
-                                    подготовке и реализации новых принципов формирования материально-технической и
-                                    кадровой базы. Как принято считать, явные признаки победы институционализации
-                                    являются только методом политического участия и в равной степени предоставлены
-                                    сами себе.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="geolocation section-offset">
-        <div class="geolocation__container container">
-            <h3 class="geolocation__title section-title">Как до нас добраться</h3>
-            <div class="geolocation__container-wrapper">
-                <div class="geolocation__container__about">
-                    <div class="geolocation__container__about-info">
-                        <div class="geolocation__info">
-                            <div class="geolocation__container-info">
-                                <div class="geolocation__container-info__large-block">
-                                    <div class="footer__info-item">
-                                        <svg width="14.000000" height="16.000000" viewBox="0 0 14 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <desc>
-                                                Created with Pixso.
-                                            </desc>
-                                            <defs />
-                                            <path id="Vector"
-                                                d="M8.34 15.49C10.38 13.74 14 10.15 14 6.86C14 5.04 13.26 3.29 11.94 2.01C10.63 0.72 8.85 0 7 0C5.14 0 3.36 0.72 2.05 2.01C0.73 3.29 0 5.04 0 6.86C0 10.15 3.61 13.74 5.65 15.49C6.02 15.82 6.5 16 7 16C7.49 16 7.97 15.82 8.34 15.49ZM4.66 6.86C4.66 6.25 4.91 5.67 5.35 5.24C5.78 4.81 6.38 4.57 7 4.57C7.61 4.57 8.21 4.81 8.64 5.24C9.08 5.67 9.33 6.25 9.33 6.86C9.33 7.47 9.08 8.05 8.64 8.48C8.21 8.91 7.61 9.15 7 9.15C6.38 9.15 5.78 8.91 5.35 8.48C4.91 8.05 4.66 7.47 4.66 6.86Z"
-                                                fill="#1F587A" fill-opacity="1.000000" fill-rule="nonzero" />
-                                        </svg>
-                                        <p class="widht-descr">Адрес call-центра:</p>
-                                    </div>
-                                    <p class="section__info-descr">Екатеринбург, Верхнедонская, 28/8</p>
-                                </div>
-                                <div class="geolocation__container-info__large-block">
-                                    <div class="footer__info-item">
-                                        <svg width="16.000000" height="16.000000" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <desc>
-                                                Created with Pixso.
-                                            </desc>
-                                            <defs />
-                                            <path id="Vector"
-                                                d="M4 0C3.73 0 3.48 0.1 3.29 0.29C3.1 0.48 3 0.73 3 1L3 2L2 2C1.46 2 0.96 2.21 0.58 2.58C0.21 2.96 0 3.46 0 4L0 14C0 14.53 0.21 15.03 0.58 15.41C0.96 15.78 1.46 16 2 16L14 16C14.53 16 15.03 15.78 15.41 15.41C15.78 15.03 16 14.53 16 14L16 4C16 3.46 15.78 2.96 15.41 2.58C15.03 2.21 14.53 2 14 2L13 2L13 1C13 0.73 12.89 0.48 12.7 0.29C12.51 0.1 12.26 0 12 0C11.73 0 11.48 0.1 11.29 0.29C11.1 0.48 11 0.73 11 1L11 2L5 2L5 1C5 0.73 4.89 0.48 4.7 0.29C4.51 0.1 4.26 0 4 0ZM4 5C3.73 5 3.48 5.1 3.29 5.29C3.1 5.48 3 5.73 3 6C3 6.26 3.1 6.51 3.29 6.7C3.48 6.89 3.73 7 4 7L12 7C12.26 7 12.51 6.89 12.7 6.7C12.89 6.51 13 6.26 13 6C13 5.73 12.89 5.48 12.7 5.29C12.51 5.1 12.26 5 12 5L4 5Z"
-                                                fill="#1F587A" fill-opacity="1.000000" fill-rule="evenodd" />
-                                        </svg>
-                                        <p class="widht-descr">Режим работы:</p>
-                                    </div>
-                                    <p class="section__info-descr">Круглосуточно, без выходных</p>
-                                </div>
-                                <div class="geolocation__container-info__large-block">
-                                    <div class="footer__info-item info-item">
-                                        <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <desc>
-                                                Created with Pixso.
-                                            </desc>
-                                            <defs>
-                                                <clipPath id="clip1345_129">
-                                                    <rect id="Icon" width="20.000000" height="20.000000"
-                                                        fill="white" fill-opacity="0" />
-                                                </clipPath>
-                                            </defs>
-                                            <rect id="Icon" width="20.000000" height="20.000000" fill="#FFFFFF"
-                                                fill-opacity="0" />
-                                            <g clip-path="url(#clip1345_129)">
-                                                <path id="Vector"
-                                                    d="M14.52 17.99C11.47 17.99 8.54 16.77 6.38 14.61C4.21 12.44 3 9.51 3 6.45C3 5.53 3.36 4.65 4 4.01C4.65 3.36 5.53 3 6.44 3C6.63 2.99 6.82 3.01 7.01 3.05C7.2 3.07 7.38 3.12 7.55 3.18C7.68 3.23 7.79 3.3 7.87 3.4C7.96 3.5 8.01 3.62 8.04 3.75L9.07 8.25C9.09 8.37 9.09 8.49 9.06 8.61C9.02 8.74 8.96 8.85 8.87 8.93C8.77 9.04 8.77 9.05 7.85 9.53C8.58 11.15 9.88 12.45 11.49 13.2C11.98 12.27 11.98 12.26 12.09 12.16C12.18 12.07 12.29 12.01 12.41 11.97C12.53 11.94 12.66 11.94 12.78 11.96L17.27 12.99C17.39 13.02 17.51 13.08 17.6 13.17C17.7 13.25 17.77 13.36 17.81 13.48C17.87 13.66 17.92 13.84 17.95 14.03C17.98 14.22 18 14.41 18 14.6C17.98 15.51 17.61 16.38 16.96 17.01C16.31 17.65 15.43 18 14.52 17.99Z"
-                                                    fill="#1F587A" fill-opacity="1.000000" fill-rule="nonzero" />
-                                            </g>
-                                        </svg>
-
-                                        <p class="widht-descr">Номер телефона:</p>
-                                    </div>
-                                    <a class="section__info-descr" href="tel:+78005001160">+7 (800) 500-11-60</a>
-                                </div>
-                                <div class="geolocation__container-info__large-block">
-                                    <div class="footer__info-item">
-                                        <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <desc>
-                                                Created with Pixso.
-                                            </desc>
-                                            <defs>
-                                                <clipPath id="clip1348_243">
-                                                    <rect id="Icon" width="20.000000" height="20.000000"
-                                                        fill="white" fill-opacity="0" />
-                                                </clipPath>
-                                            </defs>
-                                            <rect id="Icon" width="20.000000" height="20.000000" fill="#FFFFFF"
-                                                fill-opacity="0" />
-                                            <g clip-path="url(#clip1348_243)">
-                                                <path id="Vector"
-                                                    d="M17.2 3.33L2.8 3.33C1.81 3.33 1 4.12 1 5.08L1 15.58C1 16.54 1.81 17.33 2.8 17.33L17.2 17.33C18.18 17.33 19 16.54 19 15.58L19 5.08C19 4.12 18.18 3.33 17.2 3.33ZM16.84 7.05L10.47 10.91C10.18 11.09 9.81 11.09 9.52 10.91L3.15 7.05C3.06 7 2.99 6.93 2.92 6.85C2.86 6.77 2.81 6.68 2.79 6.58C2.76 6.48 2.76 6.38 2.77 6.28C2.79 6.18 2.83 6.09 2.88 6C2.94 5.92 3.01 5.85 3.09 5.79C3.18 5.73 3.27 5.69 3.38 5.67C3.48 5.65 3.58 5.65 3.68 5.67C3.78 5.69 3.88 5.73 3.96 5.79L10 9.45L16.03 5.79C16.11 5.73 16.21 5.69 16.31 5.67C16.41 5.65 16.51 5.65 16.61 5.67C16.72 5.69 16.81 5.73 16.9 5.79C16.98 5.85 17.05 5.92 17.11 6C17.16 6.09 17.2 6.18 17.22 6.28C17.23 6.38 17.23 6.48 17.2 6.58C17.18 6.68 17.13 6.77 17.07 6.85C17 6.93 16.93 7 16.84 7.05Z"
-                                                    fill="#1F587A" fill-opacity="1.000000" fill-rule="nonzero" />
-                                            </g>
-                                        </svg>
-                                        <p class="widht-descr">Электронная почта</p>
-                                    </div>
-                                    <a class="section__info-descr"
-                                        href="mailto:alfa_clinic@gmail.com">alfa_clinic@gmail.com</a>
-                                </div>
-                            </div>
-                            <button class="geolocation__button btn btn_big btn_color popup-btn" data-path="send">
-                                <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
-
-                                <span class="btn__text">Записаться на прием</span>
-                            </button>
-                            <button class="geolocation__button btn btn_big btn_red popup-btn" data-path="send">
-                                <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
-                                <span class="btn__text">Вызвать врача</span>
-                            </button>
-                        </div>
-                        <div id="map" class="geolocation__map"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="offers-2 section-offset">
-        <div class="offers__container container">
-            <div class="offers__container-wrapper__white">
-                <div class="offers__container-left">
-                    <h3 class="offers__container-left__title title__white">Получите бесплатную
-                        консультацию врача прямо сейчас!
-                        Оставьте заявку
-                    </h3>
-                    <a class="offers__container-left__link color__link" href="tel:+78005001160">
-                        <p class="offers__container-left__descr white__descr">или позвоните по номеру</p>
-                        <div class="offers__container-left__link-wrapper">
-                            <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <desc>
-                                    Created with Pixso.
-                                </desc>
-                                <defs>
-                                    <clipPath id="clip1348_205">
-                                        <rect id="Icon" width="20.000000" height="20.000000" fill="white"
-                                            fill-opacity="0" />
-                                    </clipPath>
-                                </defs>
-                                <rect id="Icon" width="20.000000" height="20.000000" fill="#FFFFFF"
-                                    fill-opacity="0" />
-                                <g clip-path="url(#clip1348_205)">
+                        <div class="about-us__container__bottom-connection">
+                            <p class="about-us__container__bottom-connection__descr">
+                                Чтобы обратиться к нам, позвоните по телефону
+                            </p>
+                            <div class="about-us__container__bottom-connection__link">
+                                <svg width="15.000000" height="15.000000" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <desc>
+                                        Created with Pixso.
+                                    </desc>
+                                    <defs></defs>
                                     <path id="Vector"
-                                        d="M14.29 17.99C11.03 17.99 7.91 16.69 5.6 14.38C3.3 12.07 2 8.94 2 5.68C2 4.7 2.38 3.76 3.07 3.07C3.76 2.38 4.69 2 5.67 2C5.87 1.99 6.08 2.01 6.28 2.05C6.48 2.08 6.67 2.13 6.86 2.2C6.99 2.24 7.11 2.32 7.2 2.43C7.29 2.53 7.35 2.66 7.38 2.8L8.47 7.59C8.5 7.73 8.5 7.86 8.46 7.99C8.42 8.12 8.36 8.24 8.26 8.33C8.16 8.44 8.15 8.45 7.17 8.96C7.95 10.69 9.33 12.08 11.06 12.87C11.58 11.88 11.58 11.88 11.7 11.77C11.79 11.68 11.91 11.61 12.04 11.57C12.16 11.54 12.3 11.53 12.43 11.56L17.22 12.66C17.35 12.69 17.47 12.75 17.58 12.84C17.68 12.94 17.75 13.05 17.8 13.18C17.86 13.37 17.91 13.56 17.95 13.76C17.98 13.96 18 14.17 18 14.37C17.98 15.34 17.58 16.27 16.89 16.95C16.19 17.63 15.26 18 14.29 17.99Z"
-                                        fill="#F3F7FD" fill-opacity="1.000000" fill-rule="nonzero" />
-                                </g>
-                            </svg>
-                            <p class="offers__phone_white">+7 (800) 500-11-60</p>
+                                        d="M11.52 14.5C8.47 14.49 5.54 13.27 3.38 11.11C1.21 8.94 0 6.01 0 2.95C0 2.03 0.36 1.15 1 0.51C1.65 -0.14 2.53 -0.5 3.44 -0.5C3.63 -0.51 3.82 -0.49 4.01 -0.45C4.2 -0.42 4.38 -0.38 4.55 -0.32C4.68 -0.27 4.79 -0.2 4.87 -0.1C4.96 0 5.01 0.12 5.04 0.25L6.07 4.75C6.09 4.87 6.09 4.99 6.06 5.12C6.02 5.24 5.96 5.35 5.87 5.44C5.77 5.54 5.77 5.55 4.85 6.03C5.58 7.65 6.88 8.95 8.49 9.7C8.98 8.76 8.98 8.76 9.09 8.66C9.18 8.57 9.29 8.51 9.41 8.47C9.53 8.44 9.66 8.44 9.78 8.46L14.27 9.49C14.39 9.52 14.51 9.58 14.6 9.67C14.7 9.75 14.77 9.86 14.81 9.98C14.87 10.16 14.92 10.34 14.95 10.53C14.98 10.72 15 10.91 15 11.1C14.98 12.01 14.61 12.88 13.96 13.51C13.31 14.15 12.43 14.5 11.52 14.5Z"
+                                        fill="#1F587A" fill-opacity="1.000000" fill-rule="nonzero"></path>
+                                </svg>
+                                <a class="about-us__container__bottom-connection__phone" href="tel:+78005001160">+7
+                                    (800) 500-11-60</a>
+                            </div>
                         </div>
-                    </a>
-                </div>
-                <div class="offers__container-right">
-                    <input class="offers__container-right__input" type="name" placeholder="Имя">
-                    <input class="offers__container-right__input" type="tel" placeholder="Номер телефона">
-                    <button class="offers__container-right__button">Оставить заявку</button>
-                    <p class="offers__container-right_descr section-descr offers__container-right_descr-white">
-                        Нажимая кнопку «Оставить заявку», вы соглашаетесь
-                        с политикой конфиденциальности данного сайта</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <section class="offers section-offset">
+            <div class="offers__container contaizner">
+                <div class="offers__container-wrapper">
+                    <div class="offers__container-left">
+                        <h3 class="offers__container-left__title">Получите бесплатную
+                            консультацию врача прямо сейчас!
+                            Оставьте заявку
+                        </h3>
+                        <a class="offers__container-left__link" href="tel:+78005001160">
+                            <p class="offers__container-left__descr">или позвоните по номеру</p>
+                            <img class="offers__icon" src="assets/img/sections/offers/Vector-offers.svg" alt="">
+                            <p class="offers__phone">+7 (800) 500-11-60</p>
+                        </a>
+                    </div>
+                    <form action="#" method="post" class="offers__container-right">
+                        <input name="name" class="offers__container-right__input" type="name" placeholder="Имя">
+                        <input name="phone" class="offers__container-right__input" type="tel"
+                            placeholder="Номер телефона">
+                        <button class="offers__container-right__button">Оставить заявку</button>
+                        <p class="offers__container-right__descr">Нажимая кнопку «Оставить заявку», вы соглашаетесь
+                            с политикой конфиденциальности данного сайта</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="team section-offset">
+            <div class="team__container container">
+                <h3 class="team__title section-title">
+                    Наша команда профессионалов
+                </h3>
+                <div class="team__slider-container slider-container">
+                    <div class="team__slider swiper slider-3">
+                        <div class="team__slider-wrapper swiper-wrapper">
+                            <div class="team__slide swiper-slide">
+                                <img class="team__slide_img" src="assets/img/sections/banner/preview.jpg" alt="">
+                                <div class="team__slide-div">
+                                    <p class="team__div_descr">Стаж 10 лет</p>
+                                </div>
+                                <a href="#" class="team__slide-block">
+                                    <p class="team__slide-block__descr section-descr">Врач-нарколог, невролог, психиатр
+                                    </p>
+                                    <p class="large-descr team__slide-block__large-descr">Зарипова Варвара Геннадьевна
+                                    </p>
+                                    <span class="span-offset">
+                                        <p class="spa-widht__descr">Подробнее</p>
+                                        <svg width="8.000000" height="7.000000" viewBox="0 0 8 7" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <desc>
+                                                Created with Pixso.
+                                            </desc>
+                                            <defs />
+                                            <path id="Vector" d="M6.64 3.89L6.49 -0.18L2.4 -0.35M6.49 -0.18L0.12 6.18"
+                                                stroke="#5682A5" stroke-opacity="1.000000" stroke-width="1.000000"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <button class="team__slide_btn btn btn_big btn_red popup-btn" data-path="send">
+                                    <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
+                                    <span class="btn__text">обратиться</span>
+                                </button>
+                            </div>
+                            <div class="team__slide swiper-slide">
+                                <img class="team__slide_img" src="assets/img/sections/about/doctor-img.jpg" alt="">
+                                <div class="team__slide-div">
+                                    <p class="team__div_descr">Стаж 10 лет</p>
+                                </div>
+                                <a href="#" class="team__slide-block">
+                                    <p class="team__slide-block__descr section-descr">Врач-нарколог, невролог, психиатр
+                                    </p>
+                                    <p class="large-descr team__slide-block__large-descr">Зарипова Варвара Геннадьевна
+                                    </p>
+                                    <span class="span-offset">
+                                        <p class="spa-widht__descr">Подробнее</p>
+                                        <svg width="8.000000" height="7.000000" viewBox="0 0 8 7" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <desc>
+                                                Created with Pixso.
+                                            </desc>
+                                            <defs />
+                                            <path id="Vector" d="M6.64 3.89L6.49 -0.18L2.4 -0.35M6.49 -0.18L0.12 6.18"
+                                                stroke="#5682A5" stroke-opacity="1.000000" stroke-width="1.000000"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <button class="team__slide_btn btn  btn_big btn_red popup-btn" data-path="send">
+                                    <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
+                                    <span class="btn__text">обратиться</span>
+                                </button>
+                            </div>
+                            <div class="team__slide swiper-slide">
+                                <img class="team__slide_img" src="assets/img/sections/about/doctor-img.jpg" alt="">
+                                <div class="team__slide-div">
+                                    <p class="team__div_descr">Стаж 10 лет</p>
+                                </div>
+                                <a href="#" class="team__slide-block">
+                                    <p class="team__slide-block__descr section-descr">Врач-нарколог, невролог, психиатр
+                                    </p>
+                                    <p class="large-descr team__slide-block__large-descr">Зарипова Варвара Геннадьевна
+                                    </p>
+                                    <span class="span-offset">
+                                        <p class="spa-widht__descr">Подробнее</p>
+                                        <svg width="8.000000" height="7.000000" viewBox="0 0 8 7" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <desc>
+                                                Created with Pixso.
+                                            </desc>
+                                            <defs />
+                                            <path id="Vector" d="M6.64 3.89L6.49 -0.18L2.4 -0.35M6.49 -0.18L0.12 6.18"
+                                                stroke="#5682A5" stroke-opacity="1.000000" stroke-width="1.000000"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <button class="team__slide_btn btn  btn_big btn_red popup-btn" data-path="send">
+                                    <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
+                                    <span class="btn__text">обратиться</span>
+                                </button>
+                            </div>
+                            <div class="team__slide swiper-slide">
+                                <img class="team__slide_img" src="assets/img/sections/about/doctor-img.jpg" alt="">
+                                <div class="team__slide-div">
+                                    <p class="team__div_descr">Стаж 10 лет</p>
+                                </div>
+                                <a href="#" class="team__slide-block">
+                                    <p class="team__slide-block__descr section-descr">Врач-нарколог, невролог, психиатр
+                                    </p>
+                                    <p class="large-descr team__slide-block__large-descr">Зарипова Варвара Геннадьевна
+                                    </p>
+                                    <span class="span-offset">
+                                        <p class="spa-widht__descr">Подробнее</p>
+                                        <svg width="8.000000" height="7.000000" viewBox="0 0 8 7" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <desc>
+                                                Created with Pixso.
+                                            </desc>
+                                            <defs />
+                                            <path id="Vector" d="M6.64 3.89L6.49 -0.18L2.4 -0.35M6.49 -0.18L0.12 6.18"
+                                                stroke="#5682A5" stroke-opacity="1.000000" stroke-width="1.000000"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </a>
+                                <button class="team__slide_btn btn  btn_big btn_red popup-btn" data-path="send">
+                                    <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
+                                    <span class="btn__text">обратиться</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-navigation slider-navigation_static">
+                        <button class="slider-btn slider-btn_prev">
+                            <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.61538 1L1 5.48375M1 5.48375L5.61538 10M1 5.48375L16 5.48375"
+                                    stroke="#5682A5" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="slider-pagination"></div>
+                        <button class="slider-btn slider-btn_next">
+                            <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.61538 1L1 5.48375M1 5.48375L5.61538 10M1 5.48375L16 5.48375"
+                                    stroke="#5682A5" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews section-offset section-offset_padding">
+            <div class="reviews__container container">
+                <div class="reviews__top section-top">
+                    <h3 class="reviews__title section-title">Отзывы наших пациентов</h3>
+                    <button class="reviews__btn btn btn_color popup-btn" data-path="add-review">
+                        <span class="btn__text">
+                            Оставить отзыв
+                        </span>
+                    </button>
+                </div>
+                <div class="reviews__slider-container slider-container">
+                    <div class="reviews__slider swiper slider-3">
+                        <div class="reviews__slider-wrapper swiper-wrapper">
+                            <div class="reviews__block review swiper-slide">
+                                <div class="reviews__rating rating">
+                                    <div class="rating__wrapper">
+                                        <div class="rating__body">
+                                            <div class="rating__active">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                            </div>
+                                            <div class="rating__items">
+                                                <input type="radio" name="f_rating" value="1" class="rating__item">
+                                                <input type="radio" name="f_rating" value="2" class="rating__item">
+                                                <input type="radio" name="f_rating" value="3" class="rating__item">
+                                                <input type="radio" name="f_rating" value="4" class="rating__item">
+                                                <input type="radio" name="f_rating" value="5" class="rating__item">
+                                            </div>
+                                            <div class="rating__stars">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rating__value visually-hidden">2.5</div>
+                                </div>
+                                <div class="review__text-wrapper">
+                                    <p class="review__text">
+                                        Для современного мира повышение уровня гражданского сознания, в своём
+                                        классическом представлении, допускает внедрение благоприятных перспектив. А
+                                        также реплицированные с зарубежных источников, современные исследования набирают
+                                        популярность среди определенных слоев населения, а значит, должны быть
+                                        представлены в исключительно положительном свете. Картельные сговоры не
+                                        допускают ситуации, при которой действия представителей оппозиции объединены в
+                                        целые кластеры себе подобных.
+                                        Для современного мира повышение уровня гражданского сознания, в своём
+                                        классическом представлении, допускает внедрение благоприятных перспектив. А
+                                        также реплицированные с зарубежных источников, современные исследования набирают
+                                        популярность среди определенных слоев населения, а значит, должны быть
+                                        представлены в исключительно положительном свете. Картельные сговоры не
+                                        допускают ситуации, при которой действия представителей оппозиции объединены в
+                                        целые кластеры себе подобных.
+                                    </p>
+                                    <div class="review__more">
+                                        <button class="review__more-btn popup-btn" data-path="review-full">
+                                            <p class="review__more-text">
+                                                Читать полностью
+                                            </p>
+                                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.14851 4.89744L6.993 0.825638M6.993 0.825638L2.90587 0.654797M6.993 0.825638L0.629035 7.1896"
+                                                    stroke="#5682A5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="review__info">
+                                    <div class="review__info-top">
+                                        <p class="review__name">
+                                            Аркадий, 40 лет
+                                        </p>
+                                        <img src="assets/img/sections/reviews/logo-1.svg" alt="" class="review__logo">
+                                    </div>
+                                    <div class="review__date">
+                                        <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14.5 7V12.4444C14.5 12.857 14.3361 13.2527 14.0444 13.5444C13.7527 13.8361 13.357 14 12.9444 14H2.05556C1.643 14 1.24733 13.8361 0.955612 13.5444C0.663888 13.2527 0.5 12.857 0.5 12.4444V7H14.5ZM10.6111 0C10.8174 0 11.0152 0.0819442 11.1611 0.227806C11.3069 0.373667 11.3889 0.571498 11.3889 0.777778V1.55556H12.9444C13.357 1.55556 13.7527 1.71944 14.0444 2.01117C14.3361 2.30289 14.5 2.69855 14.5 3.11111V5.44444H0.5V3.11111C0.5 2.69855 0.663888 2.30289 0.955612 2.01117C1.24733 1.71944 1.643 1.55556 2.05556 1.55556H3.61111V0.777778C3.61111 0.571498 3.69306 0.373667 3.83892 0.227806C3.98478 0.0819442 4.18261 0 4.38889 0C4.59517 0 4.793 0.0819442 4.93886 0.227806C5.08472 0.373667 5.16667 0.571498 5.16667 0.777778V1.55556H9.83333V0.777778C9.83333 0.571498 9.91528 0.373667 10.0611 0.227806C10.207 0.0819442 10.4048 0 10.6111 0Z"
+                                                fill="#5682A5" />
+                                        </svg>
+                                        <p class="review__date-text">
+                                            Отзыв опубликован: 26.07.2023
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__block review swiper-slide">
+                                <div class="reviews__rating rating">
+                                    <div class="rating__wrapper">
+                                        <div class="rating__body">
+                                            <div class="rating__active">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                            </div>
+                                            <div class="rating__items">
+                                                <input type="radio" name="f_rating" value="1" class="rating__item">
+                                                <input type="radio" name="f_rating" value="2" class="rating__item">
+                                                <input type="radio" name="f_rating" value="3" class="rating__item">
+                                                <input type="radio" name="f_rating" value="4" class="rating__item">
+                                                <input type="radio" name="f_rating" value="5" class="rating__item">
+                                            </div>
+                                            <div class="rating__stars">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rating__value visually-hidden">2.5</div>
+                                </div>
+                                <div class="review__text-wrapper">
+                                    <p class="review__text">
+                                        Для современного мира повышение уровня гражданского сознания, в своём
+                                        классическом представлении, допускает внедрение благоприятных перспектив. А
+                                        также реплицированные с зарубежных источников, современные исследования набирают
+                                        популярность среди определенных слоев населения, а значит, должны быть
+                                        представлены в исключительно положительном свете. Картельные сговоры не
+                                        допускают ситуации, при которой действия представителей оппозиции объединены в
+                                        целые кластеры себе подобных.
+                                        Для современного мира повышение уровня гражданского сознания, в своём
+                                        классическом представлении, допускает внедрение благоприятных перспектив. А
+                                        также реплицированные с зарубежных источников, современные исследования набирают
+                                        популярность среди определенных слоев населения, а значит, должны быть
+                                        представлены в исключительно положительном свете. Картельные сговоры не
+                                        допускают ситуации, при которой действия представителей оппозиции объединены в
+                                        целые кластеры себе подобных.
+                                    </p>
+                                    <div class="review__more">
+                                        <button class="review__more-btn popup-btn" data-path="review-full">
+                                            <p class="review__more-text">
+                                                Читать полностью
+                                            </p>
+                                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.14851 4.89744L6.993 0.825638M6.993 0.825638L2.90587 0.654797M6.993 0.825638L0.629035 7.1896"
+                                                    stroke="#5682A5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="review__info">
+                                    <div class="review__info-top">
+                                        <p class="review__name">
+                                            Аркадий, 40 лет
+                                        </p>
+                                        <img src="assets/img/sections/reviews/logo-1.svg" alt="" class="review__logo">
+                                    </div>
+                                    <div class="review__date">
+                                        <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14.5 7V12.4444C14.5 12.857 14.3361 13.2527 14.0444 13.5444C13.7527 13.8361 13.357 14 12.9444 14H2.05556C1.643 14 1.24733 13.8361 0.955612 13.5444C0.663888 13.2527 0.5 12.857 0.5 12.4444V7H14.5ZM10.6111 0C10.8174 0 11.0152 0.0819442 11.1611 0.227806C11.3069 0.373667 11.3889 0.571498 11.3889 0.777778V1.55556H12.9444C13.357 1.55556 13.7527 1.71944 14.0444 2.01117C14.3361 2.30289 14.5 2.69855 14.5 3.11111V5.44444H0.5V3.11111C0.5 2.69855 0.663888 2.30289 0.955612 2.01117C1.24733 1.71944 1.643 1.55556 2.05556 1.55556H3.61111V0.777778C3.61111 0.571498 3.69306 0.373667 3.83892 0.227806C3.98478 0.0819442 4.18261 0 4.38889 0C4.59517 0 4.793 0.0819442 4.93886 0.227806C5.08472 0.373667 5.16667 0.571498 5.16667 0.777778V1.55556H9.83333V0.777778C9.83333 0.571498 9.91528 0.373667 10.0611 0.227806C10.207 0.0819442 10.4048 0 10.6111 0Z"
+                                                fill="#5682A5" />
+                                        </svg>
+                                        <p class="review__date-text">
+                                            Отзыв опубликован: 26.07.2023
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__block review swiper-slide">
+                                <div class="reviews__rating rating">
+                                    <div class="rating__wrapper">
+                                        <div class="rating__body">
+                                            <div class="rating__active">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                            </div>
+                                            <div class="rating__items">
+                                                <input type="radio" name="f_rating" value="1" class="rating__item">
+                                                <input type="radio" name="f_rating" value="2" class="rating__item">
+                                                <input type="radio" name="f_rating" value="3" class="rating__item">
+                                                <input type="radio" name="f_rating" value="4" class="rating__item">
+                                                <input type="radio" name="f_rating" value="5" class="rating__item">
+                                            </div>
+                                            <div class="rating__stars">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rating__value visually-hidden">2.5</div>
+                                </div>
+                                <div class="review__text-wrapper">
+                                    <p class="review__text">
+                                        Для современного мира повышение уровня гражданского сознания, в своём
+                                        классическом представлении, допускает внедрение благоприятных перспектив. А
+                                        также реплицированные с зарубежных источников, современные исследования набирают
+                                    </p>
+                                    <div class="review__more">
+                                        <button class="review__more-btn popup-btn" data-path="review-full">
+                                            <p class="review__more-text">
+                                                Читать полностью
+                                            </p>
+                                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.14851 4.89744L6.993 0.825638M6.993 0.825638L2.90587 0.654797M6.993 0.825638L0.629035 7.1896"
+                                                    stroke="#5682A5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="review__info">
+                                    <div class="review__info-top">
+                                        <p class="review__name">
+                                            Аркадий, 40 лет
+                                        </p>
+                                        <img src="assets/img/sections/reviews/logo-1.svg" alt="" class="review__logo">
+                                    </div>
+                                    <div class="review__date">
+                                        <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14.5 7V12.4444C14.5 12.857 14.3361 13.2527 14.0444 13.5444C13.7527 13.8361 13.357 14 12.9444 14H2.05556C1.643 14 1.24733 13.8361 0.955612 13.5444C0.663888 13.2527 0.5 12.857 0.5 12.4444V7H14.5ZM10.6111 0C10.8174 0 11.0152 0.0819442 11.1611 0.227806C11.3069 0.373667 11.3889 0.571498 11.3889 0.777778V1.55556H12.9444C13.357 1.55556 13.7527 1.71944 14.0444 2.01117C14.3361 2.30289 14.5 2.69855 14.5 3.11111V5.44444H0.5V3.11111C0.5 2.69855 0.663888 2.30289 0.955612 2.01117C1.24733 1.71944 1.643 1.55556 2.05556 1.55556H3.61111V0.777778C3.61111 0.571498 3.69306 0.373667 3.83892 0.227806C3.98478 0.0819442 4.18261 0 4.38889 0C4.59517 0 4.793 0.0819442 4.93886 0.227806C5.08472 0.373667 5.16667 0.571498 5.16667 0.777778V1.55556H9.83333V0.777778C9.83333 0.571498 9.91528 0.373667 10.0611 0.227806C10.207 0.0819442 10.4048 0 10.6111 0Z"
+                                                fill="#5682A5" />
+                                        </svg>
+                                        <p class="review__date-text">
+                                            Отзыв опубликован: 26.07.2023
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__block review swiper-slide">
+                                <div class="reviews__rating rating">
+                                    <div class="rating__wrapper">
+                                        <div class="rating__body">
+                                            <div class="rating__active">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star-active.svg"
+                                                    alt="" class="star aspect-ratio">
+                                            </div>
+                                            <div class="rating__items">
+                                                <input type="radio" name="f_rating" value="1" class="rating__item">
+                                                <input type="radio" name="f_rating" value="2" class="rating__item">
+                                                <input type="radio" name="f_rating" value="3" class="rating__item">
+                                                <input type="radio" name="f_rating" value="4" class="rating__item">
+                                                <input type="radio" name="f_rating" value="5" class="rating__item">
+                                            </div>
+                                            <div class="rating__stars">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                                <img width="25" height="25" src="assets/img/icons/star.svg" alt=""
+                                                    class="star aspect-ratio">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rating__value visually-hidden">2.5</div>
+                                </div>
+                                <div class="review__text-wrapper">
+                                    <p class="review__text">
+                                        Для современного мира повышение уровня гражданского сознания, в своём
+                                        классическом представлении, допускает внедрение благоприятных перспектив. А
+                                        также реплицированные с зарубежных источников, современные исследования набирают
+                                        популярность среди определенных слоев населения, а значит, должны быть
+                                        представлены в исключительно положительном свете. Картельные сговоры не
+                                        допускают ситуации, при которой действия представителей оппозиции объединены в
+                                        целые кластеры себе подобных.
+                                        Для современного мира повышение уровня гражданского сознания, в своём
+                                        классическом представлении, допускает внедрение благоприятных перспектив. А
+                                        также реплицированные с зарубежных источников, современные исследования набирают
+                                        популярность среди определенных слоев населения, а значит, должны быть
+                                        представлены в исключительно положительном свете. Картельные сговоры не
+                                        допускают ситуации, при которой действия представителей оппозиции объединены в
+                                        целые кластеры себе подобных.
+                                    </p>
+                                    <div class="review__more">
+                                        <button class="review__more-btn popup-btn" data-path="review-full">
+                                            <p class="review__more-text">
+                                                Читать полностью
+                                            </p>
+                                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.14851 4.89744L6.993 0.825638M6.993 0.825638L2.90587 0.654797M6.993 0.825638L0.629035 7.1896"
+                                                    stroke="#5682A5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="review__info">
+                                    <div class="review__info-top">
+                                        <p class="review__name">
+                                            Аркадий, 40 лет
+                                        </p>
+                                        <img src="assets/img/sections/reviews/logo-1.svg" alt="" class="review__logo">
+                                    </div>
+                                    <div class="review__date">
+                                        <svg width="15" height="14" viewBox="0 0 15 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14.5 7V12.4444C14.5 12.857 14.3361 13.2527 14.0444 13.5444C13.7527 13.8361 13.357 14 12.9444 14H2.05556C1.643 14 1.24733 13.8361 0.955612 13.5444C0.663888 13.2527 0.5 12.857 0.5 12.4444V7H14.5ZM10.6111 0C10.8174 0 11.0152 0.0819442 11.1611 0.227806C11.3069 0.373667 11.3889 0.571498 11.3889 0.777778V1.55556H12.9444C13.357 1.55556 13.7527 1.71944 14.0444 2.01117C14.3361 2.30289 14.5 2.69855 14.5 3.11111V5.44444H0.5V3.11111C0.5 2.69855 0.663888 2.30289 0.955612 2.01117C1.24733 1.71944 1.643 1.55556 2.05556 1.55556H3.61111V0.777778C3.61111 0.571498 3.69306 0.373667 3.83892 0.227806C3.98478 0.0819442 4.18261 0 4.38889 0C4.59517 0 4.793 0.0819442 4.93886 0.227806C5.08472 0.373667 5.16667 0.571498 5.16667 0.777778V1.55556H9.83333V0.777778C9.83333 0.571498 9.91528 0.373667 10.0611 0.227806C10.207 0.0819442 10.4048 0 10.6111 0Z"
+                                                fill="#5682A5" />
+                                        </svg>
+                                        <p class="review__date-text">
+                                            Отзыв опубликован: 26.07.2023
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-navigation slider-navigation_static">
+                        <button class="slider-btn slider-btn_prev">
+                            <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.61538 1L1 5.48375M1 5.48375L5.61538 10M1 5.48375L16 5.48375"
+                                    stroke="#5682A5" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="slider-pagination"></div>
+                        <button class="slider-btn slider-btn_next">
+                            <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.61538 1L1 5.48375M1 5.48375L5.61538 10M1 5.48375L16 5.48375"
+                                    stroke="#5682A5" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+        </section>
+        <section class="questions section-offset">
+            <div class="questions__container container">
+                <h3 class="questions__title section-title">Ответы на часто задаваемые вопросы</h3>
+                <div class="questions__wrapper accor-wrapper">
+                    <div class="questions__accor questions accor">
+                        <button class="questions__title accor-title accor-open" data-accordion-button="">
+                            <span class="questions-title__text accor-title__text">Что такое реабилитация 12
+                                шагов?</span>
+                            <span class="questions-title__decor accor-open-decor">
+                                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.43928 10.096L10.0859 10.1062M10.0859 10.1062L10.0961 4.43915M10.0859 10.1062L0.893529 0.913833"
+                                        stroke="#1F587A" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="questions__info accor-full">
+                            <div class="questions__info-wrapper accor-full-content" data-accordion-content>
+                                <div class="questions__table content-body">
+                                    <p>Однозначно, ключевые особенности структуры проекта набирают популярность среди
+                                        определенных слоев населения, а значит, должны быть функционально разнесены на
+                                        независимые элементы. Но убеждённость некоторых оппонентов способствует
+                                        подготовке и реализации новых принципов формирования материально-технической и
+                                        кадровой базы. Как принято считать, явные признаки победы институционализации
+                                        являются только методом политического участия и в равной степени предоставлены
+                                        сами себе.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="questions__accor questions accor">
+                        <button class="questions__title accor-title accor-open" data-accordion-button="">
+                            <span class="questions-title__text accor-title__text">Что такое реабилитация 12
+                                шагов?</span>
+                            <span class="questions-title__decor accor-open-decor">
+                                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.43928 10.096L10.0859 10.1062M10.0859 10.1062L10.0961 4.43915M10.0859 10.1062L0.893529 0.913833"
+                                        stroke="#1F587A" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="questions__info accor-full">
+                            <div class="questions__info-wrapper accor-full-content" data-accordion-content>
+                                <div class="questions__table content-body">
+                                    <p>Однозначно, ключевые особенности структуры проекта набирают популярность среди
+                                        определенных слоев населения, а значит, должны быть функционально разнесены на
+                                        независимые элементы. Но убеждённость некоторых оппонентов способствует
+                                        подготовке и реализации новых принципов формирования материально-технической и
+                                        кадровой базы. Как принято считать, явные признаки победы институционализации
+                                        являются только методом политического участия и в равной степени предоставлены
+                                        сами себе.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="questions__accor questions accor">
+                        <button class="questions__title accor-title accor-open" data-accordion-button="">
+                            <span class="questions-title__text accor-title__text">Что такое реабилитация 12
+                                шагов?</span>
+                            <span class="questions-title__decor accor-open-decor">
+                                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.43928 10.096L10.0859 10.1062M10.0859 10.1062L10.0961 4.43915M10.0859 10.1062L0.893529 0.913833"
+                                        stroke="#1F587A" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="questions__info accor-full">
+                            <div class="questions__info-wrapper accor-full-content" data-accordion-content>
+                                <div class="questions__table content-body">
+                                    <p>Однозначно, ключевые особенности структуры проекта набирают популярность среди
+                                        определенных слоев населения, а значит, должны быть функционально разнесены на
+                                        независимые элементы. Но убеждённость некоторых оппонентов способствует
+                                        подготовке и реализации новых принципов формирования материально-технической и
+                                        кадровой базы. Как принято считать, явные признаки победы институционализации
+                                        являются только методом политического участия и в равной степени предоставлены
+                                        сами себе.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="questions__accor questions accor">
+                        <button class="questions__title accor-title accor-open" data-accordion-button="">
+                            <span class="questions-title__text accor-title__text">Что такое реабилитация 12
+                                шагов?</span>
+                            <span class="questions-title__decor accor-open-decor">
+                                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.43928 10.096L10.0859 10.1062M10.0859 10.1062L10.0961 4.43915M10.0859 10.1062L0.893529 0.913833"
+                                        stroke="#1F587A" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="questions__info accor-full">
+                            <div class="questions__info-wrapper accor-full-content" data-accordion-content>
+                                <div class="questions__table content-body">
+                                    <p>Однозначно, ключевые особенности структуры проекта набирают популярность среди
+                                        определенных слоев населения, а значит, должны быть функционально разнесены на
+                                        независимые элементы. Но убеждённость некоторых оппонентов способствует
+                                        подготовке и реализации новых принципов формирования материально-технической и
+                                        кадровой базы. Как принято считать, явные признаки победы институционализации
+                                        являются только методом политического участия и в равной степени предоставлены
+                                        сами себе.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="questions__accor questions accor">
+                        <button class="questions__title accor-title accor-open" data-accordion-button="">
+                            <span class="questions-title__text accor-title__text">Что такое реабилитация 12
+                                шагов?</span>
+                            <span class="questions-title__decor accor-open-decor">
+                                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.43928 10.096L10.0859 10.1062M10.0859 10.1062L10.0961 4.43915M10.0859 10.1062L0.893529 0.913833"
+                                        stroke="#1F587A" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="questions__info accor-full">
+                            <div class="questions__info-wrapper content-body accor-full-content" data-accordion-content>
+                                <div class="questions__table ">
+                                    <p>Однозначно, ключевые особенности структуры проекта набирают популярность среди
+                                        определенных слоев населения, а значит, должны быть функционально разнесены на
+                                        независимые элементы. Но убеждённость некоторых оппонентов способствует
+                                        подготовке и реализации новых принципов формирования материально-технической и
+                                        кадровой базы. Как принято считать, явные признаки победы институционализации
+                                        являются только методом политического участия и в равной степени предоставлены
+                                        сами себе.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="questions__accor questions accor">
+                        <button class="questions__title accor-title accor-open" data-accordion-button="">
+                            <span class="questions-title__text accor-title__text">Что такое реабилитация 12
+                                шагов?</span>
+                            <span class="questions-title__decor accor-open-decor">
+                                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.43928 10.096L10.0859 10.1062M10.0859 10.1062L10.0961 4.43915M10.0859 10.1062L0.893529 0.913833"
+                                        stroke="#1F587A" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="questions__info accor-full">
+                            <div class="questions__info-wrapper accor-full-content" data-accordion-content>
+                                <div class="questions__table content-body">
+                                    <p>Однозначно, ключевые особенности структуры проекта набирают популярность среди
+                                        определенных слоев населения, а значит, должны быть функционально разнесены на
+                                        независимые элементы. Но убеждённость некоторых оппонентов способствует
+                                        подготовке и реализации новых принципов формирования материально-технической и
+                                        кадровой базы. Как принято считать, явные признаки победы институционализации
+                                        являются только методом политического участия и в равной степени предоставлены
+                                        сами себе.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="geolocation section-offset">
+            <div class="geolocation__container container">
+                <h3 class="geolocation__title section-title">Как до нас добраться</h3>
+                <div class="geolocation__container-wrapper">
+                    <div class="geolocation__container__about">
+                        <div class="geolocation__container__about-info">
+                            <div class="geolocation__info">
+                                <div class="geolocation__container-info">
+                                    <div class="geolocation__container-info__large-block">
+                                        <div class="footer__info-item">
+                                            <svg width="14.000000" height="16.000000" viewBox="0 0 14 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <desc>
+                                                    Created with Pixso.
+                                                </desc>
+                                                <defs />
+                                                <path id="Vector"
+                                                    d="M8.34 15.49C10.38 13.74 14 10.15 14 6.86C14 5.04 13.26 3.29 11.94 2.01C10.63 0.72 8.85 0 7 0C5.14 0 3.36 0.72 2.05 2.01C0.73 3.29 0 5.04 0 6.86C0 10.15 3.61 13.74 5.65 15.49C6.02 15.82 6.5 16 7 16C7.49 16 7.97 15.82 8.34 15.49ZM4.66 6.86C4.66 6.25 4.91 5.67 5.35 5.24C5.78 4.81 6.38 4.57 7 4.57C7.61 4.57 8.21 4.81 8.64 5.24C9.08 5.67 9.33 6.25 9.33 6.86C9.33 7.47 9.08 8.05 8.64 8.48C8.21 8.91 7.61 9.15 7 9.15C6.38 9.15 5.78 8.91 5.35 8.48C4.91 8.05 4.66 7.47 4.66 6.86Z"
+                                                    fill="#1F587A" fill-opacity="1.000000" fill-rule="nonzero" />
+                                            </svg>
+                                            <p class="widht-descr">Адрес call-центра:</p>
+                                        </div>
+                                        <p class="section__info-descr">Екатеринбург, Верхнедонская, 28/8</p>
+                                    </div>
+                                    <div class="geolocation__container-info__large-block">
+                                        <div class="footer__info-item">
+                                            <svg width="16.000000" height="16.000000" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <desc>
+                                                    Created with Pixso.
+                                                </desc>
+                                                <defs />
+                                                <path id="Vector"
+                                                    d="M4 0C3.73 0 3.48 0.1 3.29 0.29C3.1 0.48 3 0.73 3 1L3 2L2 2C1.46 2 0.96 2.21 0.58 2.58C0.21 2.96 0 3.46 0 4L0 14C0 14.53 0.21 15.03 0.58 15.41C0.96 15.78 1.46 16 2 16L14 16C14.53 16 15.03 15.78 15.41 15.41C15.78 15.03 16 14.53 16 14L16 4C16 3.46 15.78 2.96 15.41 2.58C15.03 2.21 14.53 2 14 2L13 2L13 1C13 0.73 12.89 0.48 12.7 0.29C12.51 0.1 12.26 0 12 0C11.73 0 11.48 0.1 11.29 0.29C11.1 0.48 11 0.73 11 1L11 2L5 2L5 1C5 0.73 4.89 0.48 4.7 0.29C4.51 0.1 4.26 0 4 0ZM4 5C3.73 5 3.48 5.1 3.29 5.29C3.1 5.48 3 5.73 3 6C3 6.26 3.1 6.51 3.29 6.7C3.48 6.89 3.73 7 4 7L12 7C12.26 7 12.51 6.89 12.7 6.7C12.89 6.51 13 6.26 13 6C13 5.73 12.89 5.48 12.7 5.29C12.51 5.1 12.26 5 12 5L4 5Z"
+                                                    fill="#1F587A" fill-opacity="1.000000" fill-rule="evenodd" />
+                                            </svg>
+                                            <p class="widht-descr">Режим работы:</p>
+                                        </div>
+                                        <p class="section__info-descr">Круглосуточно, без выходных</p>
+                                    </div>
+                                    <div class="geolocation__container-info__large-block">
+                                        <div class="footer__info-item info-item">
+                                            <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <desc>
+                                                    Created with Pixso.
+                                                </desc>
+                                                <defs>
+                                                    <clipPath id="clip1345_129">
+                                                        <rect id="Icon" width="20.000000" height="20.000000"
+                                                            fill="white" fill-opacity="0" />
+                                                    </clipPath>
+                                                </defs>
+                                                <rect id="Icon" width="20.000000" height="20.000000" fill="#FFFFFF"
+                                                    fill-opacity="0" />
+                                                <g clip-path="url(#clip1345_129)">
+                                                    <path id="Vector"
+                                                        d="M14.52 17.99C11.47 17.99 8.54 16.77 6.38 14.61C4.21 12.44 3 9.51 3 6.45C3 5.53 3.36 4.65 4 4.01C4.65 3.36 5.53 3 6.44 3C6.63 2.99 6.82 3.01 7.01 3.05C7.2 3.07 7.38 3.12 7.55 3.18C7.68 3.23 7.79 3.3 7.87 3.4C7.96 3.5 8.01 3.62 8.04 3.75L9.07 8.25C9.09 8.37 9.09 8.49 9.06 8.61C9.02 8.74 8.96 8.85 8.87 8.93C8.77 9.04 8.77 9.05 7.85 9.53C8.58 11.15 9.88 12.45 11.49 13.2C11.98 12.27 11.98 12.26 12.09 12.16C12.18 12.07 12.29 12.01 12.41 11.97C12.53 11.94 12.66 11.94 12.78 11.96L17.27 12.99C17.39 13.02 17.51 13.08 17.6 13.17C17.7 13.25 17.77 13.36 17.81 13.48C17.87 13.66 17.92 13.84 17.95 14.03C17.98 14.22 18 14.41 18 14.6C17.98 15.51 17.61 16.38 16.96 17.01C16.31 17.65 15.43 18 14.52 17.99Z"
+                                                        fill="#1F587A" fill-opacity="1.000000" fill-rule="nonzero" />
+                                                </g>
+                                            </svg>
+
+                                            <p class="widht-descr">Номер телефона:</p>
+                                        </div>
+                                        <a class="section__info-descr" href="tel:+78005001160">+7 (800) 500-11-60</a>
+                                    </div>
+                                    <div class="geolocation__container-info__large-block">
+                                        <div class="footer__info-item">
+                                            <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <desc>
+                                                    Created with Pixso.
+                                                </desc>
+                                                <defs>
+                                                    <clipPath id="clip1348_243">
+                                                        <rect id="Icon" width="20.000000" height="20.000000"
+                                                            fill="white" fill-opacity="0" />
+                                                    </clipPath>
+                                                </defs>
+                                                <rect id="Icon" width="20.000000" height="20.000000" fill="#FFFFFF"
+                                                    fill-opacity="0" />
+                                                <g clip-path="url(#clip1348_243)">
+                                                    <path id="Vector"
+                                                        d="M17.2 3.33L2.8 3.33C1.81 3.33 1 4.12 1 5.08L1 15.58C1 16.54 1.81 17.33 2.8 17.33L17.2 17.33C18.18 17.33 19 16.54 19 15.58L19 5.08C19 4.12 18.18 3.33 17.2 3.33ZM16.84 7.05L10.47 10.91C10.18 11.09 9.81 11.09 9.52 10.91L3.15 7.05C3.06 7 2.99 6.93 2.92 6.85C2.86 6.77 2.81 6.68 2.79 6.58C2.76 6.48 2.76 6.38 2.77 6.28C2.79 6.18 2.83 6.09 2.88 6C2.94 5.92 3.01 5.85 3.09 5.79C3.18 5.73 3.27 5.69 3.38 5.67C3.48 5.65 3.58 5.65 3.68 5.67C3.78 5.69 3.88 5.73 3.96 5.79L10 9.45L16.03 5.79C16.11 5.73 16.21 5.69 16.31 5.67C16.41 5.65 16.51 5.65 16.61 5.67C16.72 5.69 16.81 5.73 16.9 5.79C16.98 5.85 17.05 5.92 17.11 6C17.16 6.09 17.2 6.18 17.22 6.28C17.23 6.38 17.23 6.48 17.2 6.58C17.18 6.68 17.13 6.77 17.07 6.85C17 6.93 16.93 7 16.84 7.05Z"
+                                                        fill="#1F587A" fill-opacity="1.000000" fill-rule="nonzero" />
+                                                </g>
+                                            </svg>
+                                            <p class="widht-descr">Электронная почта</p>
+                                        </div>
+                                        <a class="section__info-descr"
+                                            href="mailto:alfa_clinic@gmail.com">alfa_clinic@gmail.com</a>
+                                    </div>
+                                </div>
+                                <button class="geolocation__button btn btn_big btn_color popup-btn" data-path="send">
+                                    <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
+
+                                    <span class="btn__text">Записаться на прием</span>
+                                </button>
+                                <button class="geolocation__button btn btn_big btn_red popup-btn" data-path="send">
+                                    <img class="btn__icon" src="assets/img/icons/arrow-btn.svg" alt="">
+                                    <span class="btn__text">Вызвать врача</span>
+                                </button>
+                            </div>
+                            <div id="map" class="geolocation__map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="offers-2 section-offset">
+            <div class="offers__container container">
+                <div class="offers__container-wrapper__white">
+                    <div class="offers__container-left">
+                        <h3 class="offers__container-left__title title__white">Получите бесплатную
+                            консультацию врача прямо сейчас!
+                            Оставьте заявку
+                        </h3>
+                        <a class="offers__container-left__link color__link" href="tel:+78005001160">
+                            <p class="offers__container-left__descr white__descr">или позвоните по номеру</p>
+                            <div class="offers__container-left__link-wrapper">
+                                <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <desc>
+                                        Created with Pixso.
+                                    </desc>
+                                    <defs>
+                                        <clipPath id="clip1348_205">
+                                            <rect id="Icon" width="20.000000" height="20.000000" fill="white"
+                                                fill-opacity="0" />
+                                        </clipPath>
+                                    </defs>
+                                    <rect id="Icon" width="20.000000" height="20.000000" fill="#FFFFFF"
+                                        fill-opacity="0" />
+                                    <g clip-path="url(#clip1348_205)">
+                                        <path id="Vector"
+                                            d="M14.29 17.99C11.03 17.99 7.91 16.69 5.6 14.38C3.3 12.07 2 8.94 2 5.68C2 4.7 2.38 3.76 3.07 3.07C3.76 2.38 4.69 2 5.67 2C5.87 1.99 6.08 2.01 6.28 2.05C6.48 2.08 6.67 2.13 6.86 2.2C6.99 2.24 7.11 2.32 7.2 2.43C7.29 2.53 7.35 2.66 7.38 2.8L8.47 7.59C8.5 7.73 8.5 7.86 8.46 7.99C8.42 8.12 8.36 8.24 8.26 8.33C8.16 8.44 8.15 8.45 7.17 8.96C7.95 10.69 9.33 12.08 11.06 12.87C11.58 11.88 11.58 11.88 11.7 11.77C11.79 11.68 11.91 11.61 12.04 11.57C12.16 11.54 12.3 11.53 12.43 11.56L17.22 12.66C17.35 12.69 17.47 12.75 17.58 12.84C17.68 12.94 17.75 13.05 17.8 13.18C17.86 13.37 17.91 13.56 17.95 13.76C17.98 13.96 18 14.17 18 14.37C17.98 15.34 17.58 16.27 16.89 16.95C16.19 17.63 15.26 18 14.29 17.99Z"
+                                            fill="#F3F7FD" fill-opacity="1.000000" fill-rule="nonzero" />
+                                    </g>
+                                </svg>
+                                <p class="offers__phone_white">+7 (800) 500-11-60</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="offers__container-right">
+                        <input class="offers__container-right__input" type="name" placeholder="Имя">
+                        <input class="offers__container-right__input" type="tel" placeholder="Номер телефона">
+                        <button class="offers__container-right__button">Оставить заявку</button>
+                        <p class="offers__container-right_descr section-descr offers__container-right_descr-white">
+                            Нажимая кнопку «Оставить заявку», вы соглашаетесь
+                            с политикой конфиденциальности данного сайта</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="footer__container container">
@@ -2383,8 +2431,76 @@
                 <form action="#" class="offers__container-right" method="post">
                     <input class="offers__container-right__input" type="tel" placeholder="Номер телефона">
                     <button class="offers__container-right__button">Оставить заявку</button>
-                    <p class="offers__container-right__descr form-policy form-policy_color form-policy_max-width">
+                    <p class="offers__container-right_descr form-policy form-policy_color form-policy_max-width">
                         Нажимая кнопку «Оставить заявку», вы соглашаетесь
+                        с политикой конфиденциальности данного сайта</p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="review-full-popup popup" data-target="review-full">
+        <div class="popup__body">
+            <div class="popup__content">
+                <button class="popup__close close-popup">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M5.00569 6.34603L8.37334 9.70984C8.55204 9.88833 8.79441 9.98861 9.04713 9.98861C9.29984 9.98861 9.54221 9.88833 9.72091 9.70984C9.89961 9.53134 10 9.28925 10 9.03682C10 8.78439 9.89961 8.5423 9.72091 8.36381L6.35199 5L9.72027 1.63619C9.80871 1.54781 9.87886 1.44289 9.92671 1.32743C9.97456 1.21197 9.99917 1.08823 9.99914 0.963269C9.99911 0.838308 9.97444 0.714576 9.92654 0.599138C9.87864 0.483701 9.80844 0.378818 9.71996 0.290478C9.63147 0.202138 9.52644 0.132071 9.41085 0.0842776C9.29525 0.0364843 9.17137 0.0119005 9.04627 0.0119299C8.92116 0.0119594 8.79729 0.0366014 8.68172 0.0844491C8.56615 0.132297 8.46115 0.202413 8.37271 0.290795L5.00569 3.6546L1.63805 0.290795C1.55022 0.199878 1.44514 0.127344 1.32895 0.0774234C1.21276 0.0275031 1.08777 0.00119689 0.961292 3.99012e-05C0.834811 -0.00111709 0.709367 0.0228981 0.592278 0.0706844C0.475188 0.118471 0.368799 0.189071 0.279318 0.278366C0.189837 0.36766 0.119056 0.473862 0.0711052 0.590772C0.023154 0.707683 -0.0010069 0.832962 3.2144e-05 0.959299C0.00107119 1.08564 0.0272893 1.2105 0.0771569 1.32661C0.127025 1.44272 0.199543 1.54774 0.29048 1.63556L3.6594 5L0.291116 8.36444C0.200178 8.45226 0.12766 8.55728 0.0777922 8.67339C0.0279246 8.7895 0.00170619 8.91436 0.000667144 9.0407C-0.000371904 9.16704 0.023789 9.29232 0.0717402 9.40923C0.119691 9.52614 0.190472 9.63234 0.279953 9.72163C0.369434 9.81093 0.475823 9.88153 0.592913 9.92932C0.710002 9.9771 0.835446 10.0011 0.961927 9.99996C1.08841 9.9988 1.21339 9.9725 1.32958 9.92258C1.44578 9.87266 1.55085 9.80012 1.63868 9.7092L5.00569 6.34603Z"
+                            fill="#00253C" />
+                    </svg>
+                </button>
+                <p class="review-full-popup__name review__name"></p>
+                <p class="review-full-popup__text review__text"></p>
+            </div>
+        </div>
+    </div>
+    <div class="search-popup popup" data-target="search">
+        <div class="popup__body">
+            <div class="popup__content">
+                <button class="popup__close close-popup">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M5.00569 6.34603L8.37334 9.70984C8.55204 9.88833 8.79441 9.98861 9.04713 9.98861C9.29984 9.98861 9.54221 9.88833 9.72091 9.70984C9.89961 9.53134 10 9.28925 10 9.03682C10 8.78439 9.89961 8.5423 9.72091 8.36381L6.35199 5L9.72027 1.63619C9.80871 1.54781 9.87886 1.44289 9.92671 1.32743C9.97456 1.21197 9.99917 1.08823 9.99914 0.963269C9.99911 0.838308 9.97444 0.714576 9.92654 0.599138C9.87864 0.483701 9.80844 0.378818 9.71996 0.290478C9.63147 0.202138 9.52644 0.132071 9.41085 0.0842776C9.29525 0.0364843 9.17137 0.0119005 9.04627 0.0119299C8.92116 0.0119594 8.79729 0.0366014 8.68172 0.0844491C8.56615 0.132297 8.46115 0.202413 8.37271 0.290795L5.00569 3.6546L1.63805 0.290795C1.55022 0.199878 1.44514 0.127344 1.32895 0.0774234C1.21276 0.0275031 1.08777 0.00119689 0.961292 3.99012e-05C0.834811 -0.00111709 0.709367 0.0228981 0.592278 0.0706844C0.475188 0.118471 0.368799 0.189071 0.279318 0.278366C0.189837 0.36766 0.119056 0.473862 0.0711052 0.590772C0.023154 0.707683 -0.0010069 0.832962 3.2144e-05 0.959299C0.00107119 1.08564 0.0272893 1.2105 0.0771569 1.32661C0.127025 1.44272 0.199543 1.54774 0.29048 1.63556L3.6594 5L0.291116 8.36444C0.200178 8.45226 0.12766 8.55728 0.0777922 8.67339C0.0279246 8.7895 0.00170619 8.91436 0.000667144 9.0407C-0.000371904 9.16704 0.023789 9.29232 0.0717402 9.40923C0.119691 9.52614 0.190472 9.63234 0.279953 9.72163C0.369434 9.81093 0.475823 9.88153 0.592913 9.92932C0.710002 9.9771 0.835446 10.0011 0.961927 9.99996C1.08841 9.9988 1.21339 9.9725 1.32958 9.92258C1.44578 9.87266 1.55085 9.80012 1.63868 9.7092L5.00569 6.34603Z"
+                            fill="#00253C" />
+                    </svg>
+                </button>
+                <p class="popup__title">
+                    Поиск
+                </p>
+                <div class="popup__search search">
+                    <input type="text" placeholder="Поиск" class="search__input">
+                    <div class="search__btn">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.5 10.5L13.5 13.5M11.5 6.75C11.5 9.37335 9.37335 11.5 6.75 11.5C4.12665 11.5 2 9.37335 2 6.75C2 4.12665 4.12665 2 6.75 2C9.37335 2 11.5 4.12665 11.5 6.75Z"
+                                stroke="#00253C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="send-popup popup" data-target="add-review">
+        <div class="popup__body">
+            <div class="popup__content">
+                <button class="popup__close close-popup">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M5.00569 6.34603L8.37334 9.70984C8.55204 9.88833 8.79441 9.98861 9.04713 9.98861C9.29984 9.98861 9.54221 9.88833 9.72091 9.70984C9.89961 9.53134 10 9.28925 10 9.03682C10 8.78439 9.89961 8.5423 9.72091 8.36381L6.35199 5L9.72027 1.63619C9.80871 1.54781 9.87886 1.44289 9.92671 1.32743C9.97456 1.21197 9.99917 1.08823 9.99914 0.963269C9.99911 0.838308 9.97444 0.714576 9.92654 0.599138C9.87864 0.483701 9.80844 0.378818 9.71996 0.290478C9.63147 0.202138 9.52644 0.132071 9.41085 0.0842776C9.29525 0.0364843 9.17137 0.0119005 9.04627 0.0119299C8.92116 0.0119594 8.79729 0.0366014 8.68172 0.0844491C8.56615 0.132297 8.46115 0.202413 8.37271 0.290795L5.00569 3.6546L1.63805 0.290795C1.55022 0.199878 1.44514 0.127344 1.32895 0.0774234C1.21276 0.0275031 1.08777 0.00119689 0.961292 3.99012e-05C0.834811 -0.00111709 0.709367 0.0228981 0.592278 0.0706844C0.475188 0.118471 0.368799 0.189071 0.279318 0.278366C0.189837 0.36766 0.119056 0.473862 0.0711052 0.590772C0.023154 0.707683 -0.0010069 0.832962 3.2144e-05 0.959299C0.00107119 1.08564 0.0272893 1.2105 0.0771569 1.32661C0.127025 1.44272 0.199543 1.54774 0.29048 1.63556L3.6594 5L0.291116 8.36444C0.200178 8.45226 0.12766 8.55728 0.0777922 8.67339C0.0279246 8.7895 0.00170619 8.91436 0.000667144 9.0407C-0.000371904 9.16704 0.023789 9.29232 0.0717402 9.40923C0.119691 9.52614 0.190472 9.63234 0.279953 9.72163C0.369434 9.81093 0.475823 9.88153 0.592913 9.92932C0.710002 9.9771 0.835446 10.0011 0.961927 9.99996C1.08841 9.9988 1.21339 9.9725 1.32958 9.92258C1.44578 9.87266 1.55085 9.80012 1.63868 9.7092L5.00569 6.34603Z"
+                            fill="#00253C" />
+                    </svg>
+                </button>
+                <p class="popup__title">
+                    Оставьте свой отзыв
+                </p>
+                <form action="#" class="offers__container-right" method="post">
+                    <input class="offers__container-right__input" type="text" placeholder="Имя">
+                    <input class="offers__container-right__input" type="tel" placeholder="Номер телефона">
+                    <input class="offers__container-right__input" type="text" placeholder="Электронная почта">
+                    <textarea class="offers__container-right__input" placeholder="Ваш отзыв"></textarea>
+                    <button class="offers__container-right__button">Отправить</button>
+                    <p class="offers__container-right_descr form-policy form-policy_color form-policy_max-width">
+                        Нажимая кнопку «Отправить», вы соглашаетесь
                         с политикой конфиденциальности данного сайта</p>
                 </form>
             </div>

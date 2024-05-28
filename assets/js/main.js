@@ -141,27 +141,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    //related-services__slider
-    const relatedservicessliderList = document.querySelectorAll('.related-services__slider');
-
-    if (relatedservicessliderList.length > 0) {
-        relatedservicessliderList.forEach((elem) => {
-            const relatedservicesslider = new Swiper(elem, {
-                pagination: {
-                    el: elem.closest('.slider-container').querySelector('.slider-pagination'),
-                    clickable: true,
-                },
-
-                navigation: {
-                    prevEl: elem.closest('.slider-container').querySelector('.slider-btn_prev'),
-                    nextEl: elem.closest('.slider-container').querySelector('.slider-btn_next'),
-                },
-                slidesPerView: 4,
-                spaceBetween: 25,
-            });
-        });
-    }
-
     // Popups
     function popupClose(popupActive) {
         const formPopup = popupActive.querySelector('.form');
