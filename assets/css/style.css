@@ -1718,12 +1718,22 @@ textarea.offers__container-right__input {
     border-radius: 50px;
     background: rgb(243, 247, 253);
 }
-.about-us__rating{
-    font-family: "DaysOne","sans-serif";
+
+.about-us__rating {
+    font-family: "DaysOne", "sans-serif";
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
     margin-right: 5px;
+}
+
+.about-us__rating-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #FFF0F3;
+    border-radius: 12px;
 }
 
 .about-us__title {
@@ -2657,11 +2667,16 @@ textarea.offers__container-right__input {
 
 .about-us__date {
     display: flex;
-    gap: 85px;
+    justify-content: space-between;
+    gap: 16px;
 }
 
 .about-us__content-descr {
     margin-bottom: 4px;
+}
+
+.about-us__content-img {
+    align-self: flex-start;
 }
 
 .about-us__content-descr_doctor {
@@ -2673,6 +2688,7 @@ textarea.offers__container-right__input {
     border-radius: 15px;
     background-color: #fff;
     border: 1px solid rgb(222, 236, 253);
+    max-width: 420px;
 }
 
 .about-us__content-block_internal {
@@ -4667,6 +4683,11 @@ textarea.offers__container-right__input {
 
     .about-us__content {
         padding: 15px;
+        border-radius: 12px;
+    }
+
+    .about-us__content-article {
+        padding: 12px;
     }
 
     .about-us__content-block_internal {
@@ -4682,6 +4703,8 @@ textarea.offers__container-right__input {
     .related-services__div {
         padding: 15px 20px;
     }
+
+    
 }
 
 @media (max-width: 767px) {
@@ -4702,6 +4725,11 @@ textarea.offers__container-right__input {
 
     .about__container-img {
         width: 100%;
+    }
+
+    /* about-us */
+    .about-us__date {
+        flex-direction: column;
     }
 
     /* footer */
